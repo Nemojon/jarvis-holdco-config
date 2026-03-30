@@ -78,18 +78,25 @@ do_sync "${MAC_OPENCLAW}/agents/" "${VPS_OPENCLAW}/agents/" "agents" \
   --exclude='__pycache__/' \
   --exclude='*.log'
 
-# ── 3. workspace-orion/ ────────────────────────────────────────────────────
-do_sync "${MAC_OPENCLAW}/workspace-orion/" "${VPS_OPENCLAW}/workspace-orion/" "workspace-orion" \
-  --exclude='.git/' \
-  --exclude='.DS_Store' \
-  --exclude='node_modules/' \
-  --exclude='*.log'
+# ── 3. All workspaces ──────────────────────────────────────────────────────
+for ws_dir in "${MAC_OPENCLAW}"/workspace-*/; do
+  ws_name=$(basename "$ws_dir")
+  do_sync "${ws_dir}" "${VPS_OPENCLAW}/${ws_name}/" "$ws_name" \
+    --exclude='.git/' \
+    --exclude='.DS_Store' \
+    --exclude='node_modules/' \
+    --exclude='*.log'
+done
 
-# ── 4. vault/ ───────────────────────────────────────────────────────────────
+# ── 4. scripts/ ─────────────────────────────────────────────────────────────
+do_sync "${MAC_OPENCLAW}/scripts/" "${VPS_OPENCLAW}/scripts/" "scripts" \
+  --exclude='.DS_Store'
+
+# ── 5. vault/ ───────────────────────────────────────────────────────────────
 do_sync "${MAC_OPENCLAW}/vault/" "${VPS_OPENCLAW}/vault/" "vault" \
   --exclude='.DS_Store'
 
-# ── 5. cron/ (if exists) ───────────────────────────────────────────────────
+# ── 6. cron/ (if exists) ───────────────────────────────────────────────────
 if [[ -d "${MAC_OPENCLAW}/cron" ]]; then
   do_sync "${MAC_OPENCLAW}/cron/" "${VPS_OPENCLAW}/cron/" "cron" \
     --exclude='.DS_Store'

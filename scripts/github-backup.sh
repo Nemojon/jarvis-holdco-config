@@ -71,15 +71,22 @@ if [ -d "vault/" ]; then
   done
 fi
 
-# Scripts — add individually, skip files containing hardcoded secrets
-[ -d "scripts/" ] && find scripts/ -type f \( -name "*.sh" -o -name "*.js" \) | while read f; do
-  # Skip files that contain API keys/tokens/secrets inline
-  if grep -qiE "(ghp_|sk-|apify_|APIFY_TOKEN|ntn_|secret_|xoxb-|xoxp-)" "$f" 2>/dev/null; then
-    log "SKIP (contains secret): $f"
-    continue
-  fi
-  git add -f "$f" 2>/dev/null || true
-done
+# Scripts — add individually, skip files containing real hardcoded secrets
+# Always include this backup script itself (its grep patterns are not real secrets)
+SELF_SCRIPT="scripts/github-backup.sh"
+git add -f "$SELF_SCRIPT" 2>/dev/null || true
+PATTERN_FILE=$(mktemp)
+printf '%s\n' 'ghp_[a-zA-Z0-9]{36}' 'apify_api_[a-zA-Z0-9]+' 'APIFY_TOKEN=' 'ntn_[a-zA-Z0-9]{20,}' 'xoxb-[0-9]' 'xoxp-[0-9]' > "$PATTERN_FILE"
+if [ -d "scripts/" ]; then
+  find scripts/ -type f \( -name "*.sh" -o -name "*.js" \) ! -name "github-backup.sh" | while read f; do
+    if grep -qEf "$PATTERN_FILE" "$f" 2>/dev/null; then
+      log "SKIP (contains secret): $f"
+      continue
+    fi
+    git add -f "$f" 2>/dev/null || true
+  done
+fi
+rm -f "$PATTERN_FILE"
 
 # Identity configs — .md and .json only
 [ -d "identity/" ] && find identity/ -name "*.md" -o -name "*.json" | while read f; do
@@ -96,14 +103,19 @@ if [ -n "$STAGED_SECRETS" ]; then
   echo "$STAGED_SECRETS" | xargs -I{} git reset HEAD -- "{}" 2>/dev/null || true
 fi
 
-# Double-check: scan staged file contents for token patterns
+# Double-check: scan staged file contents for real token patterns
+# Skip the backup script itself (contains detection patterns, not real tokens)
+DBLCHK_PATTERN=$(mktemp)
+printf '%s\n' 'ghp_[a-zA-Z0-9]{36}' 'sk-[a-zA-Z0-9]{20,}' 'apify_api_[a-zA-Z0-9]+' > "$DBLCHK_PATTERN"
 for staged_file in $(git diff --cached --name-only 2>/dev/null); do
   [ -f "$staged_file" ] || continue
-  if grep -qiE "(ghp_[a-zA-Z0-9]{36}|sk-[a-zA-Z0-9]{20,}|apify_api_[a-zA-Z0-9]+)" "$staged_file" 2>/dev/null; then
+  [ "$staged_file" = "scripts/github-backup.sh" ] && continue
+  if grep -qEf "$DBLCHK_PATTERN" "$staged_file" 2>/dev/null; then
     log "WARNING: Unstaging file with embedded token: $staged_file"
     git reset HEAD -- "$staged_file" 2>/dev/null || true
   fi
 done
+rm -f "$DBLCHK_PATTERN"
 
 # Commit and push if there are changes
 CHANGES=$(git diff --cached --name-only | wc -l | tr -d ' ')
