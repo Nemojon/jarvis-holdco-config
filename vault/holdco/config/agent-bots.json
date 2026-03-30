@@ -1,0 +1,17 @@
+{
+  "jarvis": {
+    "token": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
+    "username": "Holdco_apex_bot",
+    "name": "Jarvis - COO"
+  },
+  "luna": {
+    "token": "8438320914:AAGA1sfbNYdWsk9-SMwXHP5YqEYAjGl17ts",
+    "username": "Luna_holdco_bot",
+    "name": "Luna - Marketing"
+  },
+  "echo": {
+    "token": "7977847083:AAHlFzYJL3S_tGMiBENTK6Qh6GGLZhkQH50",
+    "username": "Echo_holdco_bot",
+    "name": "Echo - Content"
+  }
+}

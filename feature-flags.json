@@ -1,0 +1,7 @@
+{
+  "agentLabEnabled": true,
+  "autoApplyEnabled": true,
+  "intentClassifierEnabled": true,
+  "agentLabBotToken": "PLACEHOLDER_TOKEN",
+  "agentLabCronEnabled": true
+}

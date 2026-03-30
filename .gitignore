@@ -1,0 +1,58 @@
+# === Secrets & Auth ===
+auth-profiles.json
+**/auth-profiles.json
+.env
+*.env
+credentials/
+**/credentials/
+*.key
+*.pem
+*.p12
+**/tokens.json
+**/oauth-*.json
+
+# === Runtime / Ephemeral ===
+sessions/
+**/sessions/
+logs/
+*.log
+node_modules/
+delivery-queue/
+completions/
+browser/
+media/
+canvas/
+classifier/
+devices/
+telegram/
+subagents/
+
+# === Backup / Temp files ===
+*.bak
+*.bak.*
+*.backup.*
+*.pre-*
+*.swp
+*.tmp
+.DS_Store
+
+# === Large / Binary ===
+*.sqlite
+*.db
+
+# === Cron run logs ===
+cron/runs/
+cron/jobs.json.bak*
+cron/jobs.json.pre-*
+
+# === Vault credentials ===
+vault/**/CREDENTIALS*
+vault/**/credentials/
+
+# === openclaw backup files ===
+openclaw.json.bak*
+openclaw.json.backup.*
+openclaw.json.pre-*
+crontab-pre-consolidation.bak
+refresh-oauth.sh
+update-check.json

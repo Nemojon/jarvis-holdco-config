@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.28",
+    "lastTouchedAt": "2026-03-30T02:54:12.538Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-18T14:50:37.059Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "cdpUrl": "http://127.0.0.1:9222",
+    "executablePath": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+    "defaultProfile": "openclaw",
+    "profiles": {
+      "brave": {
+        "cdpUrl": "http://127.0.0.1:9222",
+        "driver": "existing-session",
+        "color": "#FF6B00"
+      },
+      "openclaw": {
+        "cdpUrl": "http://127.0.0.1:9222",
+        "driver": "openclaw",
+        "color": "#FF6B00"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "oauth"
+      }
+    }
+  },
+  "models": {},
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-opus-4-6",
+        "fallbacks": [
+          "anthropic/claude-sonnet-4-6",
+          "openai/gpt-4.1",
+          "openai/gpt-4.1-mini"
+        ]
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {},
+        "anthropic/claude-haiku-4-5": {},
+        "anthropic/claude-opus-4-6": {
+          "alias": "opus"
+        },
+        "openai/gpt-4.1": {},
+        "openai/gpt-4.1-mini": {}
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "1h"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Core"
+        }
+      },
+      {
+        "id": "orion",
+        "name": "Jarvis",
+        "workspace": "/Users/apex/.openclaw/workspace-orion",
+        "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Jarvis"
+        },
+        "subagents": {
+          "allowAgents": [
+            "apex",
+            "atlas",
+            "hunter",
+            "recon",
+            "signal",
+            "ledger",
+            "pastor-zion",
+            "aurora",
+            "cto",
+            "counsel"
+          ]
+        }
+      },
+      {
+        "id": "apex",
+        "name": "Nova",
+        "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Nova"
+        }
+      },
+      {
+        "id": "atlas",
+        "name": "Aria",
+        "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Aria"
+        }
+      },
+      {
+        "id": "hunter",
+        "name": "Rex",
+        "agentDir": "/Users/apex/.openclaw/agents/hunter/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Rex"
+        }
+      },
+      {
+        "id": "recon",
+        "name": "Scout",
+        "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Scout"
+        }
+      },
+      {
+        "id": "signal",
+        "name": "Echo",
+        "agentDir": "/Users/apex/.openclaw/agents/signal/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Echo"
+        }
+      },
+      {
+        "id": "ledger",
+        "name": "Vault",
+        "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Vault"
+        }
+      },
+      {
+        "id": "pastor-zion",
+        "name": "Zion",
+        "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Zion"
+        }
+      },
+      {
+        "id": "aurora",
+        "name": "Luna",
+        "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Luna"
+        }
+      },
+      {
+        "id": "cto",
+        "name": "Cipher",
+        "agentDir": "/Users/apex/.openclaw/agents/cto/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Cipher"
+        }
+      },
+      {
+        "id": "counsel",
+        "name": "Lex",
+        "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Lex"
+        }
+      },
+      {
+        "id": "agent-lab",
+        "name": "agent-lab",
+        "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
+        "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "emoji": "\ud83e\uddea"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "orion",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "allowlist",
+      "botToken": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
+      "allowFrom": [
+        "970413391",
+        "130902006",
+        "1806224103"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    },
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": false,
+      "userTokenReadOnly": true,
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "nativeStreaming": true
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "bfa22dd3f8195a15c6b8d554fb0f152f27ce7148ff017a48"
+    },
+    "remote": {
+      "url": "ws://100.70.74.1:18789"
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram"
+      ]
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true,
+        "config": {}
+      },
+      "elevenlabs": {
+        "enabled": true,
+        "config": {}
+      },
+      "slack": {
+        "enabled": false,
+        "config": {}
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "BSA2_lmE8u4xY1s-xYp81a6eKhxWem6"
+          }
+        }
+      },
+      "perplexity": {
+        "enabled": true,
+        "config": {}
+      },
+      "deepgram": {
+        "enabled": true,
+        "config": {}
+      }
+    },
+    "installs": {
+      "perplexity": {
+        "source": "path",
+        "spec": "perplexity",
+        "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "installedAt": "2026-03-30T02:48:50.676Z"
+      },
+      "deepgram": {
+        "source": "path",
+        "spec": "deepgram",
+        "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram",
+        "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram",
+        "installedAt": "2026-03-30T02:48:51.975Z"
+      }
+    }
+  }
+}
