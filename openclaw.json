@@ -384,10 +384,6 @@
         "enabled": true,
         "config": {}
       },
-      "slack": {
-        "enabled": false,
-        "config": {}
-      },
       "brave": {
         "enabled": true,
         "config": {
