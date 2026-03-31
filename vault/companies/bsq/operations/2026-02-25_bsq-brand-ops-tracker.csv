@@ -1,0 +1,173 @@
+-- 📅 Daily Tracker --
+BSQ Brand + Business  —  MARKETING EXECUTIVE DAILY TASK TRACKER,,,,,,,,,,,
+✔ = Done   ✘ = Missed   — = N/A   |   Update daily before EOD,,,,,,,,,,,
+,,,,,,,,,,,
+,TASK / ACTIVITY,MON,TUE,WED,THU,FRI,SAT,,DONE (DAYS),TARGET (DAYS),% COMPLETE
+  PART 1 — WEEKLY CONTENT OPERATIONS  (Monday workflow),,,,,,,,,,,
+,Log in & check client profile notifications,,,,,,,,0,1,0
+,Screenshot follower count → save to analytics tracker,,,,,,,,0,1,0
+,Review content pillars & select week's focus,,,,,,,,0,1,0
+,Draft 3–5 posts (Hook / Body / CTA),,,,,,,,0,1,0
+,Select visuals / brief carousels or video for each post,,,,,,,,0,1,0
+,Export drafts to Google Doc (approval template),,,,,,,,0,1,0
+,Send approval email to client (48h deadline set),,,,,,,,0,1,0
+,Schedule ALL approved posts in Taplio,,,,,,,,0,1,0
+,Screenshot Taplio calendar → save to shared tracker,,,,,,,,0,1,0
+  PART 2 — DAILY ENGAGEMENT  (Mon–Sat),,,,,,,,,,,
+,Follow 100 target niche accounts [Jonathan profile],,,,,,,,0,6,0
+,Follow 100 target niche accounts [Amina profile],,,,,,,,0,6,0
+,Leave 100 comments on niche influencer posts [Jonathan],,,,,,,,0,6,0
+,Leave 100 comments on niche influencer posts [Amina],,,,,,,,0,6,0
+,Reply to ALL comments on client posts [Jonathan],,,,,,,,0,6,0
+,Reply to ALL comments on client posts [Amina],,,,,,,,0,6,0
+  PART 3 — SALES FUNNEL  (Mon–Sat),,,,,,,,,,,
+,Review who engaged with posts → log warm leads in pipeline,,,,,,,,0,6,0
+,Send 5–10 personalised connection requests to qualified prospects,,,,,,,,0,6,0
+,Send DM 1 (value drop) to new connections (48h after connecting),,,,,,,,0,6,0
+,Send DM 2 (soft probe) to non-responders from DM 1,,,,,,,,0,6,0
+,Send DM 3 (discovery offer) to engaged DM conversations,,,,,,,,0,6,0
+,Follow up on open proposals (if >48h no response),,,,,,,,0,5,0
+,Update pipeline stages in Lead Tracker (Google Sheet),,,,,,,,0,6,0
+,Log any closed deal in Commission Tracker immediately,,,,,,,,0,5,0
+  PART 4 — REPORTING  (Friday EOD),,,,,,,,,,,
+,"Complete weekly KPI report (impressions, follows, engagement)",,,,,,,,0,1,0
+,Review Taplio analytics — note top-performing post,,,,,,,,0,1,0
+,Check pipeline: any deals to move to next stage?,,,,,,,,0,1,0
+,Send weekly summary to manager / Jonathan,,,,,,,,0,1,0
+,,,,,,,,,,,
+  WEEKLY COMPLETION TOTALS,,0,0,0,0,0,0,,0,95,0
+
+-- 🔵 Lead Pipeline --
+BSQ BRAND + BUSINESS  —  LEAD PIPELINE TRACKER,,,,,,,,,,,,
+Update pipeline stages daily. Commission auto-calculates on Closed deals.,,,,,,,,,,,,
+,,,,,,,,,,,,
+DATE ADDED,PROSPECT NAME,LINKEDIN URL,COMPANY / ROLE,SOURCE PROFILE,FUNNEL STAGE,LAST ACTION,NEXT ACTION,NEXT ACTION DATE,DEAL VALUE ($),COMMISSION ($),STATUS,NOTES
+2026-02-24,— Enter prospect name —,,Founder / CEO,Jonathan Low,Cold,Connected,Send DM 1,2026-02-25,2500,0,Active,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,0,,
+,,,,,,,,,,,,
+  TOTALS,,,,,,,,,0,0,,
+
+-- 📊 Weekly Analytics --
+BSQ BRAND + BUSINESS  —  WEEKLY ANALYTICS SUMMARY,,,,,
+Track weekly growth metrics for both profiles. Update every Friday.,,,,,
+,,,,,
+METRIC,WEEK 1,WEEK 2,WEEK 3,WEEK 4,TARGET/WK
+  ─── JONATHAN LOW PROFILE ───,,,,,
+  Followers (end of week),,,,,
+  Impressions (total),,,,,
+  Engagement Rate (%),,,,,
+  New Follows Sent,,,,,
+  Comments Left on Niche Posts,,,,,
+  Post Comment Reply Rate (%),,,,,
+  New Leads Added to Pipeline,,,,,
+  Discovery Calls Booked,,,,,
+  ─── AMINA PROFILE ───,,,,,
+  Followers (end of week),,,,,
+  Impressions (total),,,,,
+  Engagement Rate (%),,,,,
+  New Follows Sent,,,,,
+  Comments Left on Niche Posts,,,,,
+  Post Comment Reply Rate (%),,,,,
+  New Leads Added to Pipeline,,,,,
+  Discovery Calls Booked,,,,,
+  ─── OVERALL PIPELINE ───,,,,,
+  Total Active Leads,,,,,
+  Proposals Sent,,,,,
+  Deals Closed,,,,,
+  Revenue Closed ($),,,,,
+  Commission Earned ($),,,,,
+
+-- 💰 Commission Tracker --
+BSQ BRAND + BUSINESS  —  COMMISSION TRACKER,,,,,,,,,,
+Log every closed deal immediately. Commission = 10% monthly | 12% 6-month package | 8% add-ons,,,,,,,,,,
+,,,,,,,,,,
+DATE CLOSED,CLIENT NAME,DEAL TYPE,DEAL VALUE ($),COMM RATE,COMMISSION ($),BONUS ($),TOTAL EARNED ($),PAYMENT STATUS,PAYMENT DATE,NOTES
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+,,,,0.1,0,,0,,,
+  MONTHLY TOTALS,,,,,0,0,0,,,
+
+-- ℹ️ Instructions --
+BSQ BRAND + BUSINESS  —  HOW TO USE THIS TRACKER,,
+,,
+  📅 Daily Tracker,,
+,Use the ✔ / ✘ / — dropdown in each day column to mark each task.,
+,✔ = Completed   ✘ = Missed   — = Not applicable today,
+,The % Complete column and totals update automatically.,
+,Complete this sheet DAILY before end of working day.,
+,,
+  🔵 Lead Pipeline,,
+,Add a new row for every new prospect you identify.,
+,Update the Funnel Stage column each time you move a lead forward.,
+,Commission auto-calculates when Stage = 'Closed'.,
+,Review this sheet daily and update Next Action + Next Action Date.,
+,,
+  📊 Weekly Analytics,,
+,Update every Friday by 5pm.,
+,Pull impressions and engagement data directly from LinkedIn Analytics / Taplio.,
+,This feeds the monthly client performance report.,
+,,
+  💰 Commission Tracker,,
+,Log EVERY closed deal immediately — do not wait until month end.,
+,Commission rate auto-fills based on deal type (10% / 12% / 8%).,
+,Update Payment Status once payment is confirmed by management.,
+,Monthly totals are auto-calculated at the bottom.,
+,,
+  📌 Key Rules,,
+,1. Daily Tracker must be updated DAILY — incomplete days = ✘,
+,2. Lead Pipeline must be reviewed DAILY — stale leads lose deals,
+,3. Never delete rows — use '—' or 'Lost' to archive,
+,4. Manager reviews this tracker every Monday for the prior week,
+,5. Commission disputes must be raised within 7 days of month-end statement,
+

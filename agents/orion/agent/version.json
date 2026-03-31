@@ -1,0 +1,11 @@
+{
+  "version_hash": "fde708e491539fa905e7d72caa79043f",
+  "last_modified": "2026-03-18T11:10:38.113697",
+  "hash_inputs": [
+    "CLAUDE.md",
+    "identity.md",
+    "soul.md"
+  ],
+  "hash_algorithm": "md5",
+  "generated_at": "2026-03-27T20:21:14.178959"
+}

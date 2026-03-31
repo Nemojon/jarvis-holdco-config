@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Vanuatu Citizenship by Investment — Programme Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+@page{size:A4;margin:0;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.page{width:210mm;height:297mm;margin:0 auto;background:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.top-bar{display:flex;height:5px;flex-shrink:0;}
+.top-bar span,.bottom-bar span{flex:1;}
+.c-black{background:#1a1a1a;}.c-red{background:#CE1126;}.c-green{background:#009A44;}.c-gold{background:#FFD100;}
+header{padding:12px 36px 10px;display:flex;align-items:center;gap:16px;border-bottom:1px solid #e8e3d8;flex-shrink:0;}
+.flag-wrap{flex-shrink:0;width:64px;height:38px;border:1px solid #ddd;border-radius:2px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
+.header-text{flex:1;}
+.programme-label{font-size:6.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#009A44;margin-bottom:3px;}
+.header-text h1{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#0f1e10;line-height:1.2;}
+.subtitle{font-size:8.5px;color:#666;margin-top:2px;font-weight:300;}
+.header-right{text-align:right;flex-shrink:0;}
+.doc-ref{font-size:7px;color:#999;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
+.doc-date{font-size:8px;color:#555;}
+main{padding:10px 36px 8px;flex:1;overflow:hidden;}
+.section-heading{font-family:'Playfair Display',serif;font-size:10px;font-weight:600;color:#0f1e10;margin-bottom:6px;padding-bottom:3px;border-bottom:1.5px solid #009A44;display:flex;align-items:center;gap:6px;}
+.icon{width:13px;height:13px;background:#009A44;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.icon svg{width:7px;height:7px;fill:#fff;}
+section{margin-bottom:10px;}
+.intro{background:linear-gradient(135deg,#f8fdf9,#f0f9f2);border-left:2.5px solid #009A44;border-radius:0 3px 3px 0;padding:7px 12px;font-size:8px;line-height:1.6;color:#333;margin-bottom:10px;}
+.intro strong{color:#0f1e10;}
+table{width:100%;border-collapse:collapse;font-size:8.5px;}
+thead tr{background:#0f1e10;color:#FFD100;}
+thead th{padding:5px 9px;text-align:left;font-weight:600;font-size:7px;letter-spacing:1px;text-transform:uppercase;}
+thead th:last-child{text-align:right;}
+tbody tr{border-bottom:1px solid #eee;}
+tbody tr:nth-child(even){background:#fafaf8;}
+tbody td{padding:5px 9px;color:#333;vertical-align:top;font-size:8.5px;}
+tbody td:last-child{text-align:right;font-weight:600;color:#0f1e10;white-space:nowrap;}
+.badge{display:inline-block;font-size:6px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:1px 4px;border-radius:2px;margin-bottom:1px;}
+.badge-deposit{background:#fff3cd;color:#856404;}.badge-final{background:#d1e7dd;color:#0a5239;}
+tfoot tr{background:#009A44;color:#fff;}
+tfoot td{padding:6px 9px;font-weight:600;font-size:9px;}
+tfoot td:last-child{text-align:right;color:#fff;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.timeline{list-style:none;}
+.timeline li{display:flex;align-items:flex-start;gap:7px;padding:4px 0;border-bottom:1px solid #f0f0ec;font-size:8px;color:#444;line-height:1.4;}
+.timeline li:last-child{border-bottom:none;}
+.tl-check{width:13px;height:13px;border-radius:50%;background:#009A44;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.tl-check svg{width:7px;height:7px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.tl-label{font-weight:600;color:#0f1e10;display:block;font-size:8px;}
+.tl-note{font-size:7px;color:#777;}
+.highlight-box{margin-top:6px;background:#0f1e10;color:#FFD100;border-radius:3px;padding:6px 10px;font-size:8px;font-weight:500;text-align:center;}
+.opt-item{display:flex;justify-content:space-between;align-items:flex-start;padding:4px 0;border-bottom:1px solid #f0f0ec;font-size:8px;color:#444;}
+.opt-item:last-child{border-bottom:none;}
+.opt-label strong{color:#0f1e10;display:block;font-size:8.5px;}
+.opt-label span{font-size:7px;color:#888;}
+.opt-price{font-weight:700;color:#009A44;white-space:nowrap;font-size:9px;margin-left:8px;flex-shrink:0;}
+.opt-price.inc{color:#009A44;font-size:7.5px;font-weight:600;}
+.totals-grid{display:grid;grid-template-columns:1fr;gap:4px;margin-top:8px;}
+.total-row{display:flex;justify-content:space-between;align-items:center;padding:5px 9px;border-radius:3px;font-size:8.5px;}
+.total-row.standard{background:#f0f9f2;border:1px solid #c3e6cb;}
+.total-row.courier{background:#fff8e1;border:1px solid #ffe082;}
+.total-row.remote{background:#f8f9fa;border:1px solid #dee2e6;}
+.tr-label{color:#444;}
+.tr-amount{font-weight:700;font-size:10px;color:#0f1e10;}
+footer{padding:8px 36px 0;border-top:1px solid #e8e3d8;flex-shrink:0;}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+.footer-left p{font-size:6.5px;color:#999;line-height:1.5;max-width:310px;}
+.conf-label{font-weight:700;color:#CE1126;font-size:6px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+.footer-right{text-align:right;flex-shrink:0;}
+.firm-name{font-family:'Playfair Display',serif;font-size:10px;font-weight:700;color:#0f1e10;}
+.firm-sub{font-size:6.5px;color:#888;margin-top:1px;}
+.bottom-bar{display:flex;height:5px;flex-shrink:0;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-bar"><span class="c-black"></span><span class="c-red"></span><span class="c-green"></span><span class="c-gold"></span></div>
+
+  <header>
+    <div class="flag-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="64" height="38">
+        <rect width="5" height="3" fill="#009A44"/>
+        <rect y="1.5" width="5" height="1.5" fill="#CE1126"/>
+        <polygon points="0,0 2.3,1.5 0,3" fill="#1a1a1a"/>
+        <polygon points="0,0.22 2.08,1.5 0,2.78 0,2.52 1.85,1.5 0,0.48" fill="#FFD100"/>
+        <rect x="2.02" y="1.38" width="3" height="0.24" fill="#FFD100"/>
+        <circle cx="1.08" cy="1.5" r="0.42" fill="#FFD100"/>
+        <circle cx="1.08" cy="1.5" r="0.28" fill="#009A44"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <div class="programme-label">Republic of Vanuatu — Government Authorised Programme</div>
+      <h1>Citizenship by Investment Programme</h1>
+      <div class="subtitle">Development Support Programme (DSP) — Capital Contribution Track</div>
+    </div>
+    <div class="header-right">
+      <div class="doc-ref">Ref: VCI-DSP-2026</div>
+      <div class="doc-date">Effective: 1 March 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      The <strong>Vanuatu Development Support Programme (DSP)</strong> offers a government-approved pathway to full Vanuatuan citizenship through a single non-refundable capital contribution. Applicants receive a <strong>lifetime passport</strong> with visa-free or visa-on-arrival access to <strong>90+ jurisdictions</strong> including Schengen, UK, Russia &amp; Singapore. Administered under the authority of the <strong>Vanuatu Citizenship Commission</strong> and led by our authorised advisory firm.
+    </div>
+
+    <div class="two-col">
+      <div>
+        <section>
+          <div class="section-heading">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+            Programme Fee Structure
+          </div>
+          <table>
+            <thead><tr><th>Component</th><th>Amount (USD)</th></tr></thead>
+            <tbody>
+              <tr><td>Government Citizenship Fee<br/><span style="font-size:7px;color:#888;">Non-refundable DSP contribution</span></td><td>$127,000</td></tr>
+              <tr><td>Processing &amp; Administrative Fee<br/><span style="font-size:7px;color:#888;">Due diligence &amp; advisory services</span></td><td>$3,000</td></tr>
+            </tbody>
+            <tfoot><tr><td><strong>Total Base Programme Fee</strong></td><td><strong>$130,000</strong></td></tr></tfoot>
+          </table>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div>
+            Payment Schedule
+          </div>
+          <table>
+            <thead><tr><th>Stage</th><th>Amount (USD)</th></tr></thead>
+            <tbody>
+              <tr><td><div class="badge badge-deposit">Deposit · 30%</div><br/><span style="font-size:7px;color:#555;">Due upon application submission</span></td><td>$39,000</td></tr>
+              <tr><td><div class="badge badge-final">Final Balance · 70%</div><br/><span style="font-size:7px;color:#555;">Due after approval, prior to passport printing</span></td><td>$91,000</td></tr>
+            </tbody>
+            <tfoot><tr><td><strong>Total Investment</strong></td><td><strong>$130,000</strong></td></tr></tfoot>
+          </table>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            Optional Services
+          </div>
+          <div class="opt-item">
+            <div class="opt-label"><strong>Passport Courier Delivery</strong><span>Secure international delivery (if not collecting in HK)</span></div>
+            <div class="opt-price">+$1,000</div>
+          </div>
+          <div class="opt-item">
+            <div class="opt-label"><strong>Remote Biometrics Service</strong><span>In-country capture — no travel to Vanuatu required</span></div>
+            <div class="opt-price inc">✓ Included</div>
+          </div>
+          <div style="font-size:7px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#888;margin:8px 0 5px;">Potential Programme Totals</div>
+          <div class="totals-grid">
+            <div class="total-row standard"><span class="tr-label">Standard — In-Person Collection (HK)</span><span class="tr-amount">$130,000</span></div>
+            <div class="total-row courier"><span class="tr-label">With Courier Delivery</span><span class="tr-amount">$131,000</span></div>
+            <div class="total-row remote"><span class="tr-label">Full Remote (Biometrics + Courier)</span><span class="tr-amount">$132,000</span></div>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <div class="section-heading">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+            Programme Timeline — 60 Days
+          </div>
+          <ul class="timeline">
+            <li><div class="tl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><span class="tl-label">Day 1 — Application Submission</span><span class="tl-note">$39,000 deposit received; documents lodged with Citizenship Commission</span></div></li>
+            <li><div class="tl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><span class="tl-label">Days 1–30 — Due Diligence Review</span><span class="tl-note">Background verification, document authentication &amp; government processing</span></div></li>
+            <li><div class="tl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><span class="tl-label">Days 30–45 — Approval Notification</span><span class="tl-note">Official Letter of Approval issued; final balance of $91,000 becomes due</span></div></li>
+            <li><div class="tl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><span class="tl-label">Days 45–55 — Biometrics &amp; Printing</span><span class="tl-note">Biometrics completed (in-person or remote); passport produced</span></div></li>
+            <li><div class="tl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><span class="tl-label">Day 60 — Passport in Hand ✓</span><span class="tl-note">Collection in Hong Kong or secure international courier dispatch</span></div></li>
+          </ul>
+          <div class="highlight-box">⏱&nbsp; Completed within <strong>60 days</strong> · Passport in hand upon completion</div>
+        </section>
+
+        <section style="margin-top:10px;">
+          <div class="section-heading">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+            Programme Highlights
+          </div>
+          <ul style="list-style:none;font-size:8px;color:#444;line-height:1;padding:0;">
+            <li style="padding:3.5px 0;border-bottom:1px solid #f0f0ec;">● <strong style="color:#0f1e10;">Lifetime citizenship</strong> — hereditary, passed to dependants</li>
+            <li style="padding:3.5px 0;border-bottom:1px solid #f0f0ec;">● <strong style="color:#0f1e10;">No residency requirement</strong> — no need to live in Vanuatu</li>
+            <li style="padding:3.5px 0;border-bottom:1px solid #f0f0ec;">● <strong style="color:#0f1e10;">90+ jurisdictions</strong> visa-free / visa-on-arrival (Schengen, UK, Singapore)</li>
+            <li style="padding:3.5px 0;border-bottom:1px solid #f0f0ec;">● <strong style="color:#0f1e10;">No global income tax</strong> — Vanuatu imposes no personal income tax</li>
+            <li style="padding:3.5px 0;border-bottom:1px solid #f0f0ec;">● <strong style="color:#0f1e10;">Dual citizenship permitted</strong> — no need to renounce existing nationality</li>
+            <li style="padding:3.5px 0;">● <strong style="color:#0f1e10;">Family inclusion</strong> — spouse and dependent children eligible</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="conf-label">■ Strictly Confidential &amp; Privileged</div>
+        <p>This document is prepared exclusively for the intended recipient. All fees quoted in USD and subject to confirmation at time of formal engagement. Programme terms governed by the laws of the Republic of Vanuatu and subject to change. This document does not constitute legal advice.</p>
+      </div>
+      <div class="footer-right">
+        <div class="firm-name">Citizenship Advisory Group</div>
+        <div class="firm-sub">Global Residency &amp; Citizenship Practice</div>
+        <div class="firm-sub" style="margin-top:3px;color:#009A44;font-weight:600;font-size:6.5px;">VCI-DSP-2026 · v1.0 · 1 March 2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="bottom-bar"><span class="c-gold"></span><span class="c-green"></span><span class="c-red"></span><span class="c-black"></span></div>
+</div>
+</body>
+</html>

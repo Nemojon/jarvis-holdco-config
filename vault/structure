@@ -1,0 +1,43 @@
+# VAULT — Knowledge OS
+# ~/.openclaw/vault/
+# Managed exclusively by ATLAS
+ 
+vault/
+├── companies/
+│   ├── absolutepay/
+│   │   ├── legal/          # NDAs, MOUs, incorporation docs, licenses
+│   │   ├── finance/        # Cap table, P&L, runway models, bank details
+│   │   ├── product/        # Pitch decks, one-pagers, product specs
+│   │   ├── operations/     # SOPs, org chart, team contacts
+│   │   ├── marketing/      # Brand guidelines, logos, approved copy
+│   │   └── compliance/     # Regulatory filings, KYC docs, licenses
+│   ├── biptap/
+│   │   ├── legal/
+│   │   ├── finance/
+│   │   ├── partnerships/   # Partner agreements, integration specs
+│   │   └── operations/
+│   ├── 1tx0/
+│   │   ├── legal/
+│   │   ├── technology/     # Tech specs, architecture docs, whitepapers
+│   │   └── operations/
+│   └── bsq/
+│       ├── legal/
+│       ├── clients/        # Client contracts, briefs, deliverables
+│       └── creative/       # Brand assets, templates, style guides
+├── holdco/
+│   ├── legal/              # BVI HoldCo docs, RAK OpCo, shareholder agreements
+│   ├── finance/            # Consolidated P&L, investor updates, raise materials
+│   ├── governance/         # Board resolutions, meeting minutes, policies
+│   └── investor-relations/ # Investor CRM, deck versions, DD packages
+├── templates/
+│   ├── legal/              # NDA, MOU, LOI, shareholder agreement templates
+│   ├── hr/                 # Offer letters, employment contracts, policies
+│   ├── finance/            # Invoice templates, expense policies
+│   ├── investor/           # Pitch deck templates, one-pager formats
+│   ├── partnerships/       # Partnership frameworks, term sheets
+│   └── applications/       # Regulatory applications, bank account forms
+├── intel/
+│   ├── competitors/        # Competitor research by company
+│   ├── markets/            # GCC, India, Africa market reports
+│   └── regulatory/         # Regulatory updates by jurisdiction
+└── index.md               # Master index — every file, what it is, when added
