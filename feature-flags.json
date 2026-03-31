@@ -2,6 +2,5 @@
   "agentLabEnabled": true,
   "autoApplyEnabled": true,
   "intentClassifierEnabled": true,
-  "agentLabBotToken": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
   "agentLabCronEnabled": true
 }

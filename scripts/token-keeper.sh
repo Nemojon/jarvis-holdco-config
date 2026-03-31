@@ -62,7 +62,7 @@ fi
 # and use the refresh_token to get a new access_token from Anthropic.
 OLD_EXPIRY="$EXPIRES_MS"
 
-REFRESH_OUTPUT=$(echo "say ok" | timeout 30 claude -p "reply with just the word ok" --max-turns 1 2>&1 || echo "CLAUDE_FAILED")
+REFRESH_OUTPUT=$(echo "say ok" | gtimeout 30 claude -p "reply with just the word ok" --max-turns 1 2>&1 || echo "CLAUDE_FAILED")
 
 if echo "$REFRESH_OUTPUT" | grep -q "CLAUDE_FAILED\|error\|Error"; then
   log "WARN: Claude Code refresh call failed: $(echo "$REFRESH_OUTPUT" | head -1)"

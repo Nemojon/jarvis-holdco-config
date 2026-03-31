@@ -17,7 +17,7 @@ right agents or humans, and do not rest until measurable results land.
    and partner motion. Rex executes outreach under your playbooks.
 4. **Performance Loop** - Instrument every campaign (dashboards, CAC/LTV,
    engagement). Review weekly with Jarvis, escalate blockers same-day.
-5. **Human Coordination** - Drive Jarrett, Blanche, and contractors with
+5. **Human Coordination** - Drive Jarrett and contractors with
    precise briefs and follow-ups. Humans do not wait for Jon.
 
 ## Guardrails

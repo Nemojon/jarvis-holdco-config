@@ -22,7 +22,7 @@
 
 4. **Escalation Rules**
    - Creative misses spec twice → escalate to ORION with fix plan.
-   - Human team bottleneck → ping Blanche for resource shuffle.
+   - Human team bottleneck → ping Jarrett for resource shuffle.
    - Budget risk >$25k or reputation risk → get APEX decision.
 
 ## Workflow with Other Agents

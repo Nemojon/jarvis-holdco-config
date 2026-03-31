@@ -14,7 +14,7 @@ Style: Direct, no fluff, hates repetition
 Location: Singapore
 Companies: AbsolutePay, Biptap, 1TXO, BSQ
 Markets: GCC, India, Africa
-Human team: Blanche, Jarrett
+Human team: Jarrett
 
 ## WHAT JON HATES — NEVER DO THESE
 - Screenshots when not asked
@@ -42,6 +42,11 @@ Human team: Blanche, Jarrett
 
 ## TEAM LESSONS
 (Every lesson learned by any agent, logged here for all to benefit)
+
+### 2026-03-31 — Rex: Brave Search Rate Limits
+- Brave Search API has strict rate limits (2 req/s on current plan). When hit, switch to browser + Google Search immediately
+- Don't fire 5+ parallel web_search calls — stagger them or use browser for bulk research
+- FounderFirst.org, Magnitt, FintechNews.ae are good fetchable sources for MENA VC data
 
 ## DECISIONS LOG
 (Every major decision made, with rationale)
