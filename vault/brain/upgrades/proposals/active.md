@@ -1,25 +1,21 @@
-# UPGRADE PROPOSALS
-
-Nexus writes proposals here. Jon approves/rejects.
-Status: PROPOSED → APPROVED → IMPLEMENTING → DEPLOYED → VERIFIED
+# Active Upgrade Proposals
 
 ---
 
-## UPGRADE PROPOSAL 2026-03-31
+## UPGRADE PROPOSAL — 2026-04-03
 
-**What:** Fix cascading cron job failures — `openclaw send` command removed/renamed
+**What:** Implement automated context compaction for the agent fleet using Anthropic's context engineering strategies (memory summarization + compaction pipeline)
 
-**Why:** 9 cron jobs (recon, apex, orion, nova-ap, nova-bt, nova-1x, nova-bsq, hunter, ledger) are ALL failing with `error: unknown command 'send'`. This means the entire fleet's scheduled tasks have been broken since ~March 29. The `dead-letter.sh` wrapper is catching them, but no actual work is being done. Secondary issue: config has unrecognized `forceIPv4` key in telegram channel config causing test-cron to fail too.
+**Why:** 10 out of 11 core agents are currently flagged for context bloat (10–11 items each, above the 8-item recommendation threshold). This directly degrades response quality as stale context crowds out fresh signal, and inflates token costs on every agent turn. The Anthropic cookbook just shipped a new "context engineering strategies" entry (scored 0.70 this week) covering memory, compaction, and summarization — timing is perfect to implement this properly.
 
-**Effort:** QUICK WIN
+**Effort:** MEDIUM
 
 **Implementation notes for Cipher:**
-1. Check what `openclaw send` was replaced with in 2026.3.28 — likely `openclaw message send` or similar. Run `openclaw help` to find the new command.
-2. Update all crontab entries or the scripts they call to use the new command syntax.
-3. Remove `forceIPv4` from `~/.openclaw/openclaw.json` → `channels.telegram` (or run `openclaw doctor --fix`).
-4. After fixing, manually trigger one job to verify the pipeline is restored.
-5. Bonus: 10/11 agents are bloat-flagged (10-11 items each, threshold 5). Consider a workspace cleanup pass while touching agent configs.
+- The Anthropic cookbook commit `feat(tool_use): add context engineering strategies cookbook` covers three patterns: rolling summarization, selective retention, and compaction triggers
+- For our fleet: add a compaction step to the nightly pipeline (agent-lab-nightly.js, Step 5/Bloat) — when an agent hits ≥8 items in queue, trigger a summarization pass that collapses the oldest 5 items into a single "digest" entry, preserving signal while cutting token load
+- The nightly bloat check already identifies candidates (10 flagged tonight); just needs a compaction action wired in after the flag
+- Consider a `--compact` flag on the bloat-check.js script to trigger on-demand
+- Secondary: fix the LangChain RSS URL (currently `Invalid URL` — blog.langchain.dev/rss/ may need to be `blog.langchain.dev/feed` or similar) to restore that research source
+- Also worth noting: dead-letter.sh PATH failures (`openclaw: command not found`) from March 27-30 indicate shell scripts need explicit PATH exports — add `export PATH=/opt/homebrew/bin:$PATH` at top of dead-letter.sh
 
-**Impact:** HIGH — fleet is effectively running blind on scheduled tasks. Every agent with a cron job is affected.
-
-**Status:** PROPOSED
+**Source signal:** Anthropic cookbook commit scored 0.70 (2026-03-31); fleet bloat confirmed 10/11 agents flagged tonight

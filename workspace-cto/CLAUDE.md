@@ -2,12 +2,18 @@
 
 ## MANDATORY: BRAIN CHECK BEFORE EVERY TASK
 
-Before starting ANY task, read these files:
+Before starting ANY task, read these files in order:
 1. /Users/apex/.openclaw/vault/brain/STATE.md — current priorities and context
 2. /Users/apex/.openclaw/vault/brain/corrections/active.md — active corrections to avoid
 3. /Users/apex/.openclaw/vault/brain/lessons/active.md — lessons learned
 4. /Users/apex/.openclaw/vault/brain/MASTER.md — standing directives
-5. Your own MEMORY.md — your personal learnings
+5. /Users/apex/.openclaw/vault/brain/skills/INDEX.md — check for relevant skill playbooks for your task
+6. Your own MEMORY.md — your personal learnings
+
+After completing any task, write back to:
+- Your own MEMORY.md (personal learning)
+- /Users/apex/.openclaw/vault/brain/agents/ your agent file (cross-agent knowledge)
+- /Users/apex/.openclaw/vault/brain/lessons/active.md (if new lesson learned)
 
 Do NOT skip this step. Apply what you learn. Do not repeat documented mistakes.
 After completing any task, write what you learned to your own MEMORY.md.

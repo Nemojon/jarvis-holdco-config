@@ -4,11 +4,7 @@
     "path": "/Users/apex/.openclaw/exec-approvals.sock",
     "token": "M0umfJtE2aV078xLcJevXSUERYXtb5mB"
   },
-  "defaults": {
-    "exec": "deny",
-    "fileRead": "deny",
-    "fileWrite": "deny"
-  },
+  "defaults": {},
   "agents": {
     "main": {
       "exec": "allow",
@@ -16,7 +12,8 @@
       "fileWrite": "allow",
       "allowlist": [
         {
-          "pattern": "**"
+          "pattern": "**",
+          "id": "1fb8ec92-47ce-4837-9f7d-d8c7b05a974b"
         }
       ]
     },
@@ -26,13 +23,16 @@
       "fileWrite": "allow",
       "allowlist": [
         {
-          "pattern": "/Users/apex/.openclaw/**"
+          "pattern": "/Users/apex/.openclaw/**",
+          "id": "4c69f9fd-4563-4036-9396-e6905904a695"
         },
         {
-          "pattern": "/Users/apex/Projects/**"
+          "pattern": "/Users/apex/Projects/**",
+          "id": "556fc228-7c3a-4557-85ba-e40d82dca496"
         },
         {
-          "pattern": "/tmp/**"
+          "pattern": "/tmp/**",
+          "id": "39ed7617-8142-4b59-ac91-49e41a84d5a6"
         }
       ]
     },
@@ -42,13 +42,16 @@
       "fileWrite": "allow",
       "allowlist": [
         {
-          "pattern": "/Users/apex/**"
+          "pattern": "/Users/apex/**",
+          "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e"
         },
         {
-          "pattern": "/tmp/**"
+          "pattern": "/tmp/**",
+          "id": "3d39f898-19e9-40d7-9ecd-1cfc50dc583b"
         },
         {
-          "pattern": "/opt/homebrew/**"
+          "pattern": "/opt/homebrew/**",
+          "id": "44378868-d260-4181-858a-b356310b9a3f"
         }
       ]
     },
@@ -59,19 +62,54 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "ae3790cd-90dd-4c40-8475-a8bcb27d1e42"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-apex/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "004cacef-a03b-4c7e-8241-72b5385b5d4b"
         },
         {
           "pattern": "/Users/apex/.openclaw/agents/apex/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "89e9cc66-8753-4f26-974d-076cde6a960e"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "pip", "git", "curl", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "awk", "head", "tail", "wc", "sort", "uniq", "date", "openclaw"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "pip",
+        "git",
+        "curl",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "awk",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "uniq",
+        "date",
+        "openclaw"
       ]
     },
     "recon": {
@@ -81,15 +119,45 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "632b9663-0509-47c6-91b1-d2a090c9cddd"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-recon/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "e1d49fe9-2148-4eba-8a9d-d9d9ea8bd040"
         }
       ],
       "execAllowlist": [
-        "curl", "wget", "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "chromium", "playwright"
+        "curl",
+        "wget",
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "chromium",
+        "playwright"
       ]
     },
     "signal": {
@@ -99,15 +167,44 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "5b3c32a2-34bf-405b-9e6f-fb15cfa329e6"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-signal/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "37d8cf39-265e-4509-8d99-663810a57266"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "ffmpeg", "imagemagick", "pandoc"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "ffmpeg",
+        "imagemagick",
+        "pandoc"
       ]
     },
     "ledger": {
@@ -117,15 +214,45 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "b3d0b6ca-48df-4ffd-8ade-9254d3ce25e4"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-ledger/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "d5ea6807-d8a7-48b0-9a72-ccbd5fb69943"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "pip", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "uniq", "date", "openclaw", "bc", "awk"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "pip",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "uniq",
+        "date",
+        "openclaw",
+        "bc",
+        "awk"
       ]
     },
     "aurora": {
@@ -135,15 +262,44 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "c0a11f86-8bc3-4554-aece-db137db32414"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-aurora/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "a7cd5fa8-9dbb-4d05-a5a9-ad82af41c855"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "curl", "ffmpeg", "pandoc"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "curl",
+        "ffmpeg",
+        "pandoc"
       ]
     },
     "counsel": {
@@ -153,15 +309,43 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "6e217719-68f9-48c2-a00e-8c6bd477af73"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-counsel/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "f105e2cd-2ed8-4a02-ac6c-b287156f08a7"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "pandoc", "wkhtmltopdf"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "pandoc",
+        "wkhtmltopdf"
       ]
     },
     "pastor-zion": {
@@ -171,15 +355,42 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "45d00ba9-3fa0-4c09-a8c4-761dc2d28b2c"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-pastor-zion/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "e2a0f039-cdd4-43a3-a760-d06f6c869d11"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "curl"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "curl"
       ]
     },
     "hunter": {
@@ -189,15 +400,43 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "c653f3cf-d241-48e0-8b05-967d7ced21fb"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-hunter/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "99767404-210c-42d8-9dec-4a0ea48ab81a"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "curl", "git"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "curl",
+        "git"
       ]
     },
     "atlas": {
@@ -207,15 +446,43 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "permissions": ["fileRead"]
+          "permissions": [
+            "fileRead"
+          ],
+          "id": "4f41ba48-d331-4606-929f-073db91d1f99"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-atlas/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "1e1cdb2e-f471-4252-9e4f-eb1134ae781d"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "npx", "python3", "jq", "cat", "ls", "mkdir", "cp", "mv", "rm", "echo", "grep", "sed", "head", "tail", "wc", "sort", "date", "openclaw", "curl", "git"
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "jq",
+        "cat",
+        "ls",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "echo",
+        "grep",
+        "sed",
+        "head",
+        "tail",
+        "wc",
+        "sort",
+        "date",
+        "openclaw",
+        "curl",
+        "git"
       ]
     },
     "agent-lab": {
@@ -225,11 +492,20 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/workspace-agent-lab/**",
-          "permissions": ["fileRead", "fileWrite"]
+          "permissions": [
+            "fileRead",
+            "fileWrite"
+          ],
+          "id": "d2873d0e-70f8-403b-bf89-1d733c74eab2"
         }
       ],
       "execAllowlist": [
-        "node", "npm", "cat", "ls", "echo", "jq"
+        "node",
+        "npm",
+        "cat",
+        "ls",
+        "echo",
+        "jq"
       ]
     }
   }

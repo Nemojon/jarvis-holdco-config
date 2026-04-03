@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.28",
-    "lastTouchedAt": "2026-03-31T01:56:43.363Z"
+    "lastTouchedVersion": "2026.4.2",
+    "lastTouchedAt": "2026-04-03T14:30:08.241Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T14:50:37.059Z",
@@ -104,6 +104,17 @@
         "identity": {
           "name": "Jarvis"
         },
+        "skills": [
+          "browser-automation",
+          "calendar-scheduling",
+          "telegram-delivery",
+          "quality-gate",
+          "council",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
         "subagents": {
           "allowAgents": [
             "apex",
@@ -115,7 +126,9 @@
             "pastor-zion",
             "aurora",
             "cto",
-            "counsel"
+            "counsel",
+            "council-sage",
+            "council-oracle"
           ]
         }
       },
@@ -131,16 +144,46 @@
             "openai/gpt-4.1-mini"
           ]
         },
+        "heartbeat": {
+          "every": "1h"
+        },
         "identity": {
           "name": "Nova"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "quality-gate",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "subagents": {
+          "allowAgents": [
+            "orion",
+            "atlas",
+            "hunter",
+            "recon",
+            "signal",
+            "ledger",
+            "pastor-zion",
+            "aurora",
+            "cto",
+            "counsel",
+            "agent-lab",
+            "council-sage",
+            "council-oracle"
+          ]
+        },
+        "workspace": "/Users/apex/.openclaw/workspace-apex"
       },
       {
         "id": "atlas",
         "name": "Aria",
         "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -148,7 +191,17 @@
         },
         "identity": {
           "name": "Aria"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "calendar-scheduling",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-atlas"
       },
       {
         "id": "hunter",
@@ -163,14 +216,25 @@
         },
         "identity": {
           "name": "Rex"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "web-research",
+          "investor-outreach",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-hunter"
       },
       {
         "id": "recon",
         "name": "Scout",
         "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -181,7 +245,17 @@
         },
         "identity": {
           "name": "Scout"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "web-research",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-recon"
       },
       {
         "id": "signal",
@@ -196,14 +270,23 @@
         },
         "identity": {
           "name": "Echo"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "content-creation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-signal"
       },
       {
         "id": "ledger",
         "name": "Vault",
         "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -211,14 +294,24 @@
         },
         "identity": {
           "name": "Vault"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "financial-ops",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-ledger"
       },
       {
         "id": "pastor-zion",
         "name": "Zion",
         "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -229,14 +322,24 @@
         },
         "identity": {
           "name": "Zion"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "telegram-delivery",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-pastor-zion"
       },
       {
         "id": "aurora",
         "name": "Luna",
         "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -244,7 +347,17 @@
         },
         "identity": {
           "name": "Luna"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "content-creation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-aurora"
       },
       {
         "id": "cto",
@@ -263,14 +376,28 @@
         },
         "identity": {
           "name": "Cipher"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "subagents": {
+          "allowAgents": [
+            "recon",
+            "agent-lab"
+          ]
+        },
+        "workspace": "/Users/apex/.openclaw/workspace-cto"
       },
       {
         "id": "counsel",
         "name": "Lex",
         "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
@@ -278,7 +405,18 @@
         },
         "identity": {
           "name": "Lex"
-        }
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "web-research",
+          "legal-compliance",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-counsel"
       },
       {
         "id": "agent-lab",
@@ -286,16 +424,65 @@
         "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
         "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "anthropic/claude-sonnet-4-6",
           "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
           ]
         },
         "identity": {
-          "emoji": "\ud83e\uddea"
-        }
+          "emoji": "🧪"
+        },
+        "skills": [
+          "browser-automation",
+          "telegram-delivery",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ]
+      },
+      {
+        "id": "council-sage",
+        "name": "Sage",
+        "workspace": "/Users/apex/.openclaw/workspace-council-sage",
+        "agentDir": "/Users/apex/.openclaw/agents/council-sage/agent",
+        "model": {
+          "primary": "openai/gpt-4.1",
+          "fallbacks": [
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Sage"
+        },
+        "skills": [
+          "browser-automation",
+          "web-research",
+          "google-workspace",
+          "self-improving"
+        ]
+      },
+      {
+        "id": "council-oracle",
+        "name": "Oracle",
+        "workspace": "/Users/apex/.openclaw/workspace-council-oracle",
+        "agentDir": "/Users/apex/.openclaw/agents/council-oracle/agent",
+        "model": {
+          "primary": "google/gemini-2.5-pro",
+          "fallbacks": [
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Oracle"
+        },
+        "skills": [
+          "browser-automation",
+          "web-research",
+          "google-workspace",
+          "self-improving"
+        ]
       }
     ]
   },
@@ -407,6 +594,14 @@
       }
     }
   },
+  "diagnostics": {
+    "enabled": true,
+    "cacheTrace": {
+      "enabled": true,
+      "filePath": "~/.openclaw/logs/otel-cache.json"
+    },
+    "stuckSessionWarnMs": 300000
+  },
   "plugins": {
     "load": {
       "paths": [
@@ -443,7 +638,48 @@
       "whatsapp": {
         "enabled": true,
         "config": {}
+      },
+      "browser": {
+        "enabled": true
+      },
+      "memory-lancedb": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "apiKey": "${OPENAI_API_KEY}",
+            "model": "text-embedding-3-small"
+          },
+          "autoCapture": true,
+          "autoRecall": true
+        }
+      },
+      "lobster": {
+        "enabled": true,
+        "config": {}
+      },
+      "llm-task": {
+        "enabled": true,
+        "config": {}
+      },
+      "diffs": {
+        "enabled": true,
+        "config": {}
+      },
+      "firecrawl": {
+        "enabled": false,
+        "config": {
+          "webFetch": {
+            "apiKey": "",
+            "onlyMainContent": true
+          },
+          "webSearch": {
+            "apiKey": ""
+          }
+        }
       }
+    },
+    "slots": {
+      "memory": "memory-lancedb"
     },
     "installs": {
       "perplexity": {
