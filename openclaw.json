@@ -32,6 +32,10 @@
       "anthropic:default": {
         "provider": "anthropic",
         "mode": "oauth"
+      },
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
       }
     }
   },
