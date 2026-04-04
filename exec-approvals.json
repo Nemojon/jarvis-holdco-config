@@ -44,9 +44,9 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775316983143,
-          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
-          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
+          "lastUsedAt": 1775318617263,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/tmp/**",

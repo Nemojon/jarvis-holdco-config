@@ -2,6 +2,7 @@
 auth-profiles.json
 **/auth-profiles.json
 .env
+.env.*
 *.env
 credentials/
 **/credentials/
@@ -28,6 +29,7 @@ telegram/
 subagents/
 
 # === Backup / Temp files ===
+backups/
 *.bak
 *.bak.*
 *.backup.*

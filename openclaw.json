@@ -41,6 +41,14 @@
         "provider": "google-ai-studio",
         "mode": "api_key"
       }
+    },
+    "cooldowns": {
+      "overloadedProfileRotations": 2,
+      "overloadedBackoffMs": 1000,
+      "rateLimitedProfileRotations": 1,
+      "billingBackoffHours": 5,
+      "billingMaxHours": 24,
+      "failureWindowHours": 24
     }
   },
   "models": {},
@@ -447,7 +455,7 @@
           ]
         },
         "identity": {
-          "emoji": "\ud83e\uddea",
+          "emoji": "🧪",
           "name": "Agent Lab"
         },
         "skills": [
@@ -487,7 +495,7 @@
         "workspace": "/Users/apex/.openclaw/workspace-council-oracle",
         "agentDir": "/Users/apex/.openclaw/agents/council-oracle/agent",
         "model": {
-          "primary": "google/gemini-2.5-pro",
+          "primary": "google-ai-studio/gemini-2.5-pro",
           "fallbacks": [
             "openai/gpt-4.1"
           ]
@@ -578,7 +586,11 @@
       "accounts": {
         "default": {
           "dmPolicy": "allowlist",
-          "botToken": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
+          "botToken": {
+            "source": "env",
+            "provider": "default",
+            "id": "TELEGRAM_DEFAULT_BOT_TOKEN"
+          },
           "allowFrom": [
             "970413391",
             "130902006",
@@ -590,7 +602,11 @@
         "nova": {
           "name": "Nova",
           "enabled": true,
-          "botToken": "8658810430:AAGbhd0gHo9a7vFiIjqeiwfgD97wZ83Tx6k",
+          "botToken": {
+            "source": "env",
+            "provider": "default",
+            "id": "TELEGRAM_NOVA_BOT_TOKEN"
+          },
           "dmPolicy": "allowlist",
           "allowFrom": [
             "970413391",
@@ -629,7 +645,11 @@
     },
     "auth": {
       "mode": "token",
-      "token": "bfa22dd3f8195a15c6b8d554fb0f152f27ce7148ff017a48"
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "GATEWAY_AUTH_TOKEN"
+      }
     },
     "remote": {
       "url": "ws://100.70.74.1:18789"
@@ -645,7 +665,7 @@
   "diagnostics": {
     "enabled": true,
     "cacheTrace": {
-      "enabled": true,
+      "enabled": false,
       "filePath": "~/.openclaw/logs/otel-cache.json"
     },
     "stuckSessionWarnMs": 300000
@@ -671,7 +691,11 @@
         "enabled": true,
         "config": {
           "webSearch": {
-            "apiKey": "BSA2_lmE8u4xY1s-xYp81a6eKhxWem6"
+            "apiKey": {
+              "source": "env",
+              "provider": "default",
+              "id": "BRAVE_API_KEY"
+            }
           }
         }
       },
@@ -713,23 +737,11 @@
         "enabled": true,
         "config": {}
       },
-      "firecrawl": {
-        "enabled": false,
-        "config": {
-          "webFetch": {
-            "apiKey": "",
-            "onlyMainContent": true
-          },
-          "webSearch": {
-            "apiKey": ""
-          }
-        }
-      },
       "voice-call": {
         "enabled": true
       },
       "searxng": {
-        "enabled": true,
+        "enabled": false,
         "config": {
           "webSearch": {
             "baseUrl": "http://localhost:8888"
@@ -761,6 +773,13 @@
         "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/whatsapp",
         "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/whatsapp",
         "installedAt": "2026-03-31T01:56:43.245Z"
+      }
+    }
+  },
+  "secrets": {
+    "providers": {
+      "default": {
+        "source": "env"
       }
     }
   }
