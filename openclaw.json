@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.2",
-    "lastTouchedAt": "2026-04-03T14:30:08.241Z"
+    "lastTouchedAt": "2026-04-04T08:27:46.799Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T14:50:37.059Z",
@@ -29,13 +29,13 @@
   },
   "auth": {
     "profiles": {
-      "anthropic:default": {
-        "provider": "anthropic",
-        "mode": "oauth"
-      },
       "openai:default": {
         "provider": "openai",
         "mode": "api_key"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
       }
     }
   },
@@ -43,21 +43,18 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-opus-4-6",
+        "primary": "openai-codex/gpt-5.3-codex",
         "fallbacks": [
-          "anthropic/claude-sonnet-4-6",
           "openai/gpt-4.1",
           "openai/gpt-4.1-mini"
         ]
       },
       "models": {
-        "anthropic/claude-sonnet-4-6": {},
-        "anthropic/claude-haiku-4-5": {},
-        "anthropic/claude-opus-4-6": {
-          "alias": "opus"
-        },
         "openai/gpt-4.1": {},
-        "openai/gpt-4.1-mini": {}
+        "openai/gpt-4.1-mini": {},
+        "openai-codex/gpt-5.3-codex": {
+          "alias": "codex"
+        }
       },
       "contextPruning": {
         "mode": "cache-ttl",
@@ -74,10 +71,10 @@
       {
         "id": "main",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -91,10 +88,10 @@
         "workspace": "/Users/apex/.openclaw/workspace-orion",
         "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -137,10 +134,10 @@
         "name": "Nova",
         "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -183,9 +180,9 @@
         "name": "Aria",
         "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -208,9 +205,10 @@
         "name": "Rex",
         "agentDir": "/Users/apex/.openclaw/agents/hunter/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -234,9 +232,9 @@
         "name": "Scout",
         "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -262,9 +260,10 @@
         "name": "Echo",
         "agentDir": "/Users/apex/.openclaw/agents/signal/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -286,9 +285,9 @@
         "name": "Vault",
         "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -311,9 +310,9 @@
         "name": "Zion",
         "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -339,9 +338,9 @@
         "name": "Luna",
         "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -364,10 +363,10 @@
         "name": "Cipher",
         "agentDir": "/Users/apex/.openclaw/agents/cto/agent",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
             "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -397,9 +396,9 @@
         "name": "Lex",
         "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -424,14 +423,15 @@
         "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
         "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "openai/gpt-4.1",
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
         "identity": {
-          "emoji": "🧪"
+          "emoji": "\ud83e\uddea",
+          "name": "Agent Lab"
         },
         "skills": [
           "browser-automation",
@@ -450,6 +450,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
+            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -492,6 +493,9 @@
         "enabled": true,
         "provider": "brave"
       }
+    },
+    "exec": {
+      "host": "node"
     }
   },
   "bindings": [
@@ -551,7 +555,11 @@
         "1806224103"
       ],
       "groupPolicy": "allowlist",
-      "streaming": "off"
+      "streaming": "off",
+      "network": {
+        "dnsResultOrder": "ipv4first",
+        "autoSelectFamily": false
+      }
     },
     "slack": {
       "mode": "socket",
@@ -674,6 +682,17 @@
           },
           "webSearch": {
             "apiKey": ""
+          }
+        }
+      },
+      "voice-call": {
+        "enabled": true
+      },
+      "searxng": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "baseUrl": "http://localhost:8888"
           }
         }
       }

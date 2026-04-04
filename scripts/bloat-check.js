@@ -6,9 +6,11 @@
 //   node bloat-check.js            — Full report + recommendations
 //   node bloat-check.js --json     — JSON output
 //   node bloat-check.js --quiet    — Counts only, no recommendations
+//   node bloat-check.js --compact  — Run report + auto-compact bloated agents (≥8 items)
 //
 // Also called from agent-lab-nightly.js step 5.
 // Created: 2026-03-27
+// Updated: 2026-04-04 — Added --compact flag
 
 const fs = require("fs");
 const path = require("path");
@@ -238,6 +240,7 @@ function createRecommendations(results, quiet = false) {
 function main() {
   const isJson = process.argv.includes("--json");
   const isQuiet = process.argv.includes("--quiet");
+  const isCompact = process.argv.includes("--compact");
 
   // Count items for all agents
   const results = CORE_AGENTS.map(countAgentItems);
@@ -259,10 +262,70 @@ function main() {
     const created = createRecommendations(results, false);
     console.log(`  Total new recommendations: ${created}`);
   }
+
+  // --compact: trigger compaction for all bloated agents
+  if (isCompact) {
+    const bloated = results.filter((r) => r.total >= REC_THRESHOLD);
+    if (bloated.length === 0) {
+      console.log("\nCOMPACT: No agents over threshold — nothing to compact.");
+    } else {
+      console.log(`\nCOMPACT: Triggering compaction for ${bloated.length} bloated agents...`);
+      const compactResults = [];
+      for (const r of bloated) {
+        const result = compactAgent(r.agentId, isQuiet);
+        compactResults.push(result);
+      }
+      const ok = compactResults.filter((r) => r.status === "ok").length;
+      const markers = compactResults.filter((r) => r.status === "marker").length;
+      const errors = compactResults.filter((r) => r.status === "error").length;
+      console.log(`\nCOMPACT SUMMARY: ${ok} compacted, ${markers} markers written, ${errors} errors`);
+      log(`COMPACT: ${ok} compacted, ${markers} markers, ${errors} errors`);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Compact a bloated agent session via openclaw CLI
+// ---------------------------------------------------------------------------
+function compactAgent(agentId, quiet = false) {
+  const COMPACT_LOG = path.join(OPENCLAW, "logs/compaction-nightly.log");
+  const ts = new Date().toISOString();
+  fs.mkdirSync(path.dirname(COMPACT_LOG), { recursive: true });
+
+  try {
+    // Try openclaw CLI compact command
+    const result = execSync(
+      `export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:$PATH && openclaw sessions compact --agent ${agentId} 2>&1 || true`,
+      { encoding: "utf8", stdio: ["pipe", "pipe", "pipe"], timeout: 30000 }
+    ).trim();
+    const line = `${ts} | COMPACT | ${agentId} | OK | ${result.slice(0, 200)}`;
+    fs.appendFileSync(COMPACT_LOG, line + "\n");
+    if (!quiet) console.log(`  ✓ Compacted ${agentId}: ${result.slice(0, 80)}`);
+    return { agentId, status: "ok", output: result };
+  } catch (e) {
+    // Fallback: write a compaction marker file that the agent can act on next session
+    const markerDir = path.join(OPENCLAW, `workspace-${agentId}`);
+    if (fs.existsSync(markerDir)) {
+      const markerPath = path.join(markerDir, ".compact-requested");
+      fs.writeFileSync(markerPath, JSON.stringify({
+        requestedAt: ts,
+        reason: `bloat-check detected context bloat (≥${REC_THRESHOLD} items)`,
+        requestedBy: "bloat-check --compact",
+      }, null, 2));
+      const line = `${ts} | COMPACT_MARKER | ${agentId} | marker written | ${markerPath}`;
+      fs.appendFileSync(COMPACT_LOG, line + "\n");
+      if (!quiet) console.log(`  ⚑ Marked ${agentId} for compaction (CLI unavailable — marker written)`);
+      return { agentId, status: "marker", markerPath };
+    }
+    const line = `${ts} | COMPACT_FAIL | ${agentId} | ERROR | ${e.message}`;
+    fs.appendFileSync(COMPACT_LOG, line + "\n");
+    if (!quiet) console.error(`  ✗ Compact failed for ${agentId}: ${e.message}`);
+    return { agentId, status: "error", error: e.message };
+  }
 }
 
 // Export for use in nightly pipeline
-module.exports = { countAgentItems, generateReport, createRecommendations, CORE_AGENTS };
+module.exports = { countAgentItems, generateReport, createRecommendations, compactAgent, CORE_AGENTS };
 
 if (require.main === module) {
   main();

@@ -218,8 +218,8 @@ async function scrapeAll() {
     { url: "https://api.github.com/repos/anthropics/anthropic-cookbook/commits?per_page=10", parser: "github", name: "anthropic-cookbook" },
     { url: "https://simonwillison.net/atom/everything/", parser: "rss", name: "simonwillison" },
     { url: "https://lilianweng.github.io/index.xml", parser: "rss", name: "lilianweng" },
-    { url: "https://blog.langchain.dev/rss/", parser: "rss", name: "langchain" },
-    { url: "https://huggingface.co/blog/feed.xml", parser: "rss", name: "huggingface" },
+    { url: "https://blog.langchain.dev/feed", parser: "rss", name: "langchain" },
+    { url: "https://huggingface.co/papers.rss", parser: "rss", name: "huggingface-papers" },
   ];
 
   const allItems = [];
@@ -238,6 +238,49 @@ async function scrapeAll() {
     }
   }
   return allItems;
+}
+
+// ---------------------------------------------------------------------------
+// STEP 1b: DATE FILTER — skip items older than 30 days
+// ---------------------------------------------------------------------------
+function isItemFresh(item, maxAgeDays = 30) {
+  // Check URL for stale year patterns (e.g. /2021/, /2022/)
+  const currentYear = new Date().getFullYear();
+  const urlYearMatch = item.source_url.match(/\/(20\d\d)\//); 
+  if (urlYearMatch) {
+    const urlYear = parseInt(urlYearMatch[1]);
+    if (currentYear - urlYear > 0) {
+      // More than a year old by URL heuristic
+      return false;
+    }
+  }
+
+  if (!item.pub_date) return true; // Can't determine age — allow through
+
+  try {
+    const parsed = new Date(item.pub_date);
+    if (isNaN(parsed.getTime())) return true; // Unparseable date — allow through
+    const ageMs = Date.now() - parsed.getTime();
+    const ageDays = ageMs / (1000 * 60 * 60 * 24);
+    return ageDays <= maxAgeDays;
+  } catch {
+    return true; // Parsing error — allow through
+  }
+}
+
+function filterFresh(items) {
+  const fresh = [];
+  let stale = 0;
+  for (const item of items) {
+    if (isItemFresh(item)) {
+      fresh.push(item);
+    } else {
+      log(`DATE_FILTER: Skipping stale item — "${item.title.slice(0, 60)}" (${item.pub_date || item.source_url})`);
+      stale++;
+    }
+  }
+  log(`DATE_FILTER: ${fresh.length} fresh, ${stale} stale items filtered out`);
+  return fresh;
 }
 
 // ---------------------------------------------------------------------------
@@ -489,10 +532,14 @@ async function main() {
   const rawItems = await scrapeAll();
   log(`SCRAPE TOTAL: ${rawItems.length} items from all sources`);
 
+  // STEP 1b: DATE FILTER
+  log("--- STEP 1b: DATE FILTER ---");
+  const datedItems = filterFresh(rawItems);
+
   // STEP 2: DEDUP
   log("--- STEP 2: DEDUP ---");
-  const freshItems = dedup(rawItems);
-  log(`DEDUP: ${freshItems.length} new items (${rawItems.length - freshItems.length} duplicates skipped)`);
+  const freshItems = dedup(datedItems);
+  log(`DEDUP: ${freshItems.length} new items (${datedItems.length - freshItems.length} duplicates skipped)`);
 
   // STEP 3: SCORE
   log("--- STEP 3: SCORE ---");
@@ -534,7 +581,7 @@ async function main() {
   log("--- STEP 9: REPORT ---");
   const report = `🧪 *Agent Lab nightly report* — ${today}
 
-Sources scraped: ${6}
+Sources scraped: ${rawItems.length} raw → ${datedItems.length} after date filter
 New items found: ${freshItems.length}
 Items scored above 0.3: ${aboveThreshold.length}
 Items saved to research DB: ${saved}

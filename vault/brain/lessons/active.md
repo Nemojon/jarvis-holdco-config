@@ -54,3 +54,21 @@ Repeat count > 3 = escalation required.
 **Context:** Scout's DFS report listed a speaker application URL (get-involved → Speak) that actually loads a ticket purchase page. The #1 action item in the report pointed to a potentially dead end.
 **Lesson:** Any report that includes a "do this now" action with a URL must have that URL verified as working and leading to the correct destination. Broken or misleading links in the #1 action item destroy report credibility. Scout and all agents producing actionable research must click-test every URL they include.
 **Status:** Active.
+
+## LES-011 — Calendar Browser Redirects to Wrong Account (2026-04-04)
+**Context:** Navigating to calendar.google.com/calendar/u/1/ consistently redirects to /u/0 (jonathan.lyt89ai@gmail.com AI agent account instead of jon@biptap.com). Calendar data for Jon's account is invisible.
+**Lesson:** Browser Google account order is not stable. Need to either: (a) bookmark/force the correct account via authuser param, (b) verify which account loaded after navigation, or (c) add jon@biptap.com calendar to the AI agent account as a shared calendar. This is a repeat of the Mar 31 finding — escalate to corrections.
+**Repeat count:** 2
+**Status:** Active — needs fix.
+
+## LES-012 — Cron Delivery Targeting Still Broken (2026-04-04)
+**Context:** MORNING COMMAND and STATE.md cron jobs failing with "Telegram recipient @heartbeat could not be resolved." Delivery channel set to 'last' instead of explicit chat ID.
+**Lesson:** All cron jobs that deliver to Jon must use explicit delivery config: channel=telegram, to=970413391. Using 'last' or '@heartbeat' causes silent delivery failures. Audit all cron delivery configs.
+**Repeat count:** 1
+**Status:** Active — needs cron config fix.
+
+## LES-013 — Vault Token Monitor Chronic Timeouts (2026-04-04)
+**Context:** Token Balance Monitor has 4 consecutive timeout errors. Browser-based billing page scraping is unreliable.
+**Lesson:** Browser-based billing checks are fragile — pages load slowly, require auth, and timeout at 120-360s. Need either: (a) API-based balance checks, (b) increased timeout, or (c) a lighter-weight check method. Token spend visibility is a blind spot when this job fails.
+**Repeat count:** 4 — ESCALATION THRESHOLD.
+**Status:** Active — escalate to Cipher.

@@ -2,6 +2,28 @@
 
 ---
 
+## ✅ IMPLEMENTED — 2026-04-04 (by Cipher)
+
+**What:** Add date-based filtering + source recalibration to the nightly research pipeline to eliminate stale content ingestion
+
+**Why:** Last night's scan processed 583 items but only 2 scored above 0.3, and 0 new recommendations were generated. The culprit: the HuggingFace blog feed is returning years-old posts (BERT 101, Gradio 3.0, Wav2Vec2 tutorials — all from 2021-2022). The pipeline is wasting cycles and producing no signal. This is why we've had stretches of 0 recommendations — the research engine is blind to what's actually happening in AI right now.
+
+**Effort:** QUICK WIN
+
+**Implementation notes for Cipher:**
+- In `agent-lab-nightly.js`, add a date filter in Step 3/4 (scoring): skip any item whose `pubDate` or `isoDate` is older than 30 days. Most RSS feeds include publication dates.
+- If pubDate is missing, use the item's URL or title heuristic (year in URL like `/2021/` → skip).
+- Also audit/replace the HuggingFace source — instead of `huggingface.co/blog` RSS (returns old posts), target `huggingface.co/papers` daily feed or the HF Papers newsletter which surfaces current arxiv hits.
+- Add `https://simonwillison.net/atom/everything/` as a supplemental source — Simon covers bleeding-edge LLM tooling daily.
+- Consider adding `https://www.anthropic.com/research` RSS if available.
+- Secondary: the LangChain RSS URL has been failing with `Invalid URL` — check `blog.langchain.dev/rss` vs `blog.langchain.dev/feed`.
+
+**Expected outcome:** Recommendations per night should go from ~0 to 3-5 actionable items; scoring distribution will shift meaningfully above 0.5.
+
+**Source signal:** 0/583 items actionable last night; reviewed scored items confirm 2021-era HF blog content dominating the feed
+
+---
+
 ## UPGRADE PROPOSAL — 2026-04-03
 
 **What:** Implement automated context compaction for the agent fleet using Anthropic's context engineering strategies (memory summarization + compaction pipeline)
