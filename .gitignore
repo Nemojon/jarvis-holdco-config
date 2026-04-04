@@ -56,3 +56,6 @@ openclaw.json.pre-*
 crontab-pre-consolidation.bak
 refresh-oauth.sh
 update-check.json
+
+# Cron jobs (contains embedded API tokens in message payloads)
+cron/jobs.json
