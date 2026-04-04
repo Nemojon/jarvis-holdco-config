@@ -8,10 +8,10 @@ Every agent: check this index before any task. If a relevant playbook exists, re
 | Agent Browser | agent-browser.md | Scout, Cipher, Rex | Headless browser automation via accessibility tree snapshots + refs |
 | LinkedIn Research | linkedin-research.md | Scout, Luna, Rex | Profile monitoring, engagement tracking, Apify fallback |
 | Content Creation | content-creation.md | Echo, Luna | Voice profile, hook tracking, brand voice, approval chain |
-| ClickUp Tasks | clickup-tasks.md | Aria, Vault, Lex, Nova, Zion | API access, task CRUD, dedup, pipeline management |
+| ClickUp Tasks | clickup-tasks.md | Aria, Vault, Lex, Nova, Zion, Luna | API access, task CRUD, dedup, pipeline management |
 | Calendar Scheduling | calendar-scheduling.md | Jarvis, Aria | Google Calendar via browser, Jon's locked directive |
 | Telegram Delivery | telegram-delivery.md | Jarvis, Zion, Agent Lab | Message formatting, chat IDs, bot access |
-| Web Research | web-research.md | Scout, Rex, Lex | Brave Search, Apify scrapers, rate-limit fallback |
+| Web Research | web-research.md | Scout, Rex, Lex, Luna | Brave Search, Apify scrapers, rate-limit fallback |
 | Financial Ops | financial-ops.md | Vault | Cost tracking, billing dashboards, KPI reporting |
 | Investor Outreach | investor-outreach.md | Rex | Pipeline stages, prospect research, cold outreach |
 | Quality Gate | quality-gate.md | Nova, Jarvis | Review checklist, rejection criteria, approval workflow |

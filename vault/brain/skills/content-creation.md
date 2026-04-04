@@ -25,6 +25,17 @@ Writing content as Jon (LinkedIn posts, thought leadership), drafting brand cont
 - Premium aesthetic — black and gold, editorial quality
 - Rejects anything templated or AI-generated looking
 
+## MANDATORY HOOK GATE (Luna Enforcement)
+Luna: Before approving ANY content batch from Echo, independently verify:
+1. Read `/Users/apex/.openclaw/workspace-signal/content-used-hooks.md`
+2. Cross-reference every hook in the batch against the Used Hooks table
+3. Cross-reference against the Retired Hooks table
+4. **REJECT** any batch containing a hook used in the last 14 days or on the retired list
+5. After approving a batch, ensure Echo has logged all new hooks with today's date
+6. If Echo failed to log, log them yourself before marking batch approved
+
+Failure to enforce this gate = COR-003 violation. No exceptions.
+
 ## Known Pitfalls
 - Content hooks get recycled across days — "fired top performer" and "prison to Forbes" appeared in both Mar 25 and Mar 28 drafts (COR-003). Maintain used-hooks log, reject any hook from past 14 days.
 - All outputs to Nova for quality review before delivery — never deliver directly to Jon

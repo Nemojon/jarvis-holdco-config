@@ -7,11 +7,11 @@
 # makes an API call. If no Claude Code session is active, the token expires
 # and the gateway dies.
 #
-# Solution: When the token is within 2 hours of expiry, run a minimal Claude
-# Code prompt that forces the SDK to refresh the token in the Keychain.
+# Solution: When the token is within 15 minutes of expiry, run a minimal Claude
+# Code prompt. The SDK auto-refreshes tokens near expiry during initialization.
 # Then trigger sync-oauth.sh to propagate the fresh token to all agents.
 #
-# Runs every 30 minutes via launchd.
+# Runs every 5 minutes via launchd (StartInterval=300).
 # =============================================================================
 
 set -uo pipefail
@@ -20,7 +20,7 @@ LOG="/tmp/openclaw/token-keeper.log"
 SYNC_LOG="/tmp/openclaw/oauth-sync.log"
 OPENCLAW_HOME="${HOME}/.openclaw"
 MAX_LOG_LINES=200
-REFRESH_WINDOW=7200  # 2 hours in seconds
+REFRESH_WINDOW=900  # 15 minutes — close enough for SDK to auto-refresh
 
 mkdir -p /tmp/openclaw
 
@@ -57,16 +57,16 @@ else
   log "REFRESH: Token expires in ${REMAINING_H}h (${REMAINING}s). Triggering refresh..."
 fi
 
-# ── Force token refresh via minimal Claude Code API call ─────────────────────
-# This makes the Claude Code SDK check the token, see it's near expiry,
-# and use the refresh_token to get a new access_token from Anthropic.
+# ── Force token refresh via Claude Code API call ─────────────────────────────
+# Run a minimal Claude Code prompt. The SDK checks the token on initialization
+# and refreshes it if near/past expiry. With REFRESH_WINDOW=900 and launchd
+# interval=300, we catch the token close enough for the SDK to auto-refresh.
 OLD_EXPIRY="$EXPIRES_MS"
 
-REFRESH_OUTPUT=$(echo "say ok" | gtimeout 30 claude -p "reply with just the word ok" --max-turns 1 2>&1 || echo "CLAUDE_FAILED")
+REFRESH_OUTPUT=$(echo "say ok" | gtimeout 45 claude -p "reply with just the word ok" --max-turns 1 2>&1 || echo "CLAUDE_FAILED")
 
 if echo "$REFRESH_OUTPUT" | grep -q "CLAUDE_FAILED\|error\|Error"; then
-  log "WARN: Claude Code refresh call failed: $(echo "$REFRESH_OUTPUT" | head -1)"
-  # Even if the prompt failed, the SDK may have refreshed the token
+  log "WARN: Claude Code refresh call returned: $(echo "$REFRESH_OUTPUT" | head -1)"
 fi
 
 # ── Check if token actually changed ──────────────────────────────────────────

@@ -74,14 +74,15 @@
 ### System Health
 - **Gateway:** ✅ Running (Mac mini M4)
 - **Browser:** ✅ Brave running (Openclaw profile + /u/1 for jon@biptap.com calendar)
-- **OAuth refresh:** ✅ Every 4hrs
-- **Fallback chain:** ✅ Opus → Sonnet → GPT-4.1 → GPT-4.1-mini
+- **Primary/Fallback chain (current):** ✅ openai-codex/gpt-5.3-codex → google-ai-studio/gemini-2.5-pro → openai/gpt-4.1 → openai/gpt-4.1-mini
+- **Provider/auth update:** ✅ google-ai-studio provider + auth profile added globally
+- **MCP gateway token:** ✅ Fixed; Cortex-to-Jarvis connectivity restored
 - **Plugins:** 51 loaded
 
 ### Cron Fleet (20 jobs)
-- 🟡 **12/20 erroring** — LiveSessionModelSwitchError persists
+- 🟢 **Post-fix:** 14/20 clean, 4 set to self-heal next run, 2 weekly jobs awaiting first trigger
 - ✅ **Working today:** Morning Command, STATE.md update, Echo content, Scout intel — all fired
-- 🔴 **Cipher task open:** Fix remaining session model switch errors
+- ✅ **Session mismatch errors:** 154 historical errors cleared; 0 since restart
 - 🟡 **Token Balance Monitor:** 4 consecutive timeouts (timeout increased to 300s)
 
 ### Calendar Connectivity (as of Apr 3)
@@ -105,7 +106,8 @@
 
 ## 5. RECENT CONTEXT (Apr 3–4)
 
-- **Apr 4 AM:** Morning Command delivered. Cron fleet partial (12/20 erroring). LinkedIn DM scan complete (3 critical). 3 content drafts from Echo ready. 4 ClickUp urgent items flagged (9MAi, Ambassador refund, Uphold, DHL hash). Agent Lab nightly stale since Mar 27.
+- **Apr 4 AM:** Morning Command delivered. LinkedIn DM scan complete (3 critical). 3 content drafts from Echo ready. 4 ClickUp urgent items flagged (9MAi, Ambassador refund, Uphold, DHL hash). Agent Lab nightly stale since Mar 27.
+- **Apr 4 PM/Late Night:** Cortex completed infra fix: model chain moved to codex → gemini-2.5-pro → gpt-4.1 → gpt-4.1-mini across all agents, google-ai-studio auth/provider added, MCP gateway token fixed, 154 session key mismatch errors cleared, and 4 ghost Nova dirs removed.
 - **Apr 3:** Jon returned after 2-day absence. Full cron fleet reboot. OpenAI fallback chain wired. EVENING CLOSE/MIDDAY PULSE delivery targeting fixed. Morning Brief SOP created and saved.
 
 ---

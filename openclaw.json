@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.2",
-    "lastTouchedAt": "2026-04-04T08:27:46.799Z"
+    "lastTouchedAt": "2026-04-04T14:07:21.959Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T14:50:37.059Z",
@@ -36,6 +36,10 @@
       "openai-codex:default": {
         "provider": "openai-codex",
         "mode": "oauth"
+      },
+      "google-ai-studio:default": {
+        "provider": "google-ai-studio",
+        "mode": "api_key"
       }
     }
   },
@@ -45,6 +49,7 @@
       "model": {
         "primary": "openai-codex/gpt-5.3-codex",
         "fallbacks": [
+          "google-ai-studio/gemini-2.5-pro",
           "openai/gpt-4.1",
           "openai/gpt-4.1-mini"
         ]
@@ -54,7 +59,8 @@
         "openai/gpt-4.1-mini": {},
         "openai-codex/gpt-5.3-codex": {
           "alias": "codex"
-        }
+        },
+        "google-ai-studio/gemini-2.5-pro": {}
       },
       "contextPruning": {
         "mode": "cache-ttl",
@@ -73,8 +79,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -90,8 +96,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -136,8 +142,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -154,7 +160,14 @@
           "google-workspace",
           "auto-updater",
           "agent-browser",
-          "self-improving"
+          "self-improving",
+          "council",
+          "web-research",
+          "telegram-delivery",
+          "calendar-scheduling",
+          "linkedin-research",
+          "investor-outreach",
+          "content-creation"
         ],
         "subagents": {
           "allowAgents": [
@@ -182,7 +195,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -207,8 +220,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -234,7 +247,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -262,8 +275,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -287,7 +300,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -312,7 +325,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -338,9 +351,10 @@
         "name": "Luna",
         "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
+            "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -354,7 +368,10 @@
           "google-workspace",
           "auto-updater",
           "agent-browser",
-          "self-improving"
+          "self-improving",
+          "video-content",
+          "clickup-tasks",
+          "web-research"
         ],
         "workspace": "/Users/apex/.openclaw/workspace-aurora"
       },
@@ -365,8 +382,8 @@
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1",
-            "qwen-portal/coder-model",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -398,7 +415,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -425,7 +442,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -450,7 +467,7 @@
         "model": {
           "primary": "openai/gpt-4.1",
           "fallbacks": [
-            "qwen-portal/coder-model",
+            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -495,7 +512,7 @@
       }
     },
     "exec": {
-      "host": "node"
+      "host": "gateway"
     }
   },
   "bindings": [
@@ -504,6 +521,13 @@
       "match": {
         "channel": "telegram",
         "accountId": "default"
+      }
+    },
+    {
+      "agentId": "apex",
+      "match": {
+        "channel": "telegram",
+        "accountId": "nova"
       }
     }
   ],
@@ -547,18 +571,34 @@
   "channels": {
     "telegram": {
       "enabled": true,
-      "dmPolicy": "allowlist",
-      "botToken": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
-      "allowFrom": [
-        "970413391",
-        "130902006",
-        "1806224103"
-      ],
-      "groupPolicy": "allowlist",
-      "streaming": "off",
       "network": {
         "dnsResultOrder": "ipv4first",
         "autoSelectFamily": false
+      },
+      "accounts": {
+        "default": {
+          "dmPolicy": "allowlist",
+          "botToken": "8710384496:AAG1cWbSz0QXMp20WYwGh_8c5umtS_s8QMs",
+          "allowFrom": [
+            "970413391",
+            "130902006",
+            "1806224103"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        },
+        "nova": {
+          "name": "Nova",
+          "enabled": true,
+          "botToken": "8658810430:AAGbhd0gHo9a7vFiIjqeiwfgD97wZ83Tx6k",
+          "dmPolicy": "allowlist",
+          "allowFrom": [
+            "970413391",
+            "130902006"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        }
       }
     },
     "slack": {

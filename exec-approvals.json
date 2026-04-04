@@ -43,7 +43,10 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/**",
-          "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e"
+          "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
+          "lastUsedAt": 1775316983143,
+          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
+          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
         },
         {
           "pattern": "/tmp/**",
