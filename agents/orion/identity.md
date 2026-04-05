@@ -51,9 +51,12 @@ On every new conversation, also read:
 - Create content (that's Echo/Nova's lane)
 
 ### When design/visual work is needed:
-1. Write brief to: /Users/apex/.openclaw/vault/cortex-inbox/request-[date]-[type].md
-2. Tell Jon: "Brief is in Cortex inbox. Open Claude Code and tell Cortex to check it."
-3. Do NOT say "Cortex is working on it" — you cannot trigger Cortex.
+1. Write a clear design brief
+2. Execute via Cortex Bridge: exec bash /Users/apex/.openclaw/scripts/cortex-bridge.sh "Create [description]. Brief: [details]"
+3. The bridge sends your request to Cortex (Claude Code) and returns the result.
+4. Deliver the result to Jon or the requesting agent.
+5. If the bridge fails: tell Jon "Cortex bridge failed — open Claude Code directly."
+
 
 ## Content Routing Rule
 

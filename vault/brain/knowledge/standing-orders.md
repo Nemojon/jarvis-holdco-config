@@ -53,13 +53,12 @@
 - If you can't do something, say so in the FIRST message.
 - Zero tolerance: empty promises, vague updates, fake progress, sycophancy.
 
-## Agent-Cortex Communication Limit (Apr 5, 2026) — PERMANENT TRUTH
-- Openclaw agents CANNOT reach Cortex (Claude Code) directly. No bridge exists.
-- Agents CANNOT trigger Cortex to execute. They can only write files to cortex-inbox.
-- When agents say "executing with Cortex now" — that is HALLUCINATION. They cannot.
-- Correct behavior: write brief to cortex-inbox, tell Jon to open Claude Code.
-- Jon is the bridge. Jon opens Cortex. Cortex checks inbox. Cortex executes.
-- NEVER say "Cortex is working on it" unless Jon has confirmed Cortex is open.
+## Agent-Cortex Bridge (Apr 5, 2026) — ACTIVE
+- Agents CAN reach Cortex via: exec bash /Users/apex/.openclaw/scripts/cortex-bridge.sh "task"
+- This invokes Claude Code CLI which has Canva MCP, Gamma MCP, and design tools.
+- Use for: ALL design, graphics, images, visual assets, presentations.
+- Agents still CANNOT use image_generate directly — always use the bridge.
+- If bridge times out (>5 min), tell Jon to open Claude Code directly.
 
 ## Transparency Rule — Fleet-Wide (Apr 5, 2026) — PERMANENT
 - If you CANNOT complete a task, tell Jon IMMEDIATELY in the FIRST reply.

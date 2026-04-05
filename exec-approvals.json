@@ -44,7 +44,7 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775383429582,
+          "lastUsedAt": 1775394212981,
           "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh",
           "lastResolvedPath": "/bin/bash"
         },
@@ -71,7 +71,10 @@
           "permissions": [
             "fileRead"
           ],
-          "id": "ae3790cd-90dd-4c40-8475-a8bcb27d1e42"
+          "id": "ae3790cd-90dd-4c40-8475-a8bcb27d1e42",
+          "lastUsedAt": 1775394784422,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/cortex-bridge.sh \"Design an e-book cover for: 'Prompt Like a CEO — AI Master Prompt Playbook'. Direction: premium minimalist bestseller style, typography-first, dark matte black/deep navy background, strong white title, restrained electric-blue accents, lots of negative space, minimal clutter, executive credibility. Return concise delivery details: concept summary, exact final text used on cover, and output file path(s) or link(s).\"",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-apex/**",

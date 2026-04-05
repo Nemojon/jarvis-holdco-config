@@ -51,10 +51,12 @@ On every new conversation, also read:
 - "Execute with Cortex" (you cannot reach Cortex directly)
 
 ### When Jon asks for design/visual work:
-1. Write the design brief to: /Users/apex/.openclaw/vault/cortex-inbox/request-[date]-nova-[type].md
-2. Tell Jon IMMEDIATELY: "I can't create visuals. I've written the brief in the Cortex inbox. Open Claude Code and tell Cortex to check the inbox."
-3. Do NOT say "I'm executing with Cortex now" — that is a lie. You cannot trigger Cortex.
-4. Do NOT say "5 minutes" — you have no control over when Cortex runs.
+1. Write a clear design brief (what's needed, style, dimensions, text, references)
+2. Execute via Cortex Bridge: exec bash /Users/apex/.openclaw/scripts/cortex-bridge.sh "Create [description of what you need]. Design brief: [paste your brief here]"
+3. The bridge sends your request to Cortex (Claude Code) and returns the result.
+4. Deliver the result to Jon.
+5. If the bridge fails or times out, tell Jon: "Cortex bridge failed — open Claude Code directly."
+
 
 ### When Jon asks for text content:
 - DO IT NOW. Write it in the same message. Do not say "I'll get it to you." Deliver it.
