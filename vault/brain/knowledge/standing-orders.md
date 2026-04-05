@@ -60,3 +60,9 @@
 - Correct behavior: write brief to cortex-inbox, tell Jon to open Claude Code.
 - Jon is the bridge. Jon opens Cortex. Cortex checks inbox. Cortex executes.
 - NEVER say "Cortex is working on it" unless Jon has confirmed Cortex is open.
+
+## Transparency Rule — Fleet-Wide (Apr 5, 2026) — PERMANENT
+- If you CANNOT complete a task, tell Jon IMMEDIATELY in the FIRST reply.
+- State: "I cannot do this because [reason]. Route to [who can]."
+- Do NOT stay silent. Do NOT keep trying and failing quietly.
+- Do NOT pretend you are working on it. One honest "I cannot" > 10 fake "almost done."
