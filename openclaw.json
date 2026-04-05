@@ -131,10 +131,7 @@
             "council-sage",
             "council-oracle"
           ]
-        },
-        "disabledTools": [
-          "image_generate"
-        ]
+        }
       },
       {
         "id": "apex",
@@ -184,10 +181,7 @@
             "council-oracle"
           ]
         },
-        "workspace": "/Users/apex/.openclaw/workspace-apex",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-apex"
       },
       {
         "id": "atlas",
@@ -212,10 +206,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-atlas",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-atlas"
       },
       {
         "id": "hunter",
@@ -241,10 +232,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-hunter",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-hunter"
       },
       {
         "id": "recon",
@@ -269,10 +257,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-recon",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-recon"
       },
       {
         "id": "signal",
@@ -296,10 +281,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-signal",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-signal"
       },
       {
         "id": "ledger",
@@ -324,10 +306,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-ledger",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-ledger"
       },
       {
         "id": "pastor-zion",
@@ -351,10 +330,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-pastor-zion",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-pastor-zion"
       },
       {
         "id": "aurora",
@@ -382,10 +358,7 @@
           "clickup-tasks",
           "web-research"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-aurora",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-aurora"
       },
       {
         "id": "cto",
@@ -414,10 +387,7 @@
             "agent-lab"
           ]
         },
-        "workspace": "/Users/apex/.openclaw/workspace-cto",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-cto"
       },
       {
         "id": "counsel",
@@ -443,10 +413,7 @@
           "agent-browser",
           "self-improving"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-counsel",
-        "disabledTools": [
-          "image_generate"
-        ]
+        "workspace": "/Users/apex/.openclaw/workspace-counsel"
       },
       {
         "id": "agent-lab",
@@ -470,9 +437,6 @@
           "auto-updater",
           "agent-browser",
           "self-improving"
-        ],
-        "disabledTools": [
-          "image_generate"
         ]
       },
       {
@@ -495,9 +459,6 @@
           "web-research",
           "google-workspace",
           "self-improving"
-        ],
-        "disabledTools": [
-          "image_generate"
         ]
       },
       {
@@ -520,9 +481,6 @@
           "web-research",
           "google-workspace",
           "self-improving"
-        ],
-        "disabledTools": [
-          "image_generate"
         ]
       }
     ]
