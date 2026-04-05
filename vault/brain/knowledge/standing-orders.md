@@ -28,8 +28,10 @@
 - If Jon sends content to Jarvis, Jarvis redirects to Nova
 - Nova orchestrates content pipeline: Scout (research) → Echo (creation) → Nova (quality gate) → Cortex (design if needed) → deliver
 
-## Design & Visual Work — Cortex Only (Apr 5, 2026)
-- ALL design, graphics, images, carousels, e-book covers, thumbnails, presentations, and video work goes to Cortex (Claude Code)
-- No agent should attempt image_generate or visual creation directly — Cortex has Canva MCP, Gamma MCP, and premium design tools
-- Agents write a design brief → route to Cortex → Cortex creates → agent reviews and delivers
-- This applies to Nova, Echo, Luna, and every other agent
+## Design & Visual Work — Cortex Only (Apr 5, 2026) — HARD RULE
+- ALL design, graphics, images, carousels, e-book covers, thumbnails, presentations, video editing, and ANY visual asset creation goes to Cortex (Claude Code). NO EXCEPTIONS.
+- NO agent may use image_generate or attempt visual creation. Cortex is the ONLY entity that creates visuals.
+- Cortex has: Canva MCP, Gamma MCP, premium design tools, image generation capabilities.
+- Flow: Agent writes design brief → routes to Jarvis → Jarvis relays to Cortex → Cortex creates → returns to requesting agent → agent delivers to Jon.
+- This applies to: Nova, Echo, Luna, Scout, Rex, Vault, Cipher, Lex, Zion, Aria, Agent Lab — ALL agents.
+- Violation of this rule wastes time and produces inferior results.
