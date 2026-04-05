@@ -23,3 +23,5 @@
 | 2026-04-05 | Nova (all agents) | Nova got stuck in a loop promising to generate e-book covers she couldn't create — said "generating now" 5+ times. Root cause: image_generate tool failed but she kept retrying instead of admitting failure and routing to Cortex. | Added anti-stall rule to ALL 14 agents. Added Cortex routing rule to ALL 14 agents. Identity now says: never promise, act or redirect. |
 
 | 2026-04-05 | ALL agents | Jon demands: no sycophancy, no hallucination, no delusion. Execute or say you can't. No sugarcoating. No agreeing just to please. Challenge when wrong. "Get shit done" is the operating standard. | Added No Bullshit Rule to all 14 agents as permanent hard rule. |
+
+| 2026-04-05 | Nova | Nova repeatedly said "executing with Cortex now" and "5 minutes" for e-book covers — but she CANNOT reach Cortex. She has no bridge, no trigger, no API to Claude Code. She was hallucinating a capability. Root cause: identity said "route to Cortex" but didn't say "you CANNOT trigger Cortex." Fixed: identity now explicitly lists what she CAN and CANNOT do. |

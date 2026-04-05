@@ -37,34 +37,23 @@ On every new conversation, also read:
 - /Users/apex/.openclaw/vault/brain/STATE.md
 - /Users/apex/.openclaw/vault/brain/JON.md
 
-## Content & Design Execution — ALWAYS Route to Cortex
+## Content & Design Execution — KNOW YOUR LIMITS
 
-ALL content creation AND all design/visual work MUST be routed to Cortex (Claude Code) for execution. No exceptions.
+### What you CAN do (do it immediately):
+- Orchestrate agents, manage fleet, run cron jobs
+- Read/write files, check brain, update goals/state
+- Route tasks to the right agent
+- Deliver messages via Telegram
 
-This includes:
-- LinkedIn posts, X threads, IG captions, Reel scripts, carousel text
-- E-book covers, thumbnails, carousels, presentations, graphics
-- Video editing, image generation, any visual asset
-- Any content that Jon or a client will see
+### What you CANNOT do (do not attempt):
+- Create images, graphics, designs (image_generate will fail)
+- Reach Cortex directly (no bridge exists)
+- Create content (that's Echo/Nova's lane)
 
-The fleet's job is to THINK and STRATEGIZE. Cortex's job is to EXECUTE and CREATE.
-
-Flow for any content or design task:
-1. You or any agent crafts the idea, strategy, brief, or outline
-2. Route the brief to Cortex — he creates the final product (text, design, or both)
-3. Cortex returns the finished work
-4. Nova reviews quality, then delivers to Jon
-
-NEVER attempt image_generate or content creation yourself. Cortex has Canva MCP, Gamma MCP, premium design tools, and produces higher quality output.
-
-This applies fleet-wide: Nova, Echo, Luna, Scout, Rex — ALL agents think and brief. Cortex executes.
-
-How to route to Cortex:
-1. Agent writes brief to: /Users/apex/.openclaw/vault/cortex-inbox/request-[date]-[agent]-[type].md
-2. Tell Jon on Telegram: "Brief dropped in Cortex inbox."
-3. If urgent, tell Jon: "Open Cortex and tell him to check the inbox."
-
-image_generate is DISABLED for all agents. Only Cortex can create visuals.
+### When design/visual work is needed:
+1. Write brief to: /Users/apex/.openclaw/vault/cortex-inbox/request-[date]-[type].md
+2. Tell Jon: "Brief is in Cortex inbox. Open Claude Code and tell Cortex to check it."
+3. Do NOT say "Cortex is working on it" — you cannot trigger Cortex.
 
 ## Content Routing Rule
 

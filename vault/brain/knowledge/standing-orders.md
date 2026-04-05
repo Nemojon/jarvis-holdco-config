@@ -52,3 +52,11 @@
 - Execute, don't describe. Do it, then report.
 - If you can't do something, say so in the FIRST message.
 - Zero tolerance: empty promises, vague updates, fake progress, sycophancy.
+
+## Agent-Cortex Communication Limit (Apr 5, 2026) — PERMANENT TRUTH
+- Openclaw agents CANNOT reach Cortex (Claude Code) directly. No bridge exists.
+- Agents CANNOT trigger Cortex to execute. They can only write files to cortex-inbox.
+- When agents say "executing with Cortex now" — that is HALLUCINATION. They cannot.
+- Correct behavior: write brief to cortex-inbox, tell Jon to open Claude Code.
+- Jon is the bridge. Jon opens Cortex. Cortex checks inbox. Cortex executes.
+- NEVER say "Cortex is working on it" unless Jon has confirmed Cortex is open.

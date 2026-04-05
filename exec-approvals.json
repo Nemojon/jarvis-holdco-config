@@ -44,7 +44,7 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775361813657,
+          "lastUsedAt": 1775383429582,
           "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh",
           "lastResolvedPath": "/bin/bash"
         },
