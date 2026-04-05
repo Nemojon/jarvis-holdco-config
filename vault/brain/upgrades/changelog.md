@@ -36,3 +36,4 @@ Record of all implemented upgrades.
 **Expected outcome:** 0-recommendations-per-night streak ends; pipeline should surface 3-5 actionable items nightly from current sources only.
 
 **Proposal source:** Agent Lab proposals active.md, 2026-04-04
+2026-04-05: Fixed agent cron jobs by auditing all OpenClaw CLI uses for deprecated commands, validating config (removed forceIPv4), and running openclaw doctor. All automation restored. Minor config warning remains (disabled plugin searxng). No system health risks.

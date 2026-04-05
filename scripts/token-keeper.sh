@@ -52,7 +52,21 @@ if [[ "$REMAINING" -gt "$REFRESH_WINDOW" ]]; then
 fi
 
 if [[ "$REMAINING" -lt 0 ]]; then
-  log "CRITICAL: Token already expired ${REMAINING}s ago. Forcing refresh..."
+  # ── Backoff: don't hammer refresh if it's been failing ──────────────────────
+  FAIL_COUNT_FILE="/tmp/openclaw/token-keeper-fails"
+  FAIL_COUNT=0
+  if [[ -f "$FAIL_COUNT_FILE" ]]; then
+    FAIL_COUNT=$(cat "$FAIL_COUNT_FILE" 2>/dev/null || echo "0")
+  fi
+  # Exponential backoff: skip if fail count > 5 and not on a 30-min boundary
+  if [[ "$FAIL_COUNT" -gt 5 ]]; then
+    MINUTE=$(date +%M)
+    if [[ "$MINUTE" != "00" && "$MINUTE" != "30" ]]; then
+      log "BACKOFF: Token expired ${REMAINING_H}h ago. Fail count=${FAIL_COUNT}. Retrying only at :00/:30."
+      exit 0
+    fi
+  fi
+  log "CRITICAL: Token already expired ${REMAINING}s ago. Forcing refresh... (attempt $((FAIL_COUNT+1)))"
 else
   log "REFRESH: Token expires in ${REMAINING_H}h (${REMAINING}s). Triggering refresh..."
 fi
@@ -87,6 +101,12 @@ if [[ "$NEW_EXPIRES_MS" != "$OLD_EXPIRY" && "$NEW_EXPIRES_MS" != "0" ]]; then
   # Restart gateway to pick up new token
   openclaw gateway restart >> "$LOG" 2>&1 || true
   log "Gateway restarted with fresh token."
+  # Reset fail counter on success
+  echo "0" > "${FAIL_COUNT_FILE:-/tmp/openclaw/token-keeper-fails}"
 else
-  log "WARN: Token did not change after refresh attempt (expiry still ${REMAINING_H}h). Claude Code may not have been able to refresh."
+  # Increment fail counter for backoff
+  FAIL_COUNT_FILE="/tmp/openclaw/token-keeper-fails"
+  FAIL_COUNT=$(cat "$FAIL_COUNT_FILE" 2>/dev/null || echo "0")
+  echo "$((FAIL_COUNT + 1))" > "$FAIL_COUNT_FILE"
+  log "WARN: Token did not change after refresh attempt (expiry still ${REMAINING_H}h). Fail count=$((FAIL_COUNT+1))."
 fi

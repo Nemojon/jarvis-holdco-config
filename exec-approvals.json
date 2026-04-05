@@ -44,7 +44,7 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775318617263,
+          "lastUsedAt": 1775361813657,
           "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh",
           "lastResolvedPath": "/bin/bash"
         },
@@ -54,7 +54,10 @@
         },
         {
           "pattern": "/opt/homebrew/**",
-          "id": "44378868-d260-4181-858a-b356310b9a3f"
+          "id": "44378868-d260-4181-858a-b356310b9a3f",
+          "lastUsedAt": 1775356074325,
+          "lastUsedCommand": "python3 - <<'PY'\nfrom pathlib import Path\nlines=Path('/Users/apex/.openclaw/logs/agent-lab-nightly.log').read_text(errors='ignore').splitlines()\n# last scheduled start\nsched=[l for l in lines if 'PIPELINE START' in l and '(scheduled)' in l]\ncomp=[l for l in lines if 'PIPELINE COMPLETE' in l]\nprint('LAST_SCHEDULED_START', sched[-1] if sched else 'NONE')\nprint('LAST_COMPLETE', comp[-1] if comp else 'NONE')\nPY",
+          "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
     },

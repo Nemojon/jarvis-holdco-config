@@ -1,23 +1,29 @@
 # PRIORITIES.md — Live Priority List
 
-Last updated: 2026-03-01 by Jarvis
+Last updated: 2026-04-05 by Jarvis
 
 ## TOP PRIORITIES (in order)
 
-1. BIPTAP — Funding conversations & investor pipeline
-2. 1TXO PROTOCOL — Product positioning & PR moments
-3. TED TALK — April 15 prep (content, narrative, slides) — 45 days out
-4. BSQ — Evan Luthra 14-day turnaround (Day 1: Mar 1)
-5. PERSONAL BRAND — LinkedIn scaling for Jon
+1. **TEDx (Apr 15)** — lock angle + record voice note today (10 days left)
+2. **Biptap investor pipeline** — restart momentum with qualified outreach this week
+3. **LinkedIn critical DMs** — clear 3 priority replies today
+4. **ClickUp hygiene** — dedup + re-prioritize task stack today
+5. **1TX0 positioning** — execute first PR narrative insertion this week
+6. **BSQ lead gen launch** — unblock Expandi and go live
 
 ## OPEN BLOCKERS (unresolved)
 
-- LinkedIn Draft 4: $XM placeholder — needs real transaction figure from Jon
-- Kishin & Amina Telegram IDs — needed for content approval routing
-- Sophia salary $385.71 — was due Feb 28 — payment unconfirmed
-- OpenAI auto-recharge — needs manual setup by Jon at platform.openai.com/settings/organization/billing/overview
-- Brave Search API key — signup bot-blocked; Jon must register at api-dashboard.search.brave.com/register
-- LinkedIn authenticated access for BSQ monitoring — escalated to Cipher
+- TEDx angle still depends on Jon’s final voice-note direction
+- Expandi signup pending (required for BSQ funnel launch)
+- ClickUp duplicates (Speaking Apps + VIP bypass) still need cleanup completion
+- Agent Lab nightly job stale since Mar 27 (`agent-lab-nightly.js`) — Cipher fix required
+
+## THIS WEEK'S NON-NEGOTIABLES
+
+- TEDx prep moves from planning to execution
+- Investor outreach cadence resumes with measurable output
+- Zero idle agents; all owners on active goals
 
 ## UPCOMING EVENTS
-- TED Talk: April 15, 2026 (TEDx Al Wasl, Dubai)
+
+- TEDx Talk: April 15, 2026 (10 days)

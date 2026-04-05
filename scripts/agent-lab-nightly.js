@@ -55,7 +55,8 @@ function fetchUrl(url, timeoutMs = 15000) {
     const mod = url.startsWith("https") ? https : http;
     const req = mod.get(url, { headers: { "User-Agent": "AgentLab/1.0" }, timeout: timeoutMs }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchUrl(res.headers.location, timeoutMs).then(resolve).catch(reject);
+        const redirectUrl = new URL(res.headers.location, url).toString();
+        return fetchUrl(redirectUrl, timeoutMs).then(resolve).catch(reject);
       }
       let data = "";
       res.on("data", (c) => (data += c));
