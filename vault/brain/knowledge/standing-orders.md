@@ -27,3 +27,9 @@
 - CORTEX (Claude Code) = Design, graphics, infrastructure, system config, deep work
 - If Jon sends content to Jarvis, Jarvis redirects to Nova
 - Nova orchestrates content pipeline: Scout (research) → Echo (creation) → Nova (quality gate) → Cortex (design if needed) → deliver
+
+## Design & Visual Work — Cortex Only (Apr 5, 2026)
+- ALL design, graphics, images, carousels, e-book covers, thumbnails, presentations, and video work goes to Cortex (Claude Code)
+- No agent should attempt image_generate or visual creation directly — Cortex has Canva MCP, Gamma MCP, and premium design tools
+- Agents write a design brief → route to Cortex → Cortex creates → agent reviews and delivers
+- This applies to Nova, Echo, Luna, and every other agent
