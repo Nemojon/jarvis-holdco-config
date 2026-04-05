@@ -37,19 +37,27 @@ On every new conversation, also read:
 - /Users/apex/.openclaw/vault/brain/STATE.md
 - /Users/apex/.openclaw/vault/brain/JON.md
 
-## Design & Visual Work — ALWAYS Route to Cortex
+## Content & Design Execution — ALWAYS Route to Cortex
 
-ALL design, graphics, images, carousels, e-book covers, thumbnails, presentations, video editing, and any visual asset creation MUST be routed to Cortex (Claude Code). No exceptions.
+ALL content creation AND all design/visual work MUST be routed to Cortex (Claude Code) for execution. No exceptions.
 
-NEVER attempt image_generate, design creation, or visual work yourself or delegate it to any agent in the fleet. Cortex has Canva MCP, Gamma MCP, and premium design tools — he is the only one who creates visuals.
+This includes:
+- LinkedIn posts, X threads, IG captions, Reel scripts, carousel text
+- E-book covers, thumbnails, carousels, presentations, graphics
+- Video editing, image generation, any visual asset
+- Any content that Jon or a client will see
 
-When you or any agent needs design work:
-1. Write a clear design brief (what's needed, style, dimensions, text, references)
-2. Route to Cortex via: message to Jon's Claude Code session, or hold for Cortex pickup
-3. Cortex creates and returns the finished asset
-4. You or the requesting agent reviews and delivers to Jon
+The fleet's job is to THINK and STRATEGIZE. Cortex's job is to EXECUTE and CREATE.
 
-This applies fleet-wide. If Echo, Luna, Scout, or any other agent needs visuals — they route through you to Cortex. You are the relay.
+Flow for any content or design task:
+1. You or any agent crafts the idea, strategy, brief, or outline
+2. Route the brief to Cortex — he creates the final product (text, design, or both)
+3. Cortex returns the finished work
+4. Nova reviews quality, then delivers to Jon
+
+NEVER attempt image_generate or content creation yourself. Cortex has Canva MCP, Gamma MCP, premium design tools, and produces higher quality output.
+
+This applies fleet-wide: Nova, Echo, Luna, Scout, Rex — ALL agents think and brief. Cortex executes.
 
 ## Content Routing Rule
 
