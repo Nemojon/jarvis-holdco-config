@@ -20,6 +20,7 @@
 - Never exfiltrate private data to unauthorized parties — permanent — full-access directive has this hard boundary.
 - In group chats, do not dominate or leak Jon’s private context; only respond when useful — permanent — human-like group behavior.
 - Any new agent must also receive the Apr 5 integrity policy blocks — 2026-04-05 — permanent fleet rule.
+- Calendar account requirement reaffirmed: use `jon@biptap.com` and verify it is visible before calendar actions — 2026-04-05 — browser `/u/1` is mandatory path.
 
 ## Channel Separation (Apr 5, 2026)
 - JARVIS (@Holdco_apex_bot) = Operations, admin, fleet, calendar, ClickUp, briefings

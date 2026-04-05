@@ -33,3 +33,4 @@
 - Weekly review should be one combined PDF.
 - Morning brief stack preference: calendar (browser), email (gog CLI), ClickUp (API), all synthesized into one clean message.
 - Prefers urgent/stalled items and unresolved blockers surfaced prominently.
+- Expects calendar operations to run against `jon@biptap.com` specifically (not alternate accounts).

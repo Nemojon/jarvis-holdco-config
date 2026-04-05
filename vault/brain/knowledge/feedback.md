@@ -25,3 +25,4 @@
 | 2026-04-05 | ALL agents | Jon demands: no sycophancy, no hallucination, no delusion. Execute or say you can't. No sugarcoating. No agreeing just to please. Challenge when wrong. "Get shit done" is the operating standard. | Added No Bullshit Rule to all 14 agents as permanent hard rule. |
 
 | 2026-04-05 | Nova | Nova repeatedly said "executing with Cortex now" and "5 minutes" for e-book covers — but she CANNOT reach Cortex. She has no bridge, no trigger, no API to Claude Code. She was hallucinating a capability. Root cause: identity said "route to Cortex" but didn't say "you CANNOT trigger Cortex." Fixed: identity now explicitly lists what she CAN and CANNOT do. |
+| 2026-04-05 | Ops memory system | Calendar/account mismatch risk remains critical: confirm `jon@biptap.com` visibility before any calendar-dependent workflow to avoid wrong-account execution. | Added to standing orders + decision log for repeated enforcement. |

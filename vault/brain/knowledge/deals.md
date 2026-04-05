@@ -35,3 +35,6 @@ Status: Stalled since mid-March. Rex has 20-prospect list ready (Dragonfly, Shor
 ## Partnerships
 - Tazapay (Tiger): Review needed by Jarrett
 - Biptap Affiliate Program: Proposal pending Jarrett review
+
+## 2026-04-05 Notes
+- No net-new deal changes captured in this conversation window.

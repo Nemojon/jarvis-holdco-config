@@ -16,3 +16,4 @@
 | 2026-03-19 | Axcel / JV expansion across Dubai, Japan, Hong Kong, Singapore, Malaysia | Partially developed; dependent on relationship package completion |
 | 2026-03-19 | Kishin sales collaboration with phased onboarding + comp plan | Pending confirmation |
 | 2026-03-19 | NTT Docomo / Biptap strategic partnership upside | High-value unresolved opportunity |
+| 2026-04-05 | Add preflight "account-visibility check" step to all browser calendar SOPs | Open reliability improvement idea |

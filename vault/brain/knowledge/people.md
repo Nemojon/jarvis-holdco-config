@@ -1,7 +1,7 @@
 # People & Relationships
 | Name | Role/Relationship | Context | Last Mentioned |
 |------|-------------------|---------|----------------|
-| Jonathan Low (Jon) | Founder / principal human | Founder & CEO of HoldCo; core focus on HoldCo ops, TEDx, AbsolutePay, OpenClaw power-up | 2026-04-05 |
+| Jonathan Low (Jon) | Founder / principal human | Founder & CEO of HoldCo; core focus on HoldCo ops, TEDx, AbsolutePay, OpenClaw power-up. Reconfirmed calendar must run on `jon@biptap.com` visibility path. | 2026-04-05 |
 | Nova | Co-CEO / strategic partner | Strategic challenger, problem-solver, fleet oversight, direct partner to Jon and Jarvis | 2026-04-04 |
 | Aria | Routing / ops agent | Complexity scoring, task routing, ClickUp hygiene, human liaison | 2026-04-05 |
 | Echo | Content agent | Writing, content briefs, TEDx drafting, founder content machine | 2026-04-05 |

@@ -17,3 +17,4 @@
 | Permanent | Jarvis delegates; does not execute | Only explicit operational exception recorded: direct calendar scheduling via browser. |
 | Permanent | Non-urgent tasks route through Aria | Aria handles complexity scoring/routing; Jarvis handles direct Jon requests, urgent escalations, and multi-agent coordination. |
 | Permanent | Daily reports are text-only in Telegram | PDFs reserved for formal deliverables; research and updates stay inline text. |
+| 2026-04-05 | Calendar account visibility confirmed for operations | `jon@biptap.com` must be visible and used for calendar operations; browser account `/u/1` remains required path. |
