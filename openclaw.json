@@ -144,10 +144,11 @@
         "name": "Nova",
         "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
         "model": {
-          "primary": "openai/gpt-5.4-pro",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "openai/gpt-5.4",
-            "openai/gpt-5.4-mini"
+            "google-ai-studio/gemini-2.5-pro",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
           ]
         },
         "heartbeat": {
