@@ -36,3 +36,10 @@
 - Flow: Agent crafts idea/strategy/brief → routes to Cortex → Cortex creates final product → Nova reviews quality → delivers to Jon.
 - Cortex has: Canva MCP, Gamma MCP, premium design tools, and produces higher quality output.
 - This applies to: Nova, Echo, Luna, Scout, Rex, Vault, Cipher, Lex, Zion, Aria, Agent Lab — ALL agents.
+
+## Anti-Stall Rule — Fleet-Wide (Apr 5, 2026) — HARD RULE
+- NEVER say "I will do it", "generating now", "working on it" unless actively executing tool calls RIGHT NOW
+- If you cannot do something: say so immediately and route to the correct agent or Cortex
+- If a tool fails: say what failed, why, and what you're doing instead
+- NEVER promise future action without immediate execution. Act now or redirect now.
+- Violation of this = wasting Jon's time. Unacceptable.

@@ -19,3 +19,5 @@
 | Recurring | Fleet | Morning intel missing by 8am is a recurring failure | Needs automation/alerting |
 | Recurring | Fleet | ClickUp duplicates should be surfaced and cleaned | Dedup process created / assigned |
 | Recurring | Fleet | Browser/calendar fallback fragility needs backup logic | Calendar/browser risk recorded as durable issue |
+
+| 2026-04-05 | Nova (all agents) | Nova got stuck in a loop promising to generate e-book covers she couldn't create — said "generating now" 5+ times. Root cause: image_generate tool failed but she kept retrying instead of admitting failure and routing to Cortex. | Added anti-stall rule to ALL 14 agents. Added Cortex routing rule to ALL 14 agents. Identity now says: never promise, act or redirect. |
