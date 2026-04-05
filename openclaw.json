@@ -75,9 +75,6 @@
       },
       "compaction": {
         "mode": "safeguard"
-      },
-      "heartbeat": {
-        "every": "1h"
       }
     },
     "list": [
@@ -104,9 +101,6 @@
             "openai/gpt-5.4-mini",
             "openai/gpt-4.1"
           ]
-        },
-        "heartbeat": {
-          "every": "1h"
         },
         "identity": {
           "name": "Jarvis"
@@ -150,9 +144,6 @@
             "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
           ]
-        },
-        "heartbeat": {
-          "every": "1h"
         },
         "identity": {
           "name": "Nova"
@@ -254,9 +245,6 @@
             "openai/gpt-4.1"
           ]
         },
-        "heartbeat": {
-          "every": "1h"
-        },
         "identity": {
           "name": "Scout"
         },
@@ -330,9 +318,6 @@
             "openai/gpt-4.1-mini"
           ]
         },
-        "heartbeat": {
-          "every": "1h"
-        },
         "identity": {
           "name": "Zion"
         },
@@ -385,9 +370,6 @@
             "openai/gpt-5.4-mini",
             "openai/gpt-4.1"
           ]
-        },
-        "heartbeat": {
-          "every": "1h"
         },
         "identity": {
           "name": "Cipher"
