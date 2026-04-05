@@ -96,10 +96,11 @@
         "workspace": "/Users/apex/.openclaw/workspace-orion",
         "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "google-ai-studio/gemini-2.5-pro",
+            "openai/gpt-4.1",
+            "openai/gpt-4.1-mini"
           ]
         },
         "identity": {
