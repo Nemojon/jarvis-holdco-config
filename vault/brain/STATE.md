@@ -47,6 +47,7 @@
 - **Gateway:** ✅ running
 - **Delegation path:** ✅ restored and stable
 - **Model chain:** `openai-codex/gpt-5.3-codex → google-ai-studio/gemini-2.5-pro → openai/gpt-4.1 → openai/gpt-4.1-mini`
+- **Fleet prompt policy (Apr 5):** ✅ New permanent identity policy rolled out to all 14 agents: “Constraints — What You Must NEVER Do” + “Epistemic Integrity & Doubt Protocol”
 
 ### Cron Fleet
 - **Health:** 🟢 **18/21 healthy**
@@ -66,6 +67,7 @@
 3. Aria runs ClickUp dedup pass (remove duplicate Speaking Apps + VIP bypass tasks).
 4. Cipher investigates/flags `agent-lab-nightly.js` staleness (since Mar 27).
 5. Verify weekly cron jobs are correctly configured and queued for next trigger.
+6. Ensure all future/new agents inherit Apr 5 integrity + anti-fabrication policy blocks.
 
 ---
 

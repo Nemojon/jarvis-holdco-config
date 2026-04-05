@@ -55,24 +55,23 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.3-codex",
+        "primary": "openai/gpt-5.4",
         "fallbacks": [
-          "google-ai-studio/gemini-2.5-pro",
-          "openai/gpt-4.1",
-          "openai/gpt-4.1-mini"
+          "openai/gpt-5.4-mini",
+          "openai/gpt-4.1"
         ]
       },
       "models": {
+        "openai/gpt-5.4-pro": {},
+        "openai/gpt-5.4": {},
+        "openai/gpt-5.4-mini": {},
         "openai/gpt-4.1": {},
         "openai/gpt-4.1-mini": {},
-        "openai-codex/gpt-5.3-codex": {
-          "alias": "codex"
-        },
         "google-ai-studio/gemini-2.5-pro": {}
       },
       "contextPruning": {
         "mode": "cache-ttl",
-        "ttl": "1h"
+        "ttl": "30m"
       },
       "compaction": {
         "mode": "safeguard"
@@ -85,10 +84,8 @@
       {
         "id": "main",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -102,11 +99,10 @@
         "workspace": "/Users/apex/.openclaw/workspace-orion",
         "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "heartbeat": {
@@ -148,11 +144,10 @@
         "name": "Nova",
         "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
           ]
         },
         "heartbeat": {
@@ -201,10 +196,10 @@
         "name": "Aria",
         "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -226,11 +221,10 @@
         "name": "Rex",
         "agentDir": "/Users/apex/.openclaw/agents/hunter/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -253,10 +247,10 @@
         "name": "Scout",
         "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "heartbeat": {
@@ -281,11 +275,10 @@
         "name": "Echo",
         "agentDir": "/Users/apex/.openclaw/agents/signal/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -306,10 +299,10 @@
         "name": "Vault",
         "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -331,9 +324,8 @@
         "name": "Zion",
         "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
@@ -359,11 +351,10 @@
         "name": "Luna",
         "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -388,11 +379,10 @@
         "name": "Cipher",
         "agentDir": "/Users/apex/.openclaw/agents/cto/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "heartbeat": {
@@ -421,10 +411,10 @@
         "name": "Lex",
         "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -448,14 +438,13 @@
         "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
         "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
             "openai/gpt-4.1-mini"
           ]
         },
         "identity": {
-          "emoji": "🧪",
+          "emoji": "\ud83e\uddea",
           "name": "Agent Lab"
         },
         "skills": [
@@ -473,10 +462,10 @@
         "workspace": "/Users/apex/.openclaw/workspace-council-sage",
         "agentDir": "/Users/apex/.openclaw/agents/council-sage/agent",
         "model": {
-          "primary": "openai/gpt-4.1",
+          "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
           ]
         },
         "identity": {
@@ -497,7 +486,8 @@
         "model": {
           "primary": "google-ai-studio/gemini-2.5-pro",
           "fallbacks": [
-            "openai/gpt-4.1"
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
