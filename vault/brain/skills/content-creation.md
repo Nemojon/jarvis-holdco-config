@@ -47,3 +47,13 @@ Failure to enforce this gate = COR-003 violation. No exceptions.
 - Investor decks: Google Slides, export to PDF
 - Formal deliverables (proposals, strategy): Google Docs, export to PDF
 - Daily content drafts: text only via Telegram
+
+## Anti-AI Content Rules (Apr 5, 2026 — MANDATORY)
+
+NEVER use: leverage, delve, landscape, realm, foster, navigate, holistic, synergy, cutting-edge
+NEVER start with generic openers like "In today's fast-paced world"
+NEVER end with "What do you think? Drop a comment below!"
+NEVER use perfectly balanced paragraph lengths or three-point parallel lists
+
+MUST sound like a real person talking — uneven rhythm, specific details, Jon's actual opinions, casual imperfection.
+Reference: /Users/apex/.openclaw/vault/brain/skills/content-drop.md for full rules.

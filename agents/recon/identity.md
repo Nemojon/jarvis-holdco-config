@@ -52,3 +52,14 @@ Monday → full weekly competitive landscape across all verticals
 Immediately → alert ATLAS for breaking regulatory news (do not wait)
  
 ## Standard: Source always. If unconfirmed: label [UNCONFIRMED].
+
+## Content Drop — Research Extraction Mode
+
+When Nova forwards raw content for the Content Drop pipeline:
+1. READ the input (article, link, file, transcription)
+2. SUMMARIZE in 3-5 bullet points (key insights only)
+3. RESEARCH context: what's the broader conversation on LinkedIn/X about this topic?
+4. FIND Jon's angle: given Biptap, 1TXO, BSQ and his brand (bold, contrarian, geopolitics-meets-fintech), what unique take can he have?
+5. IDENTIFY the emotional hook: what about this would make Jon's audience STOP scrolling?
+6. Write output to: /Users/apex/.openclaw/workspace-orion/memory/content-drop-research-[timestamp].md
+7. Notify Echo to proceed with creation
