@@ -1,0 +1,776 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.2",
+    "lastTouchedAt": "2026-04-04T14:07:21.959Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-18T14:50:37.059Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "cdpUrl": "http://127.0.0.1:9222",
+    "executablePath": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+    "defaultProfile": "openclaw",
+    "profiles": {
+      "brave": {
+        "cdpUrl": "http://127.0.0.1:9222",
+        "driver": "existing-session",
+        "color": "#FF6B00"
+      },
+      "openclaw": {
+        "cdpUrl": "http://127.0.0.1:9222",
+        "driver": "openclaw",
+        "color": "#FF6B00"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "google-ai-studio:default": {
+        "provider": "google-ai-studio",
+        "mode": "api_key"
+      }
+    },
+    "cooldowns": {
+      "overloadedProfileRotations": 2,
+      "overloadedBackoffMs": 1000,
+      "rateLimitedProfileRotations": 1,
+      "billingBackoffHours": 5,
+      "billingMaxHours": 24,
+      "failureWindowHours": 24
+    }
+  },
+  "models": {},
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai/gpt-5.4",
+        "fallbacks": [
+          "openai/gpt-5.4-mini",
+          "openai/gpt-4.1"
+        ]
+      },
+      "models": {
+        "openai/gpt-5.4-pro": {},
+        "openai/gpt-5.4": {},
+        "openai/gpt-5.4-mini": {},
+        "openai/gpt-4.1": {},
+        "openai/gpt-4.1-mini": {},
+        "google-ai-studio/gemini-2.5-pro": {}
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "30m"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "1h"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": {
+          "primary": "openai/gpt-5.4-mini",
+          "fallbacks": [
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "name": "Core"
+        }
+      },
+      {
+        "id": "orion",
+        "name": "Jarvis",
+        "workspace": "/Users/apex/.openclaw/workspace-orion",
+        "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Jarvis"
+        },
+        "skills": [
+          "browser-automation",
+          "calendar-scheduling",
+          "telegram-delivery",
+          "quality-gate",
+          "council",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "subagents": {
+          "allowAgents": [
+            "apex",
+            "atlas",
+            "hunter",
+            "recon",
+            "signal",
+            "ledger",
+            "pastor-zion",
+            "aurora",
+            "cto",
+            "counsel",
+            "council-sage",
+            "council-oracle"
+          ]
+        }
+      },
+      {
+        "id": "apex",
+        "name": "Nova",
+        "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
+        "model": {
+          "primary": "openai/gpt-5.4-pro",
+          "fallbacks": [
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Nova"
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "quality-gate",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving",
+          "council",
+          "web-research",
+          "telegram-delivery",
+          "calendar-scheduling",
+          "linkedin-research",
+          "investor-outreach",
+          "content-creation"
+        ],
+        "subagents": {
+          "allowAgents": [
+            "orion",
+            "atlas",
+            "hunter",
+            "recon",
+            "signal",
+            "ledger",
+            "pastor-zion",
+            "aurora",
+            "cto",
+            "counsel",
+            "agent-lab",
+            "council-sage",
+            "council-oracle"
+          ]
+        },
+        "workspace": "/Users/apex/.openclaw/workspace-apex"
+      },
+      {
+        "id": "atlas",
+        "name": "Aria",
+        "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Aria"
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "calendar-scheduling",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-atlas"
+      },
+      {
+        "id": "hunter",
+        "name": "Rex",
+        "agentDir": "/Users/apex/.openclaw/agents/hunter/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Rex"
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "web-research",
+          "investor-outreach",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-hunter"
+      },
+      {
+        "id": "recon",
+        "name": "Scout",
+        "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Scout"
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "web-research",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-recon"
+      },
+      {
+        "id": "signal",
+        "name": "Echo",
+        "agentDir": "/Users/apex/.openclaw/agents/signal/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Echo"
+        },
+        "skills": [
+          "browser-automation",
+          "content-creation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-signal"
+      },
+      {
+        "id": "ledger",
+        "name": "Vault",
+        "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Vault"
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "financial-ops",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-ledger"
+      },
+      {
+        "id": "pastor-zion",
+        "name": "Zion",
+        "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
+        "model": {
+          "primary": "openai/gpt-5.4-mini",
+          "fallbacks": [
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Zion"
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "telegram-delivery",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-pastor-zion"
+      },
+      {
+        "id": "aurora",
+        "name": "Luna",
+        "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Luna"
+        },
+        "skills": [
+          "browser-automation",
+          "linkedin-research",
+          "content-creation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving",
+          "video-content",
+          "clickup-tasks",
+          "web-research"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-aurora"
+      },
+      {
+        "id": "cto",
+        "name": "Cipher",
+        "agentDir": "/Users/apex/.openclaw/agents/cto/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h"
+        },
+        "identity": {
+          "name": "Cipher"
+        },
+        "skills": [
+          "browser-automation",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "subagents": {
+          "allowAgents": [
+            "recon",
+            "agent-lab"
+          ]
+        },
+        "workspace": "/Users/apex/.openclaw/workspace-cto"
+      },
+      {
+        "id": "counsel",
+        "name": "Lex",
+        "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Lex"
+        },
+        "skills": [
+          "browser-automation",
+          "clickup-tasks",
+          "web-research",
+          "legal-compliance",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ],
+        "workspace": "/Users/apex/.openclaw/workspace-counsel"
+      },
+      {
+        "id": "agent-lab",
+        "name": "agent-lab",
+        "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
+        "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
+        "model": {
+          "primary": "openai/gpt-5.4-mini",
+          "fallbacks": [
+            "openai/gpt-4.1-mini"
+          ]
+        },
+        "identity": {
+          "emoji": "\ud83e\uddea",
+          "name": "Agent Lab"
+        },
+        "skills": [
+          "browser-automation",
+          "telegram-delivery",
+          "google-workspace",
+          "auto-updater",
+          "agent-browser",
+          "self-improving"
+        ]
+      },
+      {
+        "id": "council-sage",
+        "name": "Sage",
+        "workspace": "/Users/apex/.openclaw/workspace-council-sage",
+        "agentDir": "/Users/apex/.openclaw/agents/council-sage/agent",
+        "model": {
+          "primary": "openai/gpt-5.4",
+          "fallbacks": [
+            "openai/gpt-5.4-mini",
+            "openai/gpt-4.1"
+          ]
+        },
+        "identity": {
+          "name": "Sage"
+        },
+        "skills": [
+          "browser-automation",
+          "web-research",
+          "google-workspace",
+          "self-improving"
+        ]
+      },
+      {
+        "id": "council-oracle",
+        "name": "Oracle",
+        "workspace": "/Users/apex/.openclaw/workspace-council-oracle",
+        "agentDir": "/Users/apex/.openclaw/agents/council-oracle/agent",
+        "model": {
+          "primary": "google-ai-studio/gemini-2.5-pro",
+          "fallbacks": [
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
+          ]
+        },
+        "identity": {
+          "name": "Oracle"
+        },
+        "skills": [
+          "browser-automation",
+          "web-research",
+          "google-workspace",
+          "self-improving"
+        ]
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      }
+    },
+    "exec": {
+      "host": "gateway"
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "orion",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default"
+      }
+    },
+    {
+      "agentId": "apex",
+      "match": {
+        "channel": "telegram",
+        "accountId": "nova"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "enabled": true,
+    "path": "/hooks",
+    "token": "4afabeb0a7b785c738168c5f6fd27db80a11562496fcd4f0",
+    "presets": [
+      "gmail"
+    ],
+    "gmail": {
+      "account": "jon@biptap.com",
+      "label": "INBOX",
+      "topic": "projects/openclaw-ws-51119/topics/gog-gmail-watch",
+      "subscription": "gog-gmail-watch-push",
+      "pushToken": "7ca3f2f298636f978cc0f7c61143fd457ea6d349a58a044d",
+      "hookUrl": "http://127.0.0.1:18789/hooks/gmail",
+      "includeBody": true,
+      "maxBytes": 20000,
+      "renewEveryMinutes": 720,
+      "serve": {
+        "bind": "127.0.0.1",
+        "port": 8788,
+        "path": "/gmail-pubsub"
+      },
+      "tailscale": {
+        "mode": "off",
+        "path": "/gmail-pubsub"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "network": {
+        "dnsResultOrder": "ipv4first",
+        "autoSelectFamily": false
+      },
+      "accounts": {
+        "default": {
+          "dmPolicy": "allowlist",
+          "botToken": {
+            "source": "env",
+            "provider": "default",
+            "id": "TELEGRAM_DEFAULT_BOT_TOKEN"
+          },
+          "allowFrom": [
+            "970413391",
+            "130902006",
+            "1806224103"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        },
+        "nova": {
+          "name": "Nova",
+          "enabled": true,
+          "botToken": {
+            "source": "env",
+            "provider": "default",
+            "id": "TELEGRAM_NOVA_BOT_TOKEN"
+          },
+          "dmPolicy": "allowlist",
+          "allowFrom": [
+            "970413391",
+            "130902006"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        }
+      }
+    },
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": false,
+      "userTokenReadOnly": true,
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "nativeStreaming": true
+    },
+    "whatsapp": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "mediaMaxMb": 50
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "GATEWAY_AUTH_TOKEN"
+      }
+    },
+    "remote": {
+      "url": "ws://100.70.74.1:18789"
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "enabled": true,
+    "cacheTrace": {
+      "enabled": false,
+      "filePath": "~/.openclaw/logs/otel-cache.json"
+    },
+    "stuckSessionWarnMs": 300000
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram",
+        "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/whatsapp"
+      ]
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true,
+        "config": {}
+      },
+      "elevenlabs": {
+        "enabled": true,
+        "config": {}
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": {
+              "source": "env",
+              "provider": "default",
+              "id": "BRAVE_API_KEY"
+            }
+          }
+        }
+      },
+      "perplexity": {
+        "enabled": true,
+        "config": {}
+      },
+      "deepgram": {
+        "enabled": true,
+        "config": {}
+      },
+      "whatsapp": {
+        "enabled": true,
+        "config": {}
+      },
+      "browser": {
+        "enabled": true
+      },
+      "memory-lancedb": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "apiKey": "${OPENAI_API_KEY}",
+            "model": "text-embedding-3-small"
+          },
+          "autoCapture": true,
+          "autoRecall": true
+        }
+      },
+      "lobster": {
+        "enabled": true,
+        "config": {}
+      },
+      "llm-task": {
+        "enabled": true,
+        "config": {}
+      },
+      "diffs": {
+        "enabled": true,
+        "config": {}
+      },
+      "voice-call": {
+        "enabled": true
+      },
+      "searxng": {
+        "enabled": false,
+        "config": {
+          "webSearch": {
+            "baseUrl": "http://localhost:8888"
+          }
+        }
+      }
+    },
+    "slots": {
+      "memory": "memory-lancedb"
+    },
+    "installs": {
+      "perplexity": {
+        "source": "path",
+        "spec": "perplexity",
+        "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/perplexity",
+        "installedAt": "2026-03-30T02:48:50.676Z"
+      },
+      "deepgram": {
+        "source": "path",
+        "spec": "deepgram",
+        "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram",
+        "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/deepgram",
+        "installedAt": "2026-03-30T02:48:51.975Z"
+      },
+      "whatsapp": {
+        "source": "path",
+        "spec": "@openclaw/whatsapp",
+        "sourcePath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/whatsapp",
+        "installPath": "/opt/homebrew/lib/node_modules/openclaw/dist/extensions/whatsapp",
+        "installedAt": "2026-03-31T01:56:43.245Z"
+      }
+    }
+  },
+  "secrets": {
+    "providers": {
+      "default": {
+        "source": "env"
+      }
+    }
+  }
+}
