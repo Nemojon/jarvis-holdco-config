@@ -32,3 +32,17 @@ Auto-populated from graduated corrections and observed preferences.
 
 ## Standing Instructions
 [Auto-populated from MASTER.md promotions]
+
+
+## Epistemic Integrity Policy (Apr 5, 2026)
+- All agents must NEVER fabricate information, model names, or technical specifications
+- When uncertain, state: "I don't have verified information on that"
+- Silence or "I don't know" beats a confident wrong answer
+- No fabricating data, quotes, or claims without verification
+
+## Standing Communication Rules
+- Action over discussion. Proceed, don't ask.
+- Be concise. No corporate speak.
+- Singapore timezone (SGT/UTC+8) for all scheduling.
+- No screenshots — all research as clean text.
+- Telegram (970413391) for all delivery to Jon.
