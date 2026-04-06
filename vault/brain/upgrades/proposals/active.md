@@ -1,10 +1,14 @@
-UPGRADE PROPOSAL [2026-04-05]
-What: Fix all agent cron jobs to handle CLI command changes and config validation errors (current failure: 'unknown command send', 'Config invalid ... Unrecognized key: forceIPv4')
-Why: Multiple agent cron jobs have been failing due to breaking changes in the OpenClaw CLI and configuration. This disrupts all scheduled automation, reduces reliability, and increases manual overhead. Fixing this unblocks daily operations and prevents further missed or broken jobs.
-Effort: QUICK WIN
+UPGRADE PROPOSAL [2026-04-06]
+
+What: Systematic adoption of "Mixture of Experts" (MoEs) technique in all transformer-based agent models used across the fleet. This is based on the high signal in the latest research pipeline scan: MoEs now deliver state-of-the-art performance for large models with improved efficiency, throughput, and robustness. Applies both to inference and training pipelines.
+
+Why: Implementing MoEs can unlock significant improvements in model scaling, processing speed, and operational efficiency. Recent research confirms tangible SOTA performance and cost reductions on large deployments—particularly relevant for OpenClaw's multi-agent inference & coding workloads.
+
+Effort: MEDIUM — Requires updates to core model configs, re-benchmarking, and careful evaluation of routing heuristics (but infra is already compatible; no multi-month rewrite required).
+
 Implementation notes for Cipher:
-- Audit all agent-related cron scripts for use of deprecated or invalid openclaw commands (notably 'send')
-- Remove or update any unrecognized/unsupported config keys (e.g. forceIPv4 in channels.telegram)
-- Run `openclaw doctor --fix` to auto-heal config, then `openclaw doctor` for a clean pass
-- Explicitly test/restart each cron after fix to confirm no EXIT=1 or EXIT=127 with shell errors remain
-- Consider adding job exit-code monitoring to email/alert when new cron failures occur
+- Audit existing transformer deployments for MoE compatibility (HuggingFace, Anthropic, OpenAI families likely ready)
+- Stage migration in sandbox, then fleet-wide
+- Prioritize agents running costliest workloads (Code, Reasoning, Vision)
+- Run re-benchmarks before/after for objective reporting
+- Review and adapt routing logic post-migration for optimal MoE performance
