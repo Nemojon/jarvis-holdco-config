@@ -46,7 +46,7 @@
 ### System Health
 - **Gateway:** ✅ running
 - **Delegation path:** ✅ restored and stable
-- **Model chain:** `openai-codex/gpt-5.3-codex → google-ai-studio/gemini-2.5-pro → openai/gpt-4.1 → openai/gpt-4.1-mini`
+- **Model chain:** `openai/gpt-5.4-pro (Jarvis + Nova) → openai/gpt-5.4 (specialists) → openai/gpt-5.4-mini (utility) → openai/gpt-4.1 (fallback)`
 - **Fleet prompt policy (Apr 5):** ✅ New permanent identity policy rolled out to all 14 agents: “Constraints — What You Must NEVER Do” + “Epistemic Integrity & Doubt Protocol”
 
 ### Cron Fleet

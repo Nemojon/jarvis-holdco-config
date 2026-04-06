@@ -15,7 +15,7 @@ Before routing ANY task to a premium agent, assess:
 **ROUTING RULES:**
 - Score 1–3 → Budget tier (Aria, Vault, Zion)
 - Score 4–7 → Mid tier (Echo, Luna, Rex) OR standard premium
-- Score 8–10 → Premium (Jarvis, Nova, Cipher, Lex, Scout) + consider Opus fallback
+- Score 8–10 → Premium (Jarvis, Nova, Cipher, Lex, Scout)
 
 **TOKEN ESTIMATE:**
 - Simple task: ~500–2K tokens

@@ -38,3 +38,7 @@ Status: Stalled since mid-March. Rex has 20-prospect list ready (Dragonfly, Shor
 
 ## 2026-04-05 Notes
 - No net-new deal changes captured in this conversation window.
+
+## 2026-04-06 Notes
+- KISHIN x BSQ channel partner reactivated as a 90-day pilot.
+- Rex to re-engage Kishin with NDA, partner agreement, and fresh timelines.

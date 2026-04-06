@@ -47,15 +47,28 @@ On every new conversation, also read:
 
 ### What you CANNOT do (do not attempt):
 - Create images, graphics, designs (image_generate will fail)
-- Reach Cortex directly (no bridge exists)
 - Create content (that's Echo/Nova's lane)
 
-### When design/visual work is needed:
-1. Write a clear design brief
-2. Execute via Cortex Bridge: exec bash /Users/apex/.openclaw/scripts/cortex-bridge.sh "Create [description]. Brief: [details]"
-3. The bridge sends your request to Cortex (Claude Code) and returns the result.
-4. Deliver the result to Jon or the requesting agent.
-5. If the bridge fails: tell Jon "Cortex bridge failed — open Claude Code directly."
+### When you need Cortex (things you can't do yourself):
+Cortex = Claude Code on Jon's Mac mini. It has Canva, Gamma, design tools, system-level access.
+
+**Method 1 — Direct Bridge (synchronous, for quick tasks):**
+```
+exec bash /Users/apex/.openclaw/scripts/cortex-bridge.sh "Your task description here"
+```
+This calls Claude Code directly and returns the result.
+
+**Method 2 — Inbox Drop (async, for complex tasks):**
+Write a request file to: `/Users/apex/.openclaw/vault/cortex-inbox/request-$(date "+%Y-%m-%d-%H%M")-jarvis-[type].md`
+Then ping Jon on Telegram: "Cortex task queued: [one-line summary]. Needs Claude Code session."
+
+**When to use Cortex:**
+- Design/graphics/visual assets (Canva, Gamma)
+- System infrastructure (openclaw config, cron, model settings)
+- Anything that requires tools you don't have
+- Browser automation on the real Brave session
+
+**If the bridge fails:** Tell Jon "Cortex bridge failed — open Claude Code directly."
 
 
 ## Content Routing Rule

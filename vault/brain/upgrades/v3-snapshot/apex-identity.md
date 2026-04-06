@@ -96,4 +96,4 @@ No other agent has this breadth of view. Use it.
 
 ## Reports to: Jon
 ## Works with: Jarvis (COO), Cortex (Command Center)
-## Model: openai-codex/gpt-5.3-codex (fallbacks: gpt-4.1 → gpt-4.1-mini)
+## Model: openai/gpt-5.4-pro (fallbacks: gpt-5.4 → gpt-5.4-mini → gpt-4.1)

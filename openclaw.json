@@ -13,17 +13,22 @@
     "enabled": true,
     "cdpUrl": "http://127.0.0.1:9222",
     "executablePath": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
-    "defaultProfile": "openclaw",
+    "defaultProfile": "user",
     "profiles": {
       "brave": {
-        "cdpUrl": "http://127.0.0.1:9222",
         "driver": "existing-session",
+        "userDataDir": "/Users/apex/Library/Application Support/BraveSoftware/Brave-Browser",
         "color": "#FF6B00"
       },
       "openclaw": {
-        "cdpUrl": "http://127.0.0.1:9222",
+        "cdpUrl": "http://127.0.0.1:9223",
         "driver": "openclaw",
         "color": "#FF6B00"
+      },
+      "user": {
+        "driver": "existing-session",
+        "userDataDir": "/Users/apex/Library/Application Support/BraveSoftware/Brave-Browser",
+        "color": "#00AA00"
       }
     }
   },
@@ -43,12 +48,12 @@
       }
     },
     "cooldowns": {
-      "overloadedProfileRotations": 2,
-      "overloadedBackoffMs": 1000,
+      "overloadedProfileRotations": 3,
+      "overloadedBackoffMs": 3000,
       "rateLimitedProfileRotations": 1,
       "billingBackoffHours": 5,
       "billingMaxHours": 24,
-      "failureWindowHours": 24
+      "failureWindowHours": 2
     }
   },
   "models": {},
@@ -57,16 +62,13 @@
       "model": {
         "primary": "openai/gpt-5.4",
         "fallbacks": [
-          "openai/gpt-5.4-mini",
-          "openai/gpt-4.1"
+          "openai/gpt-5.4-mini"
         ]
       },
       "models": {
         "openai/gpt-5.4-pro": {},
         "openai/gpt-5.4": {},
         "openai/gpt-5.4-mini": {},
-        "openai/gpt-4.1": {},
-        "openai/gpt-4.1-mini": {},
         "google-ai-studio/gemini-2.5-pro": {}
       },
       "contextPruning": {
@@ -75,6 +77,12 @@
       },
       "compaction": {
         "mode": "safeguard"
+      },
+      "subagents": {
+        "maxSpawnDepth": 2,
+        "maxChildrenPerAgent": 5,
+        "maxConcurrent": 8,
+        "runTimeoutSeconds": 900
       }
     },
     "list": [
@@ -83,7 +91,7 @@
         "model": {
           "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -96,11 +104,10 @@
         "workspace": "/Users/apex/.openclaw/workspace-orion",
         "agentDir": "/Users/apex/.openclaw/agents/orion/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -139,11 +146,10 @@
         "name": "Nova",
         "agentDir": "/Users/apex/.openclaw/agents/apex/agent",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
+          "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
-            "google-ai-studio/gemini-2.5-pro",
-            "openai/gpt-4.1",
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -191,8 +197,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -216,8 +221,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -242,8 +246,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -267,8 +270,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -291,8 +293,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -316,7 +317,7 @@
         "model": {
           "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -338,10 +339,10 @@
         "name": "Luna",
         "agentDir": "/Users/apex/.openclaw/agents/aurora/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4",
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -357,9 +358,23 @@
           "self-improving",
           "video-content",
           "clickup-tasks",
-          "web-research"
+          "web-research",
+          "quality-gate"
         ],
-        "workspace": "/Users/apex/.openclaw/workspace-aurora"
+        "workspace": "/Users/apex/.openclaw/workspace-aurora",
+        "subagents": {
+          "allowAgents": [
+            "signal",
+            "recon",
+            "cto",
+            "agent-lab",
+            "council-sage",
+            "council-oracle",
+            "hunter",
+            "counsel"
+          ],
+          "requireAgentId": false
+        }
       },
       {
         "id": "cto",
@@ -368,8 +383,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -397,8 +411,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -424,7 +437,7 @@
         "model": {
           "primary": "openai/gpt-5.4-mini",
           "fallbacks": [
-            "openai/gpt-4.1-mini"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -448,8 +461,7 @@
         "model": {
           "primary": "openai/gpt-5.4",
           "fallbacks": [
-            "openai/gpt-5.4-mini",
-            "openai/gpt-4.1"
+            "openai/gpt-5.4-mini"
           ]
         },
         "identity": {
@@ -548,7 +560,13 @@
         "mode": "off",
         "path": "/gmail-pubsub"
       }
-    }
+    },
+    "defaultSessionKey": "agent:main:webhook",
+    "allowedAgentIds": [
+      "orion",
+      "main",
+      "apex"
+    ]
   },
   "channels": {
     "telegram": {
@@ -601,7 +619,7 @@
       "nativeStreaming": true
     },
     "whatsapp": {
-      "enabled": false,
+      "enabled": true,
       "dmPolicy": "pairing",
       "groupPolicy": "allowlist",
       "debounceMs": 0,
@@ -626,7 +644,12 @@
       }
     },
     "remote": {
-      "url": "ws://100.70.74.1:18789"
+      "url": "ws://100.70.74.1:18789",
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "GATEWAY_AUTH_TOKEN"
+      }
     },
     "http": {
       "endpoints": {

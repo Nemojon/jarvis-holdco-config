@@ -8,17 +8,21 @@ Last updated: 2026-03-01 by Jarvis
 - Nova is quality gate for ALL outputs before reaching Jon
 - Jon trusts Nova + Jarvis recommendations over Orion alone
 
-## MODEL ASSIGNMENTS
-- Jarvis (orion): claude-sonnet-4-6
-- Nova (apex): claude-sonnet-4-6
-- Cipher (cto): claude-sonnet-4-6
-- Luna (aurora): gpt-4.1
-- Echo (signal): gpt-4.1
-- Rex (hunter): gpt-4.1
-- Scout (recon): gpt-4.1-mini
-- Zion (pastor-zion): gpt-4.1-mini
-- Vault (ledger): gpt-4.1-mini
-- Aria (atlas): gpt-4.1-mini
+## MODEL ASSIGNMENTS (Updated 2026-04-06)
+- Jarvis (orion): openai/gpt-5.4-pro
+- Nova (apex): openai/gpt-5.4-pro
+- Cipher (cto): openai/gpt-5.4
+- Luna (aurora): openai/gpt-5.4
+- Echo (signal): openai/gpt-5.4
+- Rex (hunter): openai/gpt-5.4
+- Scout (recon): openai/gpt-5.4
+- Vault (ledger): openai/gpt-5.4
+- Counsel (lex): openai/gpt-5.4
+- Zion (pastor-zion): openai/gpt-5.4-mini
+- Aria (atlas): openai/gpt-5.4
+- Agent Lab: openai/gpt-5.4-mini
+- Council Sage: openai/gpt-5.4
+- Council Oracle: google-ai-studio/gemini-2.5-pro
 
 ## CONTENT APPROVAL GATE
 
@@ -57,14 +61,12 @@ Last updated: 2026-03-01 by Jarvis
 - Keep only: Gmail, Google Calendar, Holdco Sheet as persistent tabs
 - Violating this slows down the Mac mini OS
 
-## CLAUDE.AI CROSS-REFERENCE LAYER — TECHNICAL SETUP (2026-03-01)
-- Model: anthropic/claude-sonnet-4-20250514
-- Connected via: Anthropic API (existing key in openclaw.json)
-- Agents on this model: Jarvis (orion), Nova (apex), Cipher (cto)
+## CLAUDE.AI CROSS-REFERENCE LAYER — TECHNICAL SETUP (Updated 2026-04-06)
+- Primary fleet: openai/gpt-5.4-pro (Jarvis, Nova) and openai/gpt-5.4 (specialists)
+- Cross-reference available via: Anthropic API or Google AI Studio (gemini-2.5-pro via Council Oracle)
 - Cross-reference auto-triggers for: high-stakes decisions, low confidence, irreversible actions
 - Protocol: form answer → spawn cross-reference subagent → synthesize → deliver
 - Jon never sees the internal process — only the final answer
-- Lower tier agents (Scout, Echo, Luna, Zion, Aria, Vault) stay on GPT-4.1/mini for cost efficiency
 
 ## HONESTY & UNCERTAINTY PROTOCOL (2026-03-17) — JON DIRECTIVE
 Jon's exact words: "Do not need to lie. If something you are unsure about, tell me you are unsure. It is ok to tell me you are not certain with the knowledge you have. And I will give my input and we make decision together. Always save all feedback into a feedback loop in knowledge base. And always self improve daily."

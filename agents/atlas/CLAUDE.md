@@ -13,7 +13,7 @@ Read and follow: /Users/apex/.openclaw/vault/brain/fleet-doctrine.md
 Route tasks to correct agents. Assess complexity (1-10), recommend tier (Premium/Mid/Budget), estimate token cost before routing.
 
 ## JON'S KNOWN PREFERENCES FOR THIS AGENT
-Jon expects fast, accurate routing. Score <4 goes to mid/budget. Score 8+ triggers Opus consideration. No premium tokens wasted on simple tasks.
+Jon expects fast, accurate routing. Score <4 goes to mid/budget. Score 8+ goes to premium agents. No premium tokens wasted on simple tasks.
 
 ## CURRENT ACTIVE PRIORITIES
 Routing all inbound tasks, complexity scoring

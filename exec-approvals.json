@@ -44,9 +44,9 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775437410599,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh",
-          "lastResolvedPath": "/bin/bash"
+          "lastUsedAt": 1775496975825,
+          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
+          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
         },
         {
           "pattern": "/tmp/**",
@@ -55,8 +55,8 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775356074325,
-          "lastUsedCommand": "python3 - <<'PY'\nfrom pathlib import Path\nlines=Path('/Users/apex/.openclaw/logs/agent-lab-nightly.log').read_text(errors='ignore').splitlines()\n# last scheduled start\nsched=[l for l in lines if 'PIPELINE START' in l and '(scheduled)' in l]\ncomp=[l for l in lines if 'PIPELINE COMPLETE' in l]\nprint('LAST_SCHEDULED_START', sched[-1] if sched else 'NONE')\nprint('LAST_COMPLETE', comp[-1] if comp else 'NONE')\nPY",
+          "lastUsedAt": 1775489432246,
+          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\nfor agent in ['orion','apex']:\n    p=Path(f'/Users/apex/.openclaw/agents/{agent}/sessions/sessions.json')\n    data=json.loads(p.read_text())\n    print(agent, sum(1 for r in data.values() if isinstance(r,dict) and str(r.get('sessionFile','')).endswith('.gz')))\nPY",
           "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
@@ -131,7 +131,10 @@
           "permissions": [
             "fileRead"
           ],
-          "id": "632b9663-0509-47c6-91b1-d2a090c9cddd"
+          "id": "632b9663-0509-47c6-91b1-d2a090c9cddd",
+          "lastUsedAt": 1775480543824,
+          "lastUsedCommand": "bash -x /Users/apex/.openclaw/scripts/sync-oauth.sh; rc=$?; echo EXIT_CODE:$rc; echo '---LOG---'; tail -50 /tmp/openclaw/oauth-sync.log",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-recon/**",

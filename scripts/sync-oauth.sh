@@ -37,41 +37,70 @@ if [ -f "$MAIN_AUTH" ]; then
   fi
 fi
 
+update_auth_file() {
+  local auth_file="$1"
+  local tmp_file
+  tmp_file=$(mktemp "${TMPDIR:-/tmp}/sync-oauth.XXXXXX")
+
+  if AUTH_FILE="$auth_file" ACCESS="$ACCESS" REFRESH="$REFRESH" EXPIRES="$EXPIRES" TMP_FILE="$tmp_file" python3 - <<'PY' 2>/dev/null
+import json, os, sys
+
+auth_file = os.environ['AUTH_FILE']
+tmp_file = os.environ['TMP_FILE']
+access = os.environ['ACCESS']
+refresh = os.environ['REFRESH']
+expires = int(os.environ['EXPIRES'])
+
+with open(auth_file, 'r') as f:
+    data = json.load(f)
+
+profiles = data.get('profiles', {})
+profile = profiles.get('anthropic:default')
+if not profile:
+    sys.exit(2)
+
+profile['access'] = access
+profile['refresh'] = refresh
+profile['expires'] = expires
+
+with open(tmp_file, 'w') as f:
+    json.dump(data, f, indent=2)
+    f.write('\n')
+PY
+  then
+    mv "$tmp_file" "$auth_file"
+    return 0
+  else
+    rc=$?
+    rm -f "$tmp_file"
+    return "$rc"
+  fi
+}
+
 # Update all agent auth-profiles.json
 UPDATED=0
+SKIPPED=0
 FAILED=0
 for agent_dir in "$AGENTS_DIR"/*/agent; do
   auth_file="$agent_dir/auth-profiles.json"
   [ -f "$auth_file" ] || continue
   agent_name=$(basename "$(dirname "$agent_dir")")
 
-  python3 -c "
-import json, sys
-with open('$auth_file', 'r') as f:
-    data = json.load(f)
-p = data.get('profiles', {}).get('anthropic:default')
-if not p:
-    sys.exit(2)
-p['access'] = '$ACCESS'
-p['refresh'] = '$REFRESH'
-p['expires'] = $EXPIRES
-with open('$auth_file', 'w') as f:
-    json.dump(data, f, indent=2)
-    f.write('\n')
-" 2>/dev/null
-
-  rc=$?
-  if [ $rc -eq 0 ]; then
+  if update_auth_file "$auth_file"; then
     UPDATED=$((UPDATED + 1))
-  elif [ $rc -eq 2 ]; then
-    : # no anthropic profile, skip silently
   else
-    FAILED=$((FAILED + 1))
-    log "WARN: Failed to update $agent_name"
+    rc=$?
+    if [ $rc -eq 2 ]; then
+      SKIPPED=$((SKIPPED + 1))
+      log "SKIP: $agent_name has no anthropic:default profile"
+    else
+      FAILED=$((FAILED + 1))
+      log "WARN: Failed to update $agent_name auth profile (rc=$rc)"
+    fi
   fi
 done
 
-log "OK: Synced token to $UPDATED agents (expires=$EXPIRES, failed=$FAILED)"
+log "OK: Synced token to $UPDATED agents; skipped=$SKIPPED; failed=$FAILED (expires=$EXPIRES)"
 
 # Also sync to VPS if reachable (non-blocking)
 VPS_PASS_FILE="/tmp/vps_pass"

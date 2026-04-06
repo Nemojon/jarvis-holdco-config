@@ -18,3 +18,6 @@
 | Permanent | Non-urgent tasks route through Aria | Aria handles complexity scoring/routing; Jarvis handles direct Jon requests, urgent escalations, and multi-agent coordination. |
 | Permanent | Daily reports are text-only in Telegram | PDFs reserved for formal deliverables; research and updates stay inline text. |
 | 2026-04-05 | Calendar account visibility confirmed for operations | `jon@biptap.com` must be visible and used for calendar operations; browser account `/u/1` remains required path. |
+| 2026-04-06 | Morning package autonomy protocol locked | When Cortex sends the morning package (Morning Briefing, Agent Activity Update, Yesterday's Completed Work), Jarvis must immediately pick up actionable items without waiting for Jon, route outbound work through Nova for quality gate, escalate only money/legal/strategic decisions, and trigger Cortex follow-up within 2 hours if inactive. |
+| 2026-04-06 | PHANTOM CEO proposal declined in current form | Only accepted counter-position is advisory plus referral rev-share. |
+| 2026-04-06 | Morning Daily Brief SOP canonical location recorded | Canonical SOP path is `/Users/apex/.openclaw/vault/brain/SOPs/morning-daily-brief.md`; calendar must use browser `/u/1` (`jon@biptap.com`), not gog CLI. |
