@@ -37,3 +37,4 @@ Record of all implemented upgrades.
 
 **Proposal source:** Agent Lab proposals active.md, 2026-04-04
 2026-04-05: Fixed agent cron jobs by auditing all OpenClaw CLI uses for deprecated commands, validating config (removed forceIPv4), and running openclaw doctor. All automation restored. Minor config warning remains (disabled plugin searxng). No system health risks.
+- 2026-04-07: Hardened cron execution by updating `scripts/dead-letter.sh` to verify the OpenClaw CLI at startup and by switching legacy cron/template examples to `/opt/homebrew/bin/openclaw agent ...` instead of brittle PATH-dependent or deprecated `send` patterns. Verified with `bash -n` and `openclaw doctor`.

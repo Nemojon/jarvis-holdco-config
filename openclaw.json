@@ -60,12 +60,15 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai/gpt-5.4",
+        "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
+          "openai/gpt-5.4",
           "openai/gpt-5.4-mini"
         ]
       },
       "models": {
+        "openai-codex/gpt-5.4": {},
+        "openai-codex/gpt-5.4-mini": {},
         "openai/gpt-5.4-pro": {},
         "openai/gpt-5.4": {},
         "openai/gpt-5.4-mini": {},
@@ -89,7 +92,7 @@
       {
         "id": "main",
         "model": {
-          "primary": "openai/gpt-5.4-mini",
+          "primary": "openai-codex/gpt-5.4-mini",
           "fallbacks": [
             "openai/gpt-5.4-mini"
           ]
@@ -106,6 +109,7 @@
         "model": {
           "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
+            "openai-codex/gpt-5.4",
             "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
@@ -148,6 +152,7 @@
         "model": {
           "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
+            "openai-codex/gpt-5.4",
             "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
@@ -195,8 +200,9 @@
         "name": "Aria",
         "agentDir": "/Users/apex/.openclaw/agents/atlas/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -219,8 +225,9 @@
         "name": "Rex",
         "agentDir": "/Users/apex/.openclaw/agents/hunter/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -244,8 +251,9 @@
         "name": "Scout",
         "agentDir": "/Users/apex/.openclaw/agents/recon/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -268,8 +276,9 @@
         "name": "Echo",
         "agentDir": "/Users/apex/.openclaw/agents/signal/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -291,8 +300,9 @@
         "name": "Vault",
         "agentDir": "/Users/apex/.openclaw/agents/ledger/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -315,7 +325,7 @@
         "name": "Zion",
         "agentDir": "/Users/apex/.openclaw/agents/pastor-zion/agent",
         "model": {
-          "primary": "openai/gpt-5.4-mini",
+          "primary": "openai-codex/gpt-5.4-mini",
           "fallbacks": [
             "openai/gpt-5.4-mini"
           ]
@@ -341,6 +351,7 @@
         "model": {
           "primary": "openai/gpt-5.4-pro",
           "fallbacks": [
+            "openai-codex/gpt-5.4",
             "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
@@ -381,8 +392,9 @@
         "name": "Cipher",
         "agentDir": "/Users/apex/.openclaw/agents/cto/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -409,8 +421,9 @@
         "name": "Lex",
         "agentDir": "/Users/apex/.openclaw/agents/counsel/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },
@@ -435,7 +448,7 @@
         "workspace": "/Users/apex/.openclaw/workspace-agent-lab",
         "agentDir": "/Users/apex/.openclaw/agents/agent-lab/agent",
         "model": {
-          "primary": "openai/gpt-5.4-mini",
+          "primary": "openai-codex/gpt-5.4-mini",
           "fallbacks": [
             "openai/gpt-5.4-mini"
           ]
@@ -459,8 +472,9 @@
         "workspace": "/Users/apex/.openclaw/workspace-council-sage",
         "agentDir": "/Users/apex/.openclaw/agents/council-sage/agent",
         "model": {
-          "primary": "openai/gpt-5.4",
+          "primary": "openai-codex/gpt-5.4",
           "fallbacks": [
+            "openai/gpt-5.4",
             "openai/gpt-5.4-mini"
           ]
         },

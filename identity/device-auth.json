@@ -10,7 +10,17 @@
         "operator.read",
         "operator.write"
       ],
-      "updatedAtMs": 1775498412359
+      "updatedAtMs": 1775584513840
+    },
+    "node": {
+      "token": "vobqH54tXgPmSBvn2Vd7_aHy6D_JAc2zGr3iJLBLA68",
+      "role": "node",
+      "scopes": [
+        "operator.admin",
+        "operator.read",
+        "operator.write"
+      ],
+      "updatedAtMs": 1775584214873
     }
   }
 }

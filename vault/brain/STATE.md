@@ -1,5 +1,5 @@
 # STATE.md — HoldCo Operating State
-**Generated:** Sunday, April 5, 2026 — 10:24 AM SGT
+**Generated:** Tuesday, April 7, 2026 — 8:01 AM SGT
 **Author:** Jarvis (COO)
 
 ---
@@ -8,68 +8,87 @@
 
 | # | Priority | Status | Owner | Deadline |
 |---|----------|--------|-------|----------|
-| 1 | **TEDx Talk prep** | 🔴 CRITICAL — 10 days left | Jon + Echo + Jarvis | April 15 |
-| 2 | **LinkedIn DMs — 3 critical replies** | 🟡 SCHEDULED (today 10:30 AM) | Jon + Rex | Today |
-| 3 | **Biptap investor pipeline restart** | 🟡 IN PROGRESS | Rex + Scout | This week |
-| 4 | **ClickUp dedup + hygiene** | 🟡 IN PROGRESS | Aria | Today |
-| 5 | **BSQ lead gen go-live** | 🟡 BLOCKED (Expandi) | Luna + Rex | ASAP |
-| 6 | **1TX0 positioning + PR moment** | 🟡 DELAYED | Echo + Scout | Q2 |
+| 1 | **TEDx talk prep — lock angle + start delivery build** | 🔴 CRITICAL — 8 days left | Jon + Echo + Jarvis | April 15 |
+| 2 | **Biptap / AbsolutePay investor + partner pipeline restart** | 🟡 IN PROGRESS | Rex + Scout | This week |
+| 3 | **Jon decision queue in ClickUp (money / legal / approvals)** | 🔴 URGENT | Jon | ASAP |
+| 4 | **BSQ growth ops — restore reliable profile visibility + unblock outreach** | 🟡 BLOCKED / LOW-VISIBILITY | Luna + Rex | ASAP |
+| 5 | **1TXO narrative insertion around regulated infrastructure trend** | 🟡 OPEN WINDOW | Echo + Scout | This week |
+| 6 | **Ops hygiene — ClickUp cleanup + agent-lab nightly fix** | 🟡 IN PROGRESS | Aria + Cipher | Today |
 
 ---
 
 ## 2. COMPANY STATUS
 
-### Biptap (AbsolutePay)
-- Investor pipeline restart in motion; fresh prospecting and intel required this week.
-- Ambassador Program refund: ✅ completed.
-- Operational risk remains from task sprawl/duplicates in ClickUp.
+### Biptap / AbsolutePay
+- Core narrative tailwind is favorable: market is shifting toward regulated, bank-connected financial infrastructure.
+- Live ClickUp pressure remains on payments / approvals / partner follow-through.
+- Notable open items surfaced this morning: **Monavate setup invoice (£15,000)**, **BasePay proposal review**, **Havenbanq pricing proposal via Xodosign**, **9MAi transfer**, **Uphold partnership**, **DHL follow-through/hash**, **DHL invoice**, and **BE Cards $5,500 collection**.
 
-### 1TX0 Protocol
-- Positioning still not activated in market; PR execution pending.
-- Opportunity window remains open for strong narrative insertion.
+### 1TXO Protocol
+- Market backdrop is supportive, but execution is still behind positioning opportunity.
+- No fresh same-day brand mentions detected this morning.
+- Best opening remains a sharp POV insertion tied to tokenization, bank rails, and cross-border infrastructure.
 
 ### BSQ
-- Delivery cadence active; funnel launch still blocked by Expandi signup.
+- Output cadence exists, but signal quality is weak: today’s BSQ report shows **no verified post data** for Jon, Evan, or Amina.
+- Prior LinkedIn verification/session issues appear not fully resolved.
+- Funnel/outreach remains fragile until profile visibility and tooling are reliable.
+
+### HoldCo Ops Backbone
+- Delegation path and gateway stack were restored in the Apr 4 fix; **session mismatch errors were at 0 after restart**.
+- Fleet-wide anti-fabrication / doubt protocol rollout completed across all 14 agents on Apr 5.
+- Agent Lab nightly remains stale since Mar 27 and still needs resolution.
+- Billing visibility is partially blind this morning; exact model-spend / runway is not freshly verified.
+- Billing visibility is partially blind this morning; exact model-spend / runway is not freshly verified.
 
 ---
 
-## 3. BLOCKERS / ESCALATIONS FOR JON
+## 3. BLOCKERS / ESCALATIONS NEEDED FROM JON
 
-1. **TEDx content direction** — 5-min voice note required to unlock full prep flow.
-2. **Expandi signup ($99/mo)** — required to launch BSQ funnel.
-3. **ClickUp cleanup decisions** — final approval on duplicate removals and priority order.
+1. **TEDx strategic direction** — lock the talk angle and give the 5-minute voice note so buildout can accelerate.
+2. **Approve / sign / pay decision queue** — Monavate invoice, Havenbanq pricing proposal, BasePay proposal, Jarrett opex payment, and any money-moving unblock tied to **9MAi** are Jon-level actions.
+3. **If BSQ funnel is still meant to go live this week, approve the required tooling spend / path immediately** (previous blocker: Expandi).
+4. **Any legal/commercial responses tied to partner proposals** — especially **Uphold** or tokenization/compliance-sensitive corridor moves — should be cleared fast to prevent pipeline drag.
 
 ---
 
-## 4. KEY METRICS
+## 4. KEY METRICS SNAPSHOT
 
 ### System Health
-- **Gateway:** ✅ running
-- **Delegation path:** ✅ restored and stable
-- **Model chain:** `openai/gpt-5.4-pro (Jarvis + Nova) → openai/gpt-5.4 (specialists) → openai/gpt-5.4-mini (utility) → openai/gpt-4.1 (fallback)`
-- **Fleet prompt policy (Apr 5):** ✅ New permanent identity policy rolled out to all 14 agents: “Constraints — What You Must NEVER Do” + “Epistemic Integrity & Doubt Protocol”
+- **Gateway / delegation path:** Last known healthy after Apr 4 fix
+- **Session mismatch errors:** 0 after restart (last verified Apr 4)
+- **Fleet integrity policy rollout:** 14/14 agents updated (Apr 5)
+- **Agent Lab nightly:** stale since Mar 27
+- **Billing / cost telemetry:** not freshly verified this morning
+- **Billing / cost telemetry:** not freshly verified this morning
 
-### Cron Fleet
-- **Health:** 🟢 **18/21 healthy**
-- **Pending first run (weekly):** 3 jobs
-- **Session mismatch errors:** 0 since restart
+### Market / Brand
+- **Fresh mainstream brand mentions (Biptap / 1TXO / Jon):** 0 detected this morning
+- **Immediate reputational threat:** none detected this morning
+- **Macro narrative:** favorable for regulated cross-border finance; compliance scrutiny still rising
 
-### Calendar Connectivity
-- **jon@biptap.com:** browser calendar path confirmed (Google Calendar)
-- **gog CLI calendar scope:** unavailable for jon@biptap.com (email-only scope)
-
----
-
-## 5. TODAY'S PLAN (Apr 5)
-
-1. Execute TEDx block (10:00 AM): pick angle + record voice note.
-2. Execute LinkedIn DMs block (10:30 AM): reply to Regis, Jack, Elisabeth.
-3. Aria runs ClickUp dedup pass (remove duplicate Speaking Apps + VIP bypass tasks).
-4. Cipher investigates/flags `agent-lab-nightly.js` staleness (since Mar 27).
-5. Verify weekly cron jobs are correctly configured and queued for next trigger.
-6. Ensure all future/new agents inherit Apr 5 integrity + anti-fabrication policy blocks.
+### ClickUp Pressure (fresh scan)
+- **Urgent Jon-owned items seen:** 2
+  - Pay Monavate setup invoice — £15,000
+  - Havenbanq pricing proposal via Xodosign
+- **High-priority Jon/public approval item:** 1
+  - BasePay proposal review
+- **High-priority ops cash items seen:** 2
+  - Collect remaining $5,500 — BE Cards
+  - Pay DHL invoice — Digifox Lifestyle $28.89
+- **BSQ profile visibility today:** 3/3 profiles returned no verified post data
 
 ---
 
-*Biggest risk: TEDx timeline (10 days).*  
-*Biggest lever today: complete TEDx voice-note decision block.*
+## 5. TODAY'S OPERATING FOCUS
+
+1. Get TEDx angle locked and move immediately into script/story build.
+2. Clear Jon’s approval/payment queue so commercial momentum is not stalled by admin lag.
+3. Push Biptap / AbsolutePay outbound using today’s strongest market angle: regulated rails, corridor infrastructure, institutional trust.
+4. Repair BSQ visibility/tool reliability before trusting social execution signals.
+5. Close ClickUp hygiene and Agent Lab nightly issues so the ops backbone stays dependable.
+
+---
+
+*Biggest risk: TEDx timeline compression plus decision bottlenecks sitting in Jon’s queue.*  
+*Biggest lever today: convert the regulated-infrastructure market tailwind into outbound, content, and partner momentum.*

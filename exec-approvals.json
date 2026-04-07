@@ -24,7 +24,10 @@
       "allowlist": [
         {
           "pattern": "/Users/apex/.openclaw/**",
-          "id": "4c69f9fd-4563-4036-9396-e6905904a695"
+          "id": "4c69f9fd-4563-4036-9396-e6905904a695",
+          "lastUsedAt": 1775569253128,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/sync-oauth.sh && tail -n 20 /tmp/openclaw/oauth-sync.log",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/Users/apex/Projects/**",
@@ -47,9 +50,9 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775496975825,
-          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
-          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
+          "lastUsedAt": 1775583378483,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/tmp/**",
@@ -58,8 +61,8 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775489432246,
-          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\nfor agent in ['orion','apex']:\n    p=Path(f'/Users/apex/.openclaw/agents/{agent}/sessions/sessions.json')\n    data=json.loads(p.read_text())\n    print(agent, sum(1 for r in data.values() if isinstance(r,dict) and str(r.get('sessionFile','')).endswith('.gz')))\nPY",
+          "lastUsedAt": 1775575847845,
+          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/Users/apex/.openclaw/agents/orion/sessions/sessions.json')\ndata=json.loads(p.read_text())\nfor k,v in data.items():\n    if v.get('sessionId')=='83cda473-a31f-4f5a-b9f8-a0995d1b046e':\n        v['sessionFile']='/Users/apex/.openclaw/agents/orion/sessions/archive/2026-04-07/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl.gz'\n        break\np.write_text(json.dumps(data, indent=2))\nlog=Path('/Users/apex/.openclaw/vault/holdco/agent-logs/session-wipe.log')\nlog.parent.mkdir(parents=True, exist_ok=True)\nlog.write_text((log.read_text() if log.exists() else '') + '2026-04-07T23:30:00+08:00 archived /Users/apex/.openclaw/agents/orion/sessions/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl -> /Users/apex/.openclaw/agents/orion/sessions/archive/2026-04-07/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl.gz\\n')\nPY",
           "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
@@ -232,7 +235,10 @@
           "permissions": [
             "fileRead"
           ],
-          "id": "b3d0b6ca-48df-4ffd-8ade-9254d3ce25e4"
+          "id": "b3d0b6ca-48df-4ffd-8ade-9254d3ce25e4",
+          "lastUsedAt": 1775571607393,
+          "lastUsedCommand": "bash ../scripts/sync-oauth.sh; echo EXIT:$?; tail -n 20 /tmp/openclaw/oauth-sync.log",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-ledger/**",

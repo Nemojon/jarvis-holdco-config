@@ -8,6 +8,18 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:$PATH"
 
 set -uo pipefail
 
+OPENCLAW_BIN="$(command -v openclaw 2>/dev/null || true)"
+if [ -z "$OPENCLAW_BIN" ] && [ -x "/opt/homebrew/bin/openclaw" ]; then
+  OPENCLAW_BIN="/opt/homebrew/bin/openclaw"
+fi
+
+if [ -n "$OPENCLAW_BIN" ]; then
+  "$OPENCLAW_BIN" --help >/dev/null 2>&1 || {
+    echo "openclaw CLI sanity check failed: $OPENCLAW_BIN" >&2
+    exit 127
+  }
+fi
+
 JOB_NAME="${1:-unknown}"
 shift || { echo "Usage: dead-letter.sh <job-name> <command...>"; exit 1; }
 
