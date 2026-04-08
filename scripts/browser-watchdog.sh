@@ -1,6 +1,7 @@
 #!/bin/bash
-# browser-watchdog.sh — Hourly check: close Brave if inactive
-# Inactive = browser running but no active CDP (Chrome DevTools Protocol) clients connected
+# browser-watchdog.sh — Hourly check: close stale tabs + close Brave if inactive
+# Stale = any tab that isn't about:blank or actively needed
+# Inactive = browser running but no active CDP clients connected
 
 LOG="/tmp/openclaw/browser-watchdog.log"
 mkdir -p /tmp/openclaw
@@ -18,8 +19,36 @@ fi
 
 log "Brave running (PID $BRAVE_PID). Checking activity..."
 
+# --- PHASE 1: Clean stale tabs ---
+TAB_COUNT=$(osascript -e 'tell application "Brave Browser" to count of tabs of window 1' 2>/dev/null)
+if [ -n "$TAB_COUNT" ] && [ "$TAB_COUNT" -gt 1 ]; then
+  log "Found $TAB_COUNT tabs. Cleaning stale tabs..."
+  osascript -e '
+    tell application "Brave Browser"
+      tell window 1
+        set tabCount to count of tabs
+        -- Close from last to first to avoid index shifting
+        repeat while tabCount > 1
+          close tab tabCount
+          set tabCount to tabCount - 1
+        end repeat
+        -- Set remaining tab to blank
+        set URL of tab 1 to "about:blank"
+      end tell
+    end tell' 2>/dev/null
+  NEW_COUNT=$(osascript -e 'tell application "Brave Browser" to count of tabs of window 1' 2>/dev/null)
+  log "Tab cleanup complete: $TAB_COUNT -> ${NEW_COUNT:-1} tabs."
+elif [ "$TAB_COUNT" -eq 1 ]; then
+  # Check if the single tab is stale (not blank)
+  TAB_URL=$(osascript -e 'tell application "Brave Browser" to get URL of active tab of window 1' 2>/dev/null)
+  if [ "$TAB_URL" != "about:blank" ] && [ -n "$TAB_URL" ]; then
+    osascript -e 'tell application "Brave Browser" to set URL of active tab of window 1 to "about:blank"' 2>/dev/null
+    log "Reset single stale tab to blank (was: $TAB_URL)"
+  fi
+fi
+
+# --- PHASE 2: Check if browser should be fully closed ---
 # Check for active CDP WebSocket connections on port 9222
-# If agents/tools are using the browser, there will be established connections
 ACTIVE_CONNECTIONS=$(lsof -i :9222 -sTCP:ESTABLISHED 2>/dev/null | grep -v "^COMMAND" | wc -l | tr -d ' ')
 
 # Also check if any openclaw agent instances are currently running

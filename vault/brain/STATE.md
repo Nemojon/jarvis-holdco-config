@@ -1,94 +1,50 @@
 # STATE.md — HoldCo Operating State
-**Generated:** Tuesday, April 7, 2026 — 8:01 AM SGT
+**Generated:** Wednesday, April 8, 2026 — 8:13 AM SGT
 **Author:** Jarvis (COO)
 
 ---
 
-## 1. ACTIVE PRIORITIES (ranked)
-
-| # | Priority | Status | Owner | Deadline |
-|---|----------|--------|-------|----------|
-| 1 | **TEDx talk prep — lock angle + start delivery build** | 🔴 CRITICAL — 8 days left | Jon + Echo + Jarvis | April 15 |
-| 2 | **Biptap / AbsolutePay investor + partner pipeline restart** | 🟡 IN PROGRESS | Rex + Scout | This week |
-| 3 | **Jon decision queue in ClickUp (money / legal / approvals)** | 🔴 URGENT | Jon | ASAP |
-| 4 | **BSQ growth ops — restore reliable profile visibility + unblock outreach** | 🟡 BLOCKED / LOW-VISIBILITY | Luna + Rex | ASAP |
-| 5 | **1TXO narrative insertion around regulated infrastructure trend** | 🟡 OPEN WINDOW | Echo + Scout | This week |
-| 6 | **Ops hygiene — ClickUp cleanup + agent-lab nightly fix** | 🟡 IN PROGRESS | Aria + Cipher | Today |
-
----
+## 1. ACTIVE PRIORITIES (ranked by urgency)
+1. **TEDx (Apr 15)** — lock final angle and move immediately into script/rehearsal execution; key milestones are now time-compressed.
+2. **Biptap / AbsolutePay pipeline** — push active whitelabel + partner deals already in negotiation and prevent investor / partner momentum from stalling.
+3. **Jon decision queue** — clear Jon-owned approvals/actions in ClickUp so payments, speaking, and partner follow-through are not bottlenecked.
+4. **1TXO positioning** — use today’s trust/regulation/stablecoin narrative window for first strong content/PR insertion.
+5. **BSQ lead-gen launch** — unblock tooling / outreach and restore reliable execution signal.
+6. **Ops hygiene** — finish ClickUp dedup / reprioritization and resolve stale Agent Lab nightly issue.
 
 ## 2. COMPANY STATUS
-
 ### Biptap / AbsolutePay
-- Core narrative tailwind is favorable: market is shifting toward regulated, bank-connected financial infrastructure.
-- Live ClickUp pressure remains on payments / approvals / partner follow-through.
-- Notable open items surfaced this morning: **Monavate setup invoice (£15,000)**, **BasePay proposal review**, **Havenbanq pricing proposal via Xodosign**, **9MAi transfer**, **Uphold partnership**, **DHL follow-through/hash**, **DHL invoice**, and **BE Cards $5,500 collection**.
+- Market tailwind remains favorable: regulated rails, stablecoins-as-infrastructure, and cross-border trust/compliance are the strongest narratives this morning.
+- ClickUp shows active commercial motion: multiple whitelabel/payment opportunities remain live in negotiating / proposal / engaged stages.
+- Pipeline hygiene still needs attention: some leads remain in early-stage buckets; duplicate / stale task cleanup is still important.
 
 ### 1TXO Protocol
-- Market backdrop is supportive, but execution is still behind positioning opportunity.
-- No fresh same-day brand mentions detected this morning.
-- Best opening remains a sharp POV insertion tied to tokenization, bank rails, and cross-border infrastructure.
+- Narrative opportunity is open, but execution is behind the market window.
+- Content calendar tasks exist, but no fresh high-confidence brand mentions surfaced this morning.
+- Best move: publish operator POV around trusted financial infrastructure, tokenization, and compliance-first rails.
 
 ### BSQ
-- Output cadence exists, but signal quality is weak: today’s BSQ report shows **no verified post data** for Jon, Evan, or Amina.
-- Prior LinkedIn verification/session issues appear not fully resolved.
-- Funnel/outreach remains fragile until profile visibility and tooling are reliable.
+- Still operationally fragile.
+- Prior blocker remains relevant: Expandi signup/tooling required to launch the funnel properly.
+- Execution quality should be treated cautiously until outreach/tool reliability is confirmed.
 
-### HoldCo Ops Backbone
-- Delegation path and gateway stack were restored in the Apr 4 fix; **session mismatch errors were at 0 after restart**.
-- Fleet-wide anti-fabrication / doubt protocol rollout completed across all 14 agents on Apr 5.
-- Agent Lab nightly remains stale since Mar 27 and still needs resolution.
-- Billing visibility is partially blind this morning; exact model-spend / runway is not freshly verified.
-- Billing visibility is partially blind this morning; exact model-spend / runway is not freshly verified.
-
----
+### HoldCo AI OS
+- Core operating system is running on the Mac mini; no fresh system incidents surfaced in today’s review.
+- Anti-fabrication / workflow discipline remains critical.
+- Agent Lab nightly issue is still stale from Mar 27 and remains an ops debt item.
 
 ## 3. BLOCKERS / ESCALATIONS NEEDED FROM JON
+1. **TEDx direction** — final voice-note / angle decision still needed to compress the remaining prep window.
+2. **Jon-owned ClickUp actions** — clear approval items assigned to Jon, especially speaking applications and executive to-dos, so execution can move.
+3. **BSQ tooling path** — if BSQ launch is still expected this week, approve the tooling/spend path immediately.
+4. **Any high-sensitivity partner/commercial approvals** — move quickly on Jon-level decisions that could slow Biptap / AbsolutePay momentum.
 
-1. **TEDx strategic direction** — lock the talk angle and give the 5-minute voice note so buildout can accelerate.
-2. **Approve / sign / pay decision queue** — Monavate invoice, Havenbanq pricing proposal, BasePay proposal, Jarrett opex payment, and any money-moving unblock tied to **9MAi** are Jon-level actions.
-3. **If BSQ funnel is still meant to go live this week, approve the required tooling spend / path immediately** (previous blocker: Expandi).
-4. **Any legal/commercial responses tied to partner proposals** — especially **Uphold** or tokenization/compliance-sensitive corridor moves — should be cleared fast to prevent pipeline drag.
+## 4. OPERATING SNAPSHOT
+- **TEDx countdown:** 7 days to event; urgent milestones already scheduled in ClickUp (drafts, rehearsal, final script, event day).
+- **ClickUp open-task scan:** 100 open tasks returned in latest review.
+- **Commercial signal:** multiple Biptap / AbsolutePay leads are live across negotiating, proposal sent, contacted, engaged, and new lead stages.
+- **Jon-visible urgent items in current scan:** speaking applications, ambassador refund fulfilment, and executive/Jon to-do items remain open.
+- **Brand / market signal:** 0 fresh high-confidence brand mentions for Biptap / 1TXO / Jon this morning; no immediate negative narrative detected.
+- **System / ops signal:** Agent Lab nightly still stale since Mar 27; ClickUp dedup / hygiene still unresolved.
 
----
-
-## 4. KEY METRICS SNAPSHOT
-
-### System Health
-- **Gateway / delegation path:** Last known healthy after Apr 4 fix
-- **Session mismatch errors:** 0 after restart (last verified Apr 4)
-- **Fleet integrity policy rollout:** 14/14 agents updated (Apr 5)
-- **Agent Lab nightly:** stale since Mar 27
-- **Billing / cost telemetry:** not freshly verified this morning
-- **Billing / cost telemetry:** not freshly verified this morning
-
-### Market / Brand
-- **Fresh mainstream brand mentions (Biptap / 1TXO / Jon):** 0 detected this morning
-- **Immediate reputational threat:** none detected this morning
-- **Macro narrative:** favorable for regulated cross-border finance; compliance scrutiny still rising
-
-### ClickUp Pressure (fresh scan)
-- **Urgent Jon-owned items seen:** 2
-  - Pay Monavate setup invoice — £15,000
-  - Havenbanq pricing proposal via Xodosign
-- **High-priority Jon/public approval item:** 1
-  - BasePay proposal review
-- **High-priority ops cash items seen:** 2
-  - Collect remaining $5,500 — BE Cards
-  - Pay DHL invoice — Digifox Lifestyle $28.89
-- **BSQ profile visibility today:** 3/3 profiles returned no verified post data
-
----
-
-## 5. TODAY'S OPERATING FOCUS
-
-1. Get TEDx angle locked and move immediately into script/story build.
-2. Clear Jon’s approval/payment queue so commercial momentum is not stalled by admin lag.
-3. Push Biptap / AbsolutePay outbound using today’s strongest market angle: regulated rails, corridor infrastructure, institutional trust.
-4. Repair BSQ visibility/tool reliability before trusting social execution signals.
-5. Close ClickUp hygiene and Agent Lab nightly issues so the ops backbone stays dependable.
-
----
-
-*Biggest risk: TEDx timeline compression plus decision bottlenecks sitting in Jon’s queue.*  
-*Biggest lever today: convert the regulated-infrastructure market tailwind into outbound, content, and partner momentum.*
+*Operating note: strongest external narrative today is trusted financial infrastructure — AI in payments, compliance, stablecoins, and cross-border rails — and that should shape outbound, content, and partner conversations.*

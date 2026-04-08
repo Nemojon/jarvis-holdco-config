@@ -8,26 +8,51 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:$PATH"
 
 set -uo pipefail
 
-OPENCLAW_BIN="$(command -v openclaw 2>/dev/null || true)"
-if [ -z "$OPENCLAW_BIN" ] && [ -x "/opt/homebrew/bin/openclaw" ]; then
-  OPENCLAW_BIN="/opt/homebrew/bin/openclaw"
+OPENCLAW_BIN="/opt/homebrew/bin/openclaw"
+if [ ! -x "$OPENCLAW_BIN" ]; then
+  OPENCLAW_BIN="$(command -v openclaw 2>/dev/null || true)"
 fi
 
-if [ -n "$OPENCLAW_BIN" ]; then
-  "$OPENCLAW_BIN" --help >/dev/null 2>&1 || {
-    echo "openclaw CLI sanity check failed: $OPENCLAW_BIN" >&2
-    exit 127
-  }
+if [ -z "$OPENCLAW_BIN" ] || [ ! -x "$OPENCLAW_BIN" ]; then
+  echo "openclaw CLI not found" >&2
+  exit 127
 fi
+
+"$OPENCLAW_BIN" --help >/dev/null 2>&1 || {
+  echo "openclaw CLI sanity check failed: $OPENCLAW_BIN" >&2
+  exit 127
+}
 
 JOB_NAME="${1:-unknown}"
 shift || { echo "Usage: dead-letter.sh <job-name> <command...>"; exit 1; }
 
 LOG="$HOME/.openclaw/logs/failures.log"
-BOT_TOKEN=$(python3 -c "import json; print(json.load(open('$HOME/.openclaw/openclaw.json'))['channels']['telegram']['botToken'])" 2>/dev/null)
 CHAT_ID="970413391"
+CONFIG_PATH="$HOME/.openclaw/openclaw.json"
 
 mkdir -p "$(dirname "$LOG")"
+
+BOT_TOKEN=$(CONFIG_PATH="$CONFIG_PATH" python3 <<'PY' 2>/dev/null
+import json, os
+path = os.environ["CONFIG_PATH"]
+try:
+    with open(path) as f:
+        cfg = json.load(f)
+    telegram = (cfg.get("channels") or {}).get("telegram") or {}
+    accounts = telegram.get("accounts") or {}
+    account = accounts.get("default") or {}
+    token = account.get("botToken")
+    if isinstance(token, str):
+        print(token)
+    elif isinstance(token, dict):
+        if token.get("source") == "env":
+            env_name = token.get("id")
+            if env_name:
+                print(os.environ.get(env_name, ""))
+except Exception:
+    pass
+PY
+)
 
 # Run the command, capture stderr
 stderr_file=$(mktemp)
@@ -36,7 +61,7 @@ exit_code=$?
 
 if [ $exit_code -ne 0 ]; then
   ts=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-  error_msg=$(cat "$stderr_file" | head -20)
+  error_msg=$(head -20 "$stderr_file")
 
   # Log to failures.log
   echo "[$ts] JOB=$JOB_NAME EXIT=$exit_code ERROR=$error_msg" >> "$LOG"
@@ -47,15 +72,16 @@ if [ $exit_code -ne 0 ]; then
 
 *Job:* $JOB_NAME
 *Exit code:* $exit_code
-*Time:* $(date '+%Y-%m-%d %H:%M WITA')
+*Time:* $(TZ=Asia/Singapore date '+%Y-%m-%d %H:%M SGT')
 *Error:*
 \`\`\`
-$(echo "$error_msg" | head -10)
+$(printf '%s
+' "$error_msg" | head -10)
 \`\`\`"
 
     curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
       -H "Content-Type: application/json" \
-      -d "{\"chat_id\": \"$CHAT_ID\", \"text\": $(echo "$msg" | python3 -c "import json,sys; print(json.dumps(sys.stdin.read()))"), \"parse_mode\": \"Markdown\"}" \
+      -d "{\"chat_id\": \"$CHAT_ID\", \"text\": $(printf '%s' "$msg" | python3 -c "import json,sys; print(json.dumps(sys.stdin.read()))"), \"parse_mode\": \"Markdown\"}" \
       > /dev/null 2>&1
   fi
 fi

@@ -26,3 +26,6 @@
 
 | 2026-04-05 | Nova | Nova repeatedly said "executing with Cortex now" and "5 minutes" for e-book covers — but she CANNOT reach Cortex. She has no bridge, no trigger, no API to Claude Code. She was hallucinating a capability. Root cause: identity said "route to Cortex" but didn't say "you CANNOT trigger Cortex." Fixed: identity now explicitly lists what she CAN and CANNOT do. |
 | 2026-04-05 | Ops memory system | Calendar/account mismatch risk remains critical: confirm `jon@biptap.com` visibility before any calendar-dependent workflow to avoid wrong-account execution. | Added to standing orders + decision log for repeated enforcement. |
+| 2026-04-08 | Fleet / ops verification | Auth checks cannot stop at exit code or nominal success; verification must confirm propagation actually happened. | Added to standing orders as a durable verification rule. |
+| 2026-04-08 | Fleet / reporting | Shared agent-log coverage was too stale/thin for a high-confidence evening close verification path. | Logged as recurring ops hygiene weakness; keep improving activity logging. |
+| 2026-04-08 | Cron / model config | Nightly Brain Save run failed when `gpt-5.4-pro` was invoked with unsupported `thinking=low`; run only progressed after fallback to Codex `gpt-5.4`. | Record as reliability issue; cron/model-thinking compatibility needs hardening. |

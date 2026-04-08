@@ -23,6 +23,7 @@
 - Calendar account requirement reaffirmed: use `jon@biptap.com` and verify it is visible before calendar actions — 2026-04-05 — browser `/u/1` is mandatory path.
 - When Cortex sends the morning package, Jarvis must immediately action it without waiting for Jon, run outbound work through Nova for quality gate, escalate only money/legal/strategic decisions, and trigger Cortex follow-up within 2 hours if inactive — 2026-04-06 — autonomous morning operating loop.
 - Future "openclaw team" updates must include all sub-agents under Jarvis's control with full details when available — 2026-04-06 — reporting completeness rule.
+- Auth checks must validate actual propagation, not just a green exit code — 2026-04-08 — verification must confirm the change really landed.
 
 ## Channel Separation (Apr 5, 2026)
 - JARVIS (@Holdco_apex_bot) = Operations, admin, fleet, calendar, ClickUp, briefings

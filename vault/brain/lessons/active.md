@@ -70,5 +70,17 @@ Repeat count > 3 = escalation required.
 ## LES-013 — Vault Token Monitor Chronic Timeouts (2026-04-04)
 **Context:** Token Balance Monitor has 4 consecutive timeout errors. Browser-based billing page scraping is unreliable.
 **Lesson:** Browser-based billing checks are fragile — pages load slowly, require auth, and timeout at 120-360s. Need either: (a) API-based balance checks, (b) increased timeout, or (c) a lighter-weight check method. Token spend visibility is a blind spot when this job fails.
-**Repeat count:** 4 — ESCALATION THRESHOLD.
-**Status:** Active — escalate to Cipher.
+**Repeat count:** 5 — ESCALATION THRESHOLD.
+**Status:** Active — escalated to Cipher.
+
+## LES-014 — Billing Tabs Need Persisted Auth, Not Just Open URLs (2026-04-08)
+**Context:** Anthropic and OpenAI billing tabs were already open in Brave, but both resolved to login screens during EVENING CLOSE.
+**Lesson:** An open billing URL is not evidence of usable billing visibility. Evening close must verify authenticated session state before relying on browser billing tabs. If the session is logged out, report token spend as unavailable and fall back to API/alternate telemetry instead of assuming the tab is enough.
+**Repeat count:** 1
+**Status:** Active.
+
+## LES-015 — OAuth Sync Script Is Out of Date for Current Fleet (2026-04-08)
+**Context:** `sync-oauth.sh` completed with `Synced token to 0 agents; skipped=15; failed=0`, because current fleet auth profiles no longer expose `anthropic:default` in the expected pattern.
+**Lesson:** Passing exit code does not equal healthy auth coverage. Auth health checks must validate that the sync actually touched live profiles and that the target provider/profile matches the current fleet design. A no-op sync should be surfaced as degraded, not silent success.
+**Repeat count:** 1
+**Status:** Active.

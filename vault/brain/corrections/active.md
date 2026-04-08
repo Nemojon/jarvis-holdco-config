@@ -39,3 +39,10 @@ Status: NEW → BROADCAST → GRADUATED (moved to archive)
 **Correction:** Never send status updates mid-task. Never report blockers — figure it out and delegate. Only ping Jon on 100% verified completion. No partial updates, no "working on it" messages.
 **Applies to:** ALL agents
 **Repeat count:** Standing rule
+
+## COR-006 — Token Spend Checks Need Non-Browser Fallback (NEW)
+**Date:** 2026-04-08
+**Source:** LES-013 repeat escalation + EVENING CLOSE failure mode
+**Correction:** Do not rely on billing-page browser sessions as the sole source for Anthropic/OpenAI token spend. Cipher must implement a fallback path that works when browser auth is expired or tabs are logged out — API usage endpoint, exported telemetry, or local usage ledger. Evening close should report exact spend only when verified; otherwise mark it unavailable explicitly.
+**Applies to:** Cipher (cto), Jarvis (orion)
+**Repeat count:** 5+ (escalated recurring blind spot)

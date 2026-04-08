@@ -1,5 +1,5 @@
-UPGRADE PROPOSAL 2026-04-07
-- What: Harden cron/dead-letter execution by making cron jobs invoke the OpenClaw CLI via an absolute path or validated shell wrapper, and replace legacy `send` calls with the supported messaging API.
-- Why: The failures log shows repeated cron exits from `openclaw: command not found` and `unknown command 'send'`, which means scheduled jobs are brittle and can miss alerts/tasks.
+UPGRADE PROPOSAL 2026-04-08
+- What: Fix cron failure handling and config validation so dead-letter notifications stop breaking jobs
+- Why: Recent failures show `openclaw: command not found`, `error: unknown command 'send'`, and an invalid Telegram config key (`forceIPv4`) are still causing cron/task failures; cleaning this up removes avoidable noise and restores reliable failure reporting
 - Effort: QUICK WIN
-- Implementation notes for Cipher: update `/Users/apex/.openclaw/scripts/dead-letter.sh` and the cron templates to use a resolvable OpenClaw binary path (or `npx openclaw`/full Homebrew path), add a startup sanity check for `openclaw --help`, and sweep any scripts still calling deprecated `send` so they use the current channel/message tool path.
+- Implementation notes for Cipher: Update `/Users/apex/.openclaw/scripts/dead-letter.sh` to invoke the correct OpenClaw path or shell environment; replace any deprecated `send` usage with the current message API; run `openclaw doctor --fix` and remove the unsupported `channels.telegram.forceIPv4` config key from `~/.openclaw/openclaw.json`; then re-run the failing cron jobs to confirm the failure path is clean.

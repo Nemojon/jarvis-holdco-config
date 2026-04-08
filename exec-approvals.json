@@ -25,8 +25,8 @@
         {
           "pattern": "/Users/apex/.openclaw/**",
           "id": "4c69f9fd-4563-4036-9396-e6905904a695",
-          "lastUsedAt": 1775569253128,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/sync-oauth.sh && tail -n 20 /tmp/openclaw/oauth-sync.log",
+          "lastUsedAt": 1775658412592,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/sync-oauth.sh; rc=$?; echo RC:$rc; tail -40 /tmp/openclaw/oauth-sync.log",
           "lastResolvedPath": "/bin/bash"
         },
         {
@@ -50,9 +50,9 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775583378483,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
-          "lastResolvedPath": "/bin/bash"
+          "lastUsedAt": 1775668980918,
+          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
+          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
         },
         {
           "pattern": "/tmp/**",
@@ -61,8 +61,8 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775575847845,
-          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/Users/apex/.openclaw/agents/orion/sessions/sessions.json')\ndata=json.loads(p.read_text())\nfor k,v in data.items():\n    if v.get('sessionId')=='83cda473-a31f-4f5a-b9f8-a0995d1b046e':\n        v['sessionFile']='/Users/apex/.openclaw/agents/orion/sessions/archive/2026-04-07/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl.gz'\n        break\np.write_text(json.dumps(data, indent=2))\nlog=Path('/Users/apex/.openclaw/vault/holdco/agent-logs/session-wipe.log')\nlog.parent.mkdir(parents=True, exist_ok=True)\nlog.write_text((log.read_text() if log.exists() else '') + '2026-04-07T23:30:00+08:00 archived /Users/apex/.openclaw/agents/orion/sessions/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl -> /Users/apex/.openclaw/agents/orion/sessions/archive/2026-04-07/83cda473-a31f-4f5a-b9f8-a0995d1b046e.jsonl.gz\\n')\nPY",
+          "lastUsedAt": 1775664262474,
+          "lastUsedCommand": "python3 - <<'PY'\nimport http.client, urllib.parse\nsecret='ba9061df0c64fbc38dde456e055ec2e0635bad151d83d8d0'\nfor agent in ['pulse','spark']:\n    path=f\"/api/ask-hive?secret={secret}&agent={agent}&q=ping\"\n    print('===', agent, '===')\n    conn=http.client.HTTPConnection('100.70.74.1',3900,timeout=10)\n    try:\n        conn.request('GET', path)\n        resp=conn.getresponse()\n        print('status', resp.status)\n        print('reason', resp.reason)\n        data=resp.read(500).decode('utf-8','replace')\n        print('body', data)\n    except Exception as e:\n        print(type(e).__name__, e)\n    finally:\n        conn.close()\n    print()\nPY",
           "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
