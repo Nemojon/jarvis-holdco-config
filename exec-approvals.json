@@ -25,8 +25,8 @@
         {
           "pattern": "/Users/apex/.openclaw/**",
           "id": "4c69f9fd-4563-4036-9396-e6905904a695",
-          "lastUsedAt": 1775658412592,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/sync-oauth.sh; rc=$?; echo RC:$rc; tail -40 /tmp/openclaw/oauth-sync.log",
+          "lastUsedAt": 1775741200112,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/notion-bridge.sh write vault \"2026-04-09 | Jarvis | KV compliance failed: only Orion and Ledger wrote same-day memory output; enforce a minimum of 3 agent memory writes before evening close.\" && bash /Users/apex/.openclaw/scripts/notion-bridge.sh write vault \"2026-04-09 | Jarvis | Token monitor ran 4 times today but both OpenAI and Anthropic billing paths stayed on login screens, so spend visibility remains degraded despite the monitor loop running.\"",
           "lastResolvedPath": "/bin/bash"
         },
         {
@@ -50,9 +50,9 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775668980918,
-          "lastUsedCommand": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh",
-          "lastResolvedPath": "/Users/apex/.openclaw/workspace-cto/scripts/fireflies-meeting-summary.sh"
+          "lastUsedAt": 1775750811285,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/model-guard.sh; echo EXIT:$?",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/tmp/**",
@@ -61,8 +61,8 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775664262474,
-          "lastUsedCommand": "python3 - <<'PY'\nimport http.client, urllib.parse\nsecret='ba9061df0c64fbc38dde456e055ec2e0635bad151d83d8d0'\nfor agent in ['pulse','spark']:\n    path=f\"/api/ask-hive?secret={secret}&agent={agent}&q=ping\"\n    print('===', agent, '===')\n    conn=http.client.HTTPConnection('100.70.74.1',3900,timeout=10)\n    try:\n        conn.request('GET', path)\n        resp=conn.getresponse()\n        print('status', resp.status)\n        print('reason', resp.reason)\n        data=resp.read(500).decode('utf-8','replace')\n        print('body', data)\n    except Exception as e:\n        print(type(e).__name__, e)\n    finally:\n        conn.close()\n    print()\nPY",
+          "lastUsedAt": 1775748708189,
+          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfor agent in ['apex','orion']:\n    path=f'/Users/apex/.openclaw/agents/{agent}/sessions/sessions.json'\n    with open(path) as f:\n        data=json.load(f)\n    print('##', agent, type(data).__name__)\n    if isinstance(data, list):\n        print('len', len(data))\n        if data: print('keys', list(data[0].keys())[:20])\n    elif isinstance(data, dict):\n        print('keys', list(data.keys())[:20])\n        for k,v in data.items():\n            print('first key type', k, type(v).__name__)\n            if isinstance(v, list) and v:\n                print('item keys', list(v[0].keys())[:20])\n            elif isinstance(v, dict):\n                print('nested keys', list(v.keys())[:20])\n            break\nPY",
           "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
@@ -470,7 +470,10 @@
           "permissions": [
             "fileRead"
           ],
-          "id": "4f41ba48-d331-4606-929f-073db91d1f99"
+          "id": "4f41ba48-d331-4606-929f-073db91d1f99",
+          "lastUsedAt": 1775739778378,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/notion-bridge.sh write vault \"2026-04-09 | Jarvis | Dispatch verification only credited Ledger because Orion had no explicit same-day dispatch log and most agents wrote no same-day workspace memory; completion proof requires both assignment logging and agent-side memory output.\"",
+          "lastResolvedPath": "/bin/bash"
         },
         {
           "pattern": "/Users/apex/.openclaw/workspace-atlas/**",

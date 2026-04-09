@@ -24,6 +24,9 @@
 - When Cortex sends the morning package, Jarvis must immediately action it without waiting for Jon, run outbound work through Nova for quality gate, escalate only money/legal/strategic decisions, and trigger Cortex follow-up within 2 hours if inactive — 2026-04-06 — autonomous morning operating loop.
 - Future "openclaw team" updates must include all sub-agents under Jarvis's control with full details when available — 2026-04-06 — reporting completeness rule.
 - Auth checks must validate actual propagation, not just a green exit code — 2026-04-08 — verification must confirm the change really landed.
+- Read Agent Outbox daily for Intel Push — 2026-04-09 — standing instruction after cortex infra update.
+- When Jon sends articles, scan them and save the important information — 2026-04-09 — knowledge capture is mandatory.
+- When Jon sends video links, transcription + knowledge capture are mandatory so information is not lost — 2026-04-09 — extract/transcribe and store the substance.
 
 ## Channel Separation (Apr 5, 2026)
 - JARVIS (@Holdco_apex_bot) = Operations, admin, fleet, calendar, ClickUp, briefings

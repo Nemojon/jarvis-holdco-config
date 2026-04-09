@@ -1,50 +1,47 @@
 # STATE.md — HoldCo Operating State
-**Generated:** Wednesday, April 8, 2026 — 8:13 AM SGT
+**Generated:** Thursday, April 9, 2026 — 9:30 AM SGT
 **Author:** Jarvis (COO)
 
 ---
 
 ## 1. ACTIVE PRIORITIES (ranked by urgency)
-1. **TEDx (Apr 15)** — lock final angle and move immediately into script/rehearsal execution; key milestones are now time-compressed.
-2. **Biptap / AbsolutePay pipeline** — push active whitelabel + partner deals already in negotiation and prevent investor / partner momentum from stalling.
-3. **Jon decision queue** — clear Jon-owned approvals/actions in ClickUp so payments, speaking, and partner follow-through are not bottlenecked.
-4. **1TXO positioning** — use today’s trust/regulation/stablecoin narrative window for first strong content/PR insertion.
-5. **BSQ lead-gen launch** — unblock tooling / outreach and restore reliable execution signal.
-6. **Ops hygiene** — finish ClickUp dedup / reprioritization and resolve stale Agent Lab nightly issue.
+1. **TEDx Al Wasl (Apr 15)** — final angle/script and rehearsal execution are critical; ClickUp shows final draft and in-person rehearsal as urgent.
+2. **Biptap / AbsolutePay partnership pipeline** — keep live commercial motion moving, especially Ratio/Kaia, Regal, Boggi, and other whitelabel / FX infrastructure conversations.
+3. **Jon decision queue** — clear Jon-owned reviews/approvals, especially Ratio/Kaia and any TEDx direction calls, to avoid bottlenecks.
+4. **Fireflies / knowledge access** — complete Fireflies team access so Jon can review team meetings; important for operating visibility.
+5. **BSQ go-to-market reliability** — resolve tooling/session issues before trusting outreach volume.
+6. **Ops backbone** — keep the AI OS stable after the recent cron/trigger reset and confirm the new nightly / dispatch jobs are holding.
 
 ## 2. COMPANY STATUS
 ### Biptap / AbsolutePay
-- Market tailwind remains favorable: regulated rails, stablecoins-as-infrastructure, and cross-border trust/compliance are the strongest narratives this morning.
-- ClickUp shows active commercial motion: multiple whitelabel/payment opportunities remain live in negotiating / proposal / engaged stages.
-- Pipeline hygiene still needs attention: some leads remain in early-stage buckets; duplicate / stale task cleanup is still important.
+- Commercial pipeline is active, with real partner motion across FX infrastructure, whitelabel, and card-related conversations.
+- Highest-signal items today: Larry Lin / Ratio-Kaia, Regal, Boggi, and CandyPay.
+- Main risk is not demand; it is follow-through speed and decision latency.
 
 ### 1TXO Protocol
-- Narrative opportunity is open, but execution is behind the market window.
-- Content calendar tasks exist, but no fresh high-confidence brand mentions surfaced this morning.
-- Best move: publish operator POV around trusted financial infrastructure, tokenization, and compliance-first rails.
+- Narrative window still exists around trusted financial infrastructure / compliance-first rails, but execution remains behind the opportunity.
+- No fresh strong operating signal surfaced this morning; treat as secondary to TEDx and live pipeline.
 
 ### BSQ
-- Still operationally fragile.
-- Prior blocker remains relevant: Expandi signup/tooling required to launch the funnel properly.
-- Execution quality should be treated cautiously until outreach/tool reliability is confirmed.
+- Still fragile operationally.
+- Lead-gen is not yet dependable: LinkedIn/session verification issues were active this week, and the tooling/spend path still needs to be settled.
+- Do not assume consistent outbound until tooling is confirmed working.
 
 ### HoldCo AI OS
-- Core operating system is running on the Mac mini; no fresh system incidents surfaced in today’s review.
-- Anti-fabrication / workflow discipline remains critical.
-- Agent Lab nightly issue is still stale from Mar 27 and remains an ops debt item.
+- Core infrastructure is materially healthier than last week.
+- Apr 9 update added Agent Lab nightly, Dispatch Verification q4h, remote triggers, and auto-heal q2h; Fireflies cron was replaced by remote trigger and HIVE jobs were disabled.
+- Remaining watch items: confirm the new schedule holds, and restore/verify stale monitoring surfaces like token balance checks.
 
 ## 3. BLOCKERS / ESCALATIONS NEEDED FROM JON
-1. **TEDx direction** — final voice-note / angle decision still needed to compress the remaining prep window.
-2. **Jon-owned ClickUp actions** — clear approval items assigned to Jon, especially speaking applications and executive to-dos, so execution can move.
-3. **BSQ tooling path** — if BSQ launch is still expected this week, approve the tooling/spend path immediately.
-4. **Any high-sensitivity partner/commercial approvals** — move quickly on Jon-level decisions that could slow Biptap / AbsolutePay momentum.
+1. **TEDx direction lock** — if any final angle/voice decision is still pending, it needs to be closed immediately.
+2. **Ratio/Kaia review** — Jon-owned review task is open and could slow a high-signal partnership.
+3. **BSQ tooling/spend approval** — if BSQ launch still matters near-term, approve the tooling path now.
+4. **Partner-sensitive commercial approvals** — move fast on founder-level decisions so active deals do not cool.
 
-## 4. OPERATING SNAPSHOT
-- **TEDx countdown:** 7 days to event; urgent milestones already scheduled in ClickUp (drafts, rehearsal, final script, event day).
-- **ClickUp open-task scan:** 100 open tasks returned in latest review.
-- **Commercial signal:** multiple Biptap / AbsolutePay leads are live across negotiating, proposal sent, contacted, engaged, and new lead stages.
-- **Jon-visible urgent items in current scan:** speaking applications, ambassador refund fulfilment, and executive/Jon to-do items remain open.
-- **Brand / market signal:** 0 fresh high-confidence brand mentions for Biptap / 1TXO / Jon this morning; no immediate negative narrative detected.
-- **System / ops signal:** Agent Lab nightly still stale since Mar 27; ClickUp dedup / hygiene still unresolved.
-
-*Operating note: strongest external narrative today is trusted financial infrastructure — AI in payments, compliance, stablecoins, and cross-border rails — and that should shape outbound, content, and partner conversations.*
+## 4. KEY METRICS SNAPSHOT
+- **TEDx countdown:** 6 days to event.
+- **Meaningful open ClickUp tasks (non-transcript noise):** 19.
+- **Urgent ClickUp items:** TEDx final script, TEDx in-person rehearsal, TEDx event day, Larry Lin / Ratio-Kaia partnership.
+- **High-priority ClickUp items:** Regal whitelabel, Boggi cards + WL, CandyPay BD, Fireflies team access, Jon review of Ratio/Kaia.
+- **Ops changes live today:** Agent Lab nightly restored, Dispatch Verification every 4h, auto-heal every 2h, Fireflies moved to remote trigger.
+- **Known monitoring weakness:** token balance monitoring was previously stale and should stay on watchlist until verified.

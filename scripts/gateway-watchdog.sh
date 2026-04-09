@@ -276,6 +276,32 @@ if [[ -n "$DISK_USAGE_PCT" ]]; then
 fi
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# CHECK 8: Cron job health — surface jobs with consecutive errors
+# ═══════════════════════════════════════════════════════════════════════════════
+CRON_FILE="${OPENCLAW_HOME}/cron/jobs.json"
+if [[ -f "$CRON_FILE" ]]; then
+  # Count jobs with 2+ consecutive errors
+  FAILING_JOBS=$(grep -o '"consecutiveErrors": [0-9]*' "$CRON_FILE" 2>/dev/null \
+    | awk -F': ' '$2 >= 2 {count++} END {print count+0}')
+  if [[ "$FAILING_JOBS" -gt 0 ]]; then
+    log "WARN: ${FAILING_JOBS} cron job(s) have 2+ consecutive errors."
+  fi
+fi
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CHECK 9: Brave CDP port (9222) — needed for browser-dependent agents
+# Run infrequently (every 6th cycle = ~30 min)
+# ═══════════════════════════════════════════════════════════════════════════════
+if [[ $(( LIVENESS_COUNT % 6 )) -eq 0 ]]; then
+  BRAVE_CDP=$(curl -s --max-time 3 "http://127.0.0.1:9222/json/version" 2>/dev/null || echo "")
+  if [[ -z "$BRAVE_CDP" ]]; then
+    log "WARN: Brave CDP port 9222 not responding. Browser-dependent agents may fail."
+  else
+    log "OK: Brave CDP port 9222 responding."
+  fi
+fi
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # ALL CLEAR
 # ═══════════════════════════════════════════════════════════════════════════════
 log "OK: All checks passed (HTTP ${HTTP_STATUS}, PID ${GATEWAY_PID})."

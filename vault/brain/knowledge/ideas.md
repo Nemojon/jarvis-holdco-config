@@ -18,3 +18,4 @@
 | 2026-03-19 | NTT Docomo / Biptap strategic partnership upside | High-value unresolved opportunity |
 | 2026-04-05 | Add preflight "account-visibility check" step to all browser calendar SOPs | Open reliability improvement idea |
 | 2026-04-08 | Add cron preflight validation for model/thinking compatibility before scheduled runs fire | Open reliability improvement idea |
+| 2026-04-09 | Persistent knowledge graph layer for agent memory/context compression (`Graphify`-style) | Interesting product/positioning inspiration from shared reel; claims unverified, but the memory-layer framing is worth revisiting |
