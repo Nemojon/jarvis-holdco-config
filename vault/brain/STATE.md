@@ -1,47 +1,47 @@
 # STATE.md — HoldCo Operating State
-**Generated:** Thursday, April 9, 2026 — 9:30 AM SGT
+**Generated:** Friday, April 10, 2026 — 8:00 AM SGT
 **Author:** Jarvis (COO)
 
 ---
 
 ## 1. ACTIVE PRIORITIES (ranked by urgency)
-1. **TEDx Al Wasl (Apr 15)** — final angle/script and rehearsal execution are critical; ClickUp shows final draft and in-person rehearsal as urgent.
-2. **Biptap / AbsolutePay partnership pipeline** — keep live commercial motion moving, especially Ratio/Kaia, Regal, Boggi, and other whitelabel / FX infrastructure conversations.
-3. **Jon decision queue** — clear Jon-owned reviews/approvals, especially Ratio/Kaia and any TEDx direction calls, to avoid bottlenecks.
-4. **Fireflies / knowledge access** — complete Fireflies team access so Jon can review team meetings; important for operating visibility.
-5. **BSQ go-to-market reliability** — resolve tooling/session issues before trusting outreach volume.
-6. **Ops backbone** — keep the AI OS stable after the recent cron/trigger reset and confirm the new nightly / dispatch jobs are holding.
+1. **TEDx Al Wasl (Apr 15)** — lock final angle/script, rehearsal cadence, and speaking calendar decisions; this remains the nearest hard deadline.
+2. **Biptap / AbsolutePay commercial pipeline** — keep live partnership and white-label motion moving, especially Ratio/Kaia, Uphold, BasePay, Rain, Tigerpay, Kingex, and LP-related follow-ups.
+3. **Jon decision + payment queue** — clear founder-owned approvals, signatures, and invoice payments that can stall operators, partners, or vendors.
+4. **BSQ data-source reliability** — restore LinkedIn / browser / Apify access so outbound, engagement scans, and brand-intel loops are trustworthy again.
+5. **Ops backbone / AI OS reliability** — confirm the new cron / remote-trigger structure is holding and that monitoring surfaces are current.
 
 ## 2. COMPANY STATUS
 ### Biptap / AbsolutePay
-- Commercial pipeline is active, with real partner motion across FX infrastructure, whitelabel, and card-related conversations.
-- Highest-signal items today: Larry Lin / Ratio-Kaia, Regal, Boggi, and CandyPay.
-- Main risk is not demand; it is follow-through speed and decision latency.
+- Pipeline is active across partnerships, white-label, liquidity-provider, and infrastructure conversations.
+- Live ClickUp signal shows open founder-review items around **Ratio/Kaia**, **BasePay proposal**, **Uphold partnership**, plus newer leads including **Rain**, **Tigerpay**, **Kingex**, and **Masspay**.
+- Main risk is speed of follow-through: too many founder-owned reviews/payments can slow live deal momentum.
 
 ### 1TXO Protocol
-- Narrative window still exists around trusted financial infrastructure / compliance-first rails, but execution remains behind the opportunity.
-- No fresh strong operating signal surfaced this morning; treat as secondary to TEDx and live pipeline.
+- Still strategically relevant as the crypto / compliance infrastructure layer, but there is no stronger same-day operating signal than the Biptap pipeline.
+- Market tailwinds remain favorable around compliant stablecoin rails and infrastructure, but execution urgency today sits elsewhere.
 
 ### BSQ
-- Still fragile operationally.
-- Lead-gen is not yet dependable: LinkedIn/session verification issues were active this week, and the tooling/spend path still needs to be settled.
-- Do not assume consistent outbound until tooling is confirmed working.
+- Operational visibility is weak today.
+- The 2026-04-10 BSQ daily report is incomplete: Apify credits are nearly exhausted, browser fallback failed, and some LinkedIn profile paths may be stale.
+- Treat BSQ outreach / content intelligence as degraded until at least one reliable collection path is restored.
 
 ### HoldCo AI OS
-- Core infrastructure is materially healthier than last week.
-- Apr 9 update added Agent Lab nightly, Dispatch Verification q4h, remote triggers, and auto-heal q2h; Fireflies cron was replaced by remote trigger and HIVE jobs were disabled.
-- Remaining watch items: confirm the new schedule holds, and restore/verify stale monitoring surfaces like token balance checks.
+- Core system is more stable than last week after cron / trigger cleanup.
+- Still needs watchkeeping: verify new schedules continue firing, keep token / monitoring surfaces fresh, and avoid silent failures in daily intel loops.
 
 ## 3. BLOCKERS / ESCALATIONS NEEDED FROM JON
-1. **TEDx direction lock** — if any final angle/voice decision is still pending, it needs to be closed immediately.
-2. **Ratio/Kaia review** — Jon-owned review task is open and could slow a high-signal partnership.
-3. **BSQ tooling/spend approval** — if BSQ launch still matters near-term, approve the tooling path now.
-4. **Partner-sensitive commercial approvals** — move fast on founder-level decisions so active deals do not cool.
+1. **TEDx direction lock** — any remaining angle / script / speaking-priority decisions need to close now.
+2. **Commercial approvals** — review / approve **Ratio-Kaia**, **BasePay**, and **Uphold** items so counterparties do not cool.
+3. **Payment backlog** — multiple payment tasks are open in ClickUp (vendor commissions, reimbursements, card/DHL/loading invoices, Monavate setup invoice); this can create drag or reputational risk if left hanging.
+4. **Signature backlog** — Jen’s partnership agreement is still open.
+5. **BSQ tooling decision** — approve / restore a reliable data path if BSQ intelligence and outbound still matter near term.
 
 ## 4. KEY METRICS SNAPSHOT
-- **TEDx countdown:** 6 days to event.
-- **Meaningful open ClickUp tasks (non-transcript noise):** 19.
-- **Urgent ClickUp items:** TEDx final script, TEDx in-person rehearsal, TEDx event day, Larry Lin / Ratio-Kaia partnership.
-- **High-priority ClickUp items:** Regal whitelabel, Boggi cards + WL, CandyPay BD, Fireflies team access, Jon review of Ratio/Kaia.
-- **Ops changes live today:** Agent Lab nightly restored, Dispatch Verification every 4h, auto-heal every 2h, Fireflies moved to remote trigger.
-- **Known monitoring weakness:** token balance monitoring was previously stale and should stay on watchlist until verified.
+- **TEDx countdown:** 5 days to event.
+- **Live ClickUp tasks assigned to Jon (open feed):** 52 raw tasks pulled this morning.
+- **Approx. deduped open task count:** 48.
+- **Immediate founder-review / approval tasks visible:** Ratio/Kaia review, BasePay proposal, Uphold partnership review, Jen partnership agreement, DCS commercials, Monavate invoice.
+- **New-lead / pipeline tasks visible:** Rain, Tigerpay, Kingex, Masspay, Sak Verdant, Vadi x Biptap.
+- **BSQ monitoring status:** degraded — Apify credits effectively exhausted and browser fallback failed.
+- **Macro watch:** Middle East / Hormuz risk remains the top external volatility driver; useful mainly for narrative and treasury awareness, not as a same-day blocker.

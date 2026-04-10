@@ -25,8 +25,8 @@
         {
           "pattern": "/Users/apex/.openclaw/**",
           "id": "4c69f9fd-4563-4036-9396-e6905904a695",
-          "lastUsedAt": 1775741200112,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/notion-bridge.sh write vault \"2026-04-09 | Jarvis | KV compliance failed: only Orion and Ledger wrote same-day memory output; enforce a minimum of 3 agent memory writes before evening close.\" && bash /Users/apex/.openclaw/scripts/notion-bridge.sh write vault \"2026-04-09 | Jarvis | Token monitor ran 4 times today but both OpenAI and Anthropic billing paths stayed on login screens, so spend visibility remains degraded despite the monitor loop running.\"",
+          "lastUsedAt": 1775827090607,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/sync-oauth.sh",
           "lastResolvedPath": "/bin/bash"
         },
         {
@@ -50,8 +50,8 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775750811285,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/model-guard.sh; echo EXIT:$?",
+          "lastUsedAt": 1775837768085,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh && echo '\n--- MODEL GUARD ---\n' && bash /Users/apex/.openclaw/scripts/model-guard.sh",
           "lastResolvedPath": "/bin/bash"
         },
         {
@@ -61,9 +61,9 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775748708189,
-          "lastUsedCommand": "python3 - <<'PY'\nimport json\nfor agent in ['apex','orion']:\n    path=f'/Users/apex/.openclaw/agents/{agent}/sessions/sessions.json'\n    with open(path) as f:\n        data=json.load(f)\n    print('##', agent, type(data).__name__)\n    if isinstance(data, list):\n        print('len', len(data))\n        if data: print('keys', list(data[0].keys())[:20])\n    elif isinstance(data, dict):\n        print('keys', list(data.keys())[:20])\n        for k,v in data.items():\n            print('first key type', k, type(v).__name__)\n            if isinstance(v, list) and v:\n                print('item keys', list(v[0].keys())[:20])\n            elif isinstance(v, dict):\n                print('nested keys', list(v.keys())[:20])\n            break\nPY",
-          "lastResolvedPath": "/opt/homebrew/bin/python3"
+          "lastUsedAt": 1775829628028,
+          "lastUsedCommand": "node /Users/apex/.openclaw/scripts/agent-lab-nightly.js",
+          "lastResolvedPath": "/opt/homebrew/bin/node"
         }
       ]
     },
