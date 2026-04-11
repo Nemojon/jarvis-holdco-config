@@ -50,8 +50,8 @@
         {
           "pattern": "/Users/apex/**",
           "id": "5b4ef9ac-a3b4-4539-a601-53d47918662e",
-          "lastUsedAt": 1775837768085,
-          "lastUsedCommand": "bash /Users/apex/.openclaw/workspace-cto/scripts/agent-watchdog.sh && echo '\n--- MODEL GUARD ---\n' && bash /Users/apex/.openclaw/scripts/model-guard.sh",
+          "lastUsedAt": 1775869968568,
+          "lastUsedCommand": "bash /Users/apex/.openclaw/scripts/model-guard.sh; printf '\\nEXIT:%s\\n' $?",
           "lastResolvedPath": "/bin/bash"
         },
         {
@@ -61,9 +61,9 @@
         {
           "pattern": "/opt/homebrew/**",
           "id": "44378868-d260-4181-858a-b356310b9a3f",
-          "lastUsedAt": 1775829628028,
-          "lastUsedCommand": "node /Users/apex/.openclaw/scripts/agent-lab-nightly.js",
-          "lastResolvedPath": "/opt/homebrew/bin/node"
+          "lastUsedAt": 1775919867585,
+          "lastUsedCommand": "python3 - <<'PY'\nfrom pathlib import Path\npaths=[Path('/Users/apex/.openclaw/agents/orion/sessions/sessions.json'),Path('/Users/apex/.openclaw/agents/apex/sessions/sessions.json')]\nfor p in paths:\n    txt=p.read_text(errors='ignore')\n    if 'thinkingLevel' in txt and 'gpt-5.4-pro' in txt:\n        print('FOUND IN',p)\n        for line in txt.splitlines():\n            if 'thinkingLevel' in line or 'gpt-5.4-pro' in line:\n                print(line[:500])\nPY",
+          "lastResolvedPath": "/opt/homebrew/bin/python3"
         }
       ]
     },
